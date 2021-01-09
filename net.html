@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176574648-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176574648-1');
+    </script>
+    
+    <link rel='stylesheet' href='/static/css/pygment_trac.css'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <title>ActiveJ | Net, high-performance alternative to Netty for building async servers without overheads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Abstraction layer for building asynchronous HTTP, RPC, TCP servers with no performance overhead. ">
+    <meta name="keywords" content=" tcp,rpc,http,java,java framework,spring alternative,jetty alternative,netty alternative,eventloop,asynchronous server,async ">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name="og:description" content="ActiveJ is an alternative Java platform built from the ground up as a replacement of Spring, Spark, Quarkus, Micronauts, and other solutions. It is minimalistic, boilerplate-free, and provides outstanding performance." />
+    <meta name="og:image" content="https://activej.io/static/images/AJ_Card.jpeg" />
+    <meta name="og:title" content="ActiveJ - An Alternative Java platform built for web, high load, and cloud development" />
+</head>
+<body>
+    <div class="navbar-container-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <ul class="navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                <div class="logo-link-title mr-5">
+                    <img src="/favicon.png" style="max-width: 25px">
+                    
+                    
+                    <a class="navbar-nav__link logo-link-title" href="/" style="margin-left: 5px">ActiveJ</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </ul>
+            <button class="navbar-toggler m-1 ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="container">
+                    
+                    
+                    <ul class="navbar-nav navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/tutorials/getting-started.html">
+                                Tutorials
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/http.html">
+                                Docs
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <span>
+              <ul class="navbar-nav expanded-links navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                  <li class="dropdown">
+                    <a class="nav-link nav-expanded">Components</a>
+                    <ul class="dropdown__content">
+                        
+                            <div class="dropdown__content-wrapper">
+                                
+                                    <a href="https://activej.io" class="dropdown__content__item  selected-link ">
+                                        <li>
+                                            <div href="https://activej.io">ActiveJ</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Redefining Java for modern web applications </p>
+                                    </a>
+                                
+                                    <a href="https://inject.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://inject.activej.io">ActiveJ Inject</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast and ultimately powerful DI library </p>
+                                    </a>
+                                
+                                    <a href="https://serializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://serializer.activej.io">ActiveJ Serializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> The fastest JVM serializer in the world </p>
+                                    </a>
+                                
+                                    <a href="https://codegen.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://codegen.activej.io">ActiveJ Codegen</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Dynamic bytecode generation without overhead of reflection </p>
+                                    </a>
+                                
+                                    <a href="https://specializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://specializer.activej.io">ActiveJ Specializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> A little bit of magic to speed up your code </p>
+                                    </a>
+                                
+                                    <a href="https://rpc.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://rpc.activej.io">ActiveJ RPC</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast binary protocol for microservices architecture </p>
+                                    </a>
+                                
+                                    <a href="https://fs.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://fs.activej.io">ActiveJ FS</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Tiny abstraction for managing local, remote, and distributed FS </p>
+                                    </a>
+                                
+                           </div>
+                        
+                    </ul>
+                </li>
+                  <li><a class="navbar-nav__link" href="https://activej.io/blog/release-notes.html">Blog</a> </li>
+                <li><a class="navbar-nav__link" href="http://uikernel.io">UIKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://adkernel.com">AdKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://github.com/activej/activej">GitHub</a></li>
+                <li><a class="navbar-nav__link" href="/about.html">About us</a></li>
+              </ul>
+            </span>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <div class="content">
+        
+            <div class="container">
+                <div class="row">
+                    <div class="px-0 mb-3 sidebar">
+    
+<h3>Async I/O</h3>
+<ul>
+    
+    
+    <li>
+        <a href="/http.html">HTTP</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/eventloop.html">Eventloop</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/promise.html">Promise</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/csp.html">CSP</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/datastream.html">Datastream</a>
+    </li>
+    
+    
+    
+    <li class="sidebar-item-selected-wrapper">
+        <div class="sidebar-item-selected">
+            <a href="/net.html">Net</a>
+        </div>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/dataflow.html">Dataflow</a>
+    </li>
+    
+    
+</ul>
+
+<h3>Boot</h3>
+<ul>
+    
+    
+    <li>
+        <a href="/launcher.html">Launcher</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/service-graph.html">Service Graph</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/workers.html">Workers</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/config.html">Config</a>
+    </li>
+    
+    
+</ul>
+
+<h3>Misc</h3>
+<ul>
+    
+    
+    <li>
+        <a href="/bytebuf.html">ByteBuf</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/codec.html">Codec</a>
+    </li>
+    
+    
+</ul>
+
+</div>
+<div class="pr-3 markdown-content docs-content">
+    <div class="status-wrapper">
+        <h1>Net </h1>
+    </div>
+    <p>Handy and efficient alternative to Netty, Apache Mina, and other similar solutions for high performance networking. A tiny abstraction layer on top of <a href="/eventloop.html">Eventloop</a> 
+and Java NIO Adapters for <a href="https://github.com/activej/activej/blob/v4.3/core-net/src/main/java/io/activej/net/socket/tcp/AsyncTcpSocket.java"><strong>AsyncTcpSocket</strong></a> 
+along with <a href="https://github.com/activej/activej/blob/v4.3/core-net/src/main/java/io/activej/net/socket/udp/AsyncUdpSocket.java"><strong>AsyncUdpSocket</strong></a>.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>Support of <strong>Promises</strong> for read and write operations</li>
+  <li>Compatibility with <a href="/csp.html">CSP</a> <a href="https://github.com/activej/activej/blob/v4.3/core-csp/src/main/java/io/activej/csp/ChannelSupplier.java"><strong>ChannelSupplier</strong></a> 
+and <a href="https://github.com/activej/activej/blob/v4.3/core-csp/src/main/java/io/activej/csp/ChannelConsumer.java"><strong>ChannelConsumer</strong></a>. 
+<strong>AsyncTcpSocket</strong> can work as a CSP channel with built-in back pressure propagation, and can be plugged into CSP/<a href="/datastream.html">Datastream</a> 
+pipeline with all its features (like buffering, compression, serialization/deserialization, data transformations, data 
+filtering, reducing, etc.)</li>
+  <li>Extensively optimized and has almost no performance overhead, uses <a href="/bytebuf.html#bytebufpool">ByteBufPool</a> widely</li>
+</ul>
+
+<p>The <a href="https://github.com/activej/activej/blob/v4.3/core-net/src/main/java/io/activej/net/AbstractServer.java"><strong>AbstractServer</strong></a> 
+class serves as a foundation for building Eventloop-aware TCP servers (HTTP servers, RPC servers, TCP file services, etc.):</p>
+<ul>
+  <li>Support of <em>start/stop</em> semantics</li>
+  <li>Implements <a href="https://github.com/activej/activej/blob/v4.3/core-net/src/main/java/io/activej/net/EventloopServer.java"><strong>EventloopServer</strong></a> interface with <em>listen/close</em> capabilities</li>
+  <li>Implements <a href="https://github.com/activej/activej/blob/v4.3/core-net/src/main/java/io/activej/net/WorkerServer.java"><strong>WorkerServer</strong></a> interface, so all subclasses of <strong>AbstractServer</strong> can be readily used as worker servers</li>
+  <li>Support of <a href="https://github.com/activej/activej/blob/v4.3/core-eventloop/src/main/java/io/activej/eventloop/net/ServerSocketSettings.java"><strong>ServerSocketSettings</strong></a> and <a href="https://github.com/activej/activej/blob/v4.3/core-eventloop/src/main/java/io/activej/eventloop/net/SocketSettings.java"><strong>SocketSettings</strong></a></li>
+</ul>
+
+<p>Ready-to-use <a href="https://github.com/activej/activej/blob/v4.3/core-net/src/main/java/io/activej/net/PrimaryServer.java"><strong>PrimaryServer</strong></a> 
+implementation which works in primary Eventloops as a balancer. It takes external 
+“accept” requests and redistributes them to the WorkerServers that will then execute the actual “accept” requests in 
+their corresponding worker Eventloop threads.</p>
+
+<h2 id="examples">Examples</h2>
+<ul>
+  <li><a href="#ping-pong-socket-connection">Ping-Pong Socket Connection</a></li>
+  <li><a href="#csp-tcp-client">CSP TCP Client Example</a></li>
+  <li><a href="#csp-tcp-server">CSP TCP Server Example</a></li>
+  <li><a href="#datastream-tcp-client">Datastream TCP Client Example</a></li>
+  <li><a href="#datastream-tcp-server">Datastream TCP Server Example</a></li>
+</ul>
+
+<div class="note-wrapper">
+    <div class="note">
+        <b>Note:</b>
+        To run the examples, you need to clone ActiveJ from GitHub: 
+<br /> <b>$ git clone https://github.com/activej/activej</b> 
+<br /> Then import it as a Maven project. Check out tag <b>v4.3</b>. Before running the examples, build the project.
+<br /> These examples are located at <b>activej -&gt; examples-&gt; core -&gt; net</b>.
+    </div>
+</div>
+
+<h3 id="ping-pong-socket-connection"><strong>Ping-Pong Socket Connection</strong></h3>
+<p>In this example we are using an implementation of <strong>AbstractServer</strong> - <a href="https://github.com/activej/activej/blob/v4.3/core-net/src/main/java/io/activej/net/SimpleServer.java"><strong>SimpleServer</strong></a> which receives a message and 
+sends a response (<code class="language-plaintext highlighter-rouge">PONG</code>). We will also use <a href="https://github.com/activej/activej/blob/v4.3/core-net/src/main/java/io/activej/net/socket/tcp/AsyncTcpSocketNio.java"><strong>AsyncTcpSocketNio</strong></a> to send 3 request messages (<code class="language-plaintext highlighter-rouge">PING</code>).</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+	<span class="nc">Eventloop</span> <span class="n">eventloop</span> <span class="o">=</span> <span class="nc">Eventloop</span><span class="o">.</span><span class="na">create</span><span class="o">().</span><span class="na">withCurrentThread</span><span class="o">();</span>
+
+	<span class="nc">SimpleServer</span> <span class="n">server</span> <span class="o">=</span> <span class="nc">SimpleServer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span>
+			<span class="n">socket</span> <span class="o">-&gt;</span> <span class="o">{</span>
+				<span class="nc">BinaryChannelSupplier</span> <span class="n">bufsSupplier</span> <span class="o">=</span> <span class="nc">BinaryChannelSupplier</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="nc">ChannelSupplier</span><span class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span class="o">));</span>
+				<span class="n">repeat</span><span class="o">(()</span> <span class="o">-&gt;</span>
+						<span class="n">bufsSupplier</span><span class="o">.</span><span class="na">decode</span><span class="o">(</span><span class="no">DECODER</span><span class="o">)</span>
+								<span class="o">.</span><span class="na">whenResult</span><span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">))</span>
+								<span class="o">.</span><span class="na">then</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">socket</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">wrapAscii</span><span class="o">(</span><span class="no">RESPONSE_MSG</span><span class="o">)))</span>
+								<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="err">$</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">))</span>
+						<span class="o">.</span><span class="na">whenComplete</span><span class="o">(</span><span class="nl">socket:</span><span class="o">:</span><span class="n">close</span><span class="o">);</span>
+			<span class="o">})</span>
+			<span class="o">.</span><span class="na">withListenAddress</span><span class="o">(</span><span class="no">ADDRESS</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withAcceptOnce</span><span class="o">();</span>
+
+	<span class="n">server</span><span class="o">.</span><span class="na">listen</span><span class="o">();</span>
+
+	<span class="nc">AsyncTcpSocketNio</span><span class="o">.</span><span class="na">connect</span><span class="o">(</span><span class="no">ADDRESS</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">whenResult</span><span class="o">(</span><span class="n">socket</span> <span class="o">-&gt;</span> <span class="o">{</span>
+				<span class="nc">BinaryChannelSupplier</span> <span class="n">bufsSupplier</span> <span class="o">=</span> <span class="nc">BinaryChannelSupplier</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="nc">ChannelSupplier</span><span class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span class="o">));</span>
+				<span class="n">loop</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span>
+						<span class="n">i</span> <span class="o">-&gt;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">ITERATIONS</span><span class="o">,</span>
+						<span class="n">i</span> <span class="o">-&gt;</span> <span class="n">socket</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">wrapAscii</span><span class="o">(</span><span class="no">REQUEST_MSG</span><span class="o">))</span>
+								<span class="o">.</span><span class="na">then</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">bufsSupplier</span><span class="o">.</span><span class="na">decode</span><span class="o">(</span><span class="no">DECODER</span><span class="o">)</span>
+										<span class="o">.</span><span class="na">whenResult</span><span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">))</span>
+										<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="err">$</span><span class="mi">2</span> <span class="o">-&gt;</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)))</span>
+						<span class="o">.</span><span class="na">whenComplete</span><span class="o">(</span><span class="nl">socket:</span><span class="o">:</span><span class="n">close</span><span class="o">);</span>
+			<span class="o">})</span>
+			<span class="o">.</span><span class="na">whenException</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">RuntimeException</span><span class="o">(</span><span class="n">e</span><span class="o">);</span> <span class="o">});</span>
+
+	<span class="n">eventloop</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/net/src/main/java/PingPongSocketConnection.java">See full example on GitHub</a></p>
+
+<h3 id="csp-tcp-client"><strong>CSP TCP Client</strong></h3>
+<p>A simple TCP console client which connects to TCP server:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Connecting to server at localhost (port 9922)..."</span><span class="o">);</span>
+	<span class="n">eventloop</span><span class="o">.</span><span class="na">connect</span><span class="o">(</span><span class="k">new</span> <span class="nc">InetSocketAddress</span><span class="o">(</span><span class="s">"localhost"</span><span class="o">,</span> <span class="mi">9922</span><span class="o">),</span> <span class="o">(</span><span class="n">socketChannel</span><span class="o">,</span> <span class="n">e</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">e</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Connected to server, enter some text and send it by pressing 'Enter'."</span><span class="o">);</span>
+			<span class="nc">AsyncTcpSocket</span> <span class="n">socket</span><span class="o">;</span>
+			<span class="k">try</span> <span class="o">{</span>
+				<span class="n">socket</span> <span class="o">=</span> <span class="nc">AsyncTcpSocketNio</span><span class="o">.</span><span class="na">wrapChannel</span><span class="o">(</span><span class="n">getCurrentEventloop</span><span class="o">(),</span> <span class="n">socketChannel</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+			<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ioException</span><span class="o">)</span> <span class="o">{</span>
+				<span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ioException</span><span class="o">);</span>
+			<span class="o">}</span>
+
+			<span class="nc">BinaryChannelSupplier</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="nc">ChannelSupplier</span><span class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span class="o">))</span>
+					<span class="o">.</span><span class="na">decodeStream</span><span class="o">(</span><span class="nc">ByteBufsDecoder</span><span class="o">.</span><span class="na">ofCrlfTerminatedBytes</span><span class="o">())</span>
+					<span class="o">.</span><span class="na">streamTo</span><span class="o">(</span><span class="nc">ChannelConsumer</span><span class="o">.</span><span class="na">ofConsumer</span><span class="o">(</span><span class="n">buf</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">buf</span><span class="o">.</span><span class="na">asString</span><span class="o">(</span><span class="no">UTF_8</span><span class="o">))));</span>
+
+			<span class="n">startCommandLineInterface</span><span class="o">(</span><span class="n">socket</span><span class="o">);</span>
+		<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"Could not connect to server, make sure it is started: %s%n"</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">});</span>
+	<span class="n">eventloop</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">new</span> <span class="nf">TcpClientExample</span><span class="o">().</span><span class="na">run</span><span class="o">();</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>It sends characters, receives some data back through CSP channel, parses it and then prints out to console.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/net/src/main/java/csp/TcpClientExample.java">See full example on GitHub</a></p>
+
+<h3 id="csp-tcp-server"><strong>CSP TCP Server</strong></h3>
+<p>Simple TCP echo server which runs in an eventloop:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+	<span class="nc">Eventloop</span> <span class="n">eventloop</span> <span class="o">=</span> <span class="nc">Eventloop</span><span class="o">.</span><span class="na">create</span><span class="o">().</span><span class="na">withCurrentThread</span><span class="o">();</span>
+
+	<span class="nc">SimpleServer</span> <span class="n">server</span> <span class="o">=</span> <span class="nc">SimpleServer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">socket</span> <span class="o">-&gt;</span>
+			<span class="nc">BinaryChannelSupplier</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="nc">ChannelSupplier</span><span class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span class="o">))</span>
+					<span class="o">.</span><span class="na">decodeStream</span><span class="o">(</span><span class="nc">ByteBufsDecoder</span><span class="o">.</span><span class="na">ofCrlfTerminatedBytes</span><span class="o">())</span>
+					<span class="o">.</span><span class="na">peek</span><span class="o">(</span><span class="n">buf</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"client:"</span> <span class="o">+</span> <span class="n">buf</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="no">UTF_8</span><span class="o">)))</span>
+					<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">buf</span> <span class="o">-&gt;</span> <span class="o">{</span>
+						<span class="nc">ByteBuf</span> <span class="n">serverBuf</span> <span class="o">=</span> <span class="nc">ByteBufStrings</span><span class="o">.</span><span class="na">wrapUtf8</span><span class="o">(</span><span class="s">"Server&gt; "</span><span class="o">);</span>
+						<span class="k">return</span> <span class="nc">ByteBufPool</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">serverBuf</span><span class="o">,</span> <span class="n">buf</span><span class="o">);</span>
+					<span class="o">})</span>
+					<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">buf</span> <span class="o">-&gt;</span> <span class="nc">ByteBufPool</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">buf</span><span class="o">,</span> <span class="no">CRLF</span><span class="o">))</span>
+					<span class="o">.</span><span class="na">streamTo</span><span class="o">(</span><span class="nc">ChannelConsumer</span><span class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span class="o">)))</span>
+			<span class="o">.</span><span class="na">withListenPort</span><span class="o">(</span><span class="no">PORT</span><span class="o">);</span>
+
+	<span class="n">server</span><span class="o">.</span><span class="na">listen</span><span class="o">();</span>
+
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Server is running"</span><span class="o">);</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You can connect from telnet with command: telnet localhost 9922 or by running csp.TcpClientExample"</span><span class="o">);</span>
+
+	<span class="n">eventloop</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>This server listens for connections and when client connects, it parses its message and sends it back as CSP channel via socket.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/net/src/main/java/csp/TcpServerExample.java">See full example on GitHub</a></p>
+
+<h3 id="datastream-tcp-client"><strong>Datastream TCP Client</strong></h3>
+
+<figure class="figure-image">
+    <img src="http://www.plantuml.com/plantuml/png/dPH1RiCW44Ntd694Dl72aT83LBb3J-3QqmJLPYmO9qghtBrGspME0uwwPHwVp_-2W-N2SDVKmZAPueWWtz2SqS1cB-5R0A1cnLUGhQ6gAn6KPYk3TOj65RNwGk0JDdvCy7vbl8DqrQy2UN67WaQ-aFaCCOCbghDN8ei3_s6eYV4LJgVtzE_nbetInvc1akeQInwK1y3HK42jB4jnMmRmCWzWDFTlM_V9bTIq7Kzk1ablqADWgS4JNHw7FLqXcdUOuZBrcn3RiDCCylmLjj4wCv6OZNkZBMT29CUmspc1TCHUOuNeVIJoTxT8JVlzJnRZj9ub8U_QURhB_cO1FnXF6YlT_cMTXEQ9frvSc7kI6nscdsMyWX4OTLOURIOExfRkx_e1" style="max-width: 750px;" />
+</figure>
+
+<p>This image illustrates communication and transformations between two Datastream servers. Datastream TCP client represents Server#1:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">TcpClientExample</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">PORT</span> <span class="o">=</span> <span class="mi">9922</span><span class="o">;</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Eventloop</span> <span class="n">eventloop</span> <span class="o">=</span> <span class="nc">Eventloop</span><span class="o">.</span><span class="na">create</span><span class="o">().</span><span class="na">withFatalErrorHandler</span><span class="o">(</span><span class="n">rethrowOnAnyError</span><span class="o">());</span>
+
+		<span class="n">eventloop</span><span class="o">.</span><span class="na">connect</span><span class="o">(</span><span class="k">new</span> <span class="nc">InetSocketAddress</span><span class="o">(</span><span class="s">"localhost"</span><span class="o">,</span> <span class="no">PORT</span><span class="o">),</span> <span class="o">(</span><span class="n">socketChannel</span><span class="o">,</span> <span class="n">e</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">e</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+				<span class="nc">AsyncTcpSocket</span> <span class="n">socket</span><span class="o">;</span>
+				<span class="k">try</span> <span class="o">{</span>
+					<span class="n">socket</span> <span class="o">=</span> <span class="nc">AsyncTcpSocketNio</span><span class="o">.</span><span class="na">wrapChannel</span><span class="o">(</span><span class="n">eventloop</span><span class="o">,</span> <span class="n">socketChannel</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+				<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ioEx</span><span class="o">)</span> <span class="o">{</span>
+					<span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ioEx</span><span class="o">);</span>
+				<span class="o">}</span>
+
+				<span class="nc">StreamSupplier</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">9</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
+						<span class="o">.</span><span class="na">transformWith</span><span class="o">(</span><span class="nc">ChannelSerializer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="no">INT_SERIALIZER</span><span class="o">))</span>
+						<span class="o">.</span><span class="na">streamTo</span><span class="o">(</span><span class="nc">ChannelConsumer</span><span class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span class="o">));</span>
+
+				<span class="nc">StreamConsumerToList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">consumer</span> <span class="o">=</span> <span class="nc">StreamConsumerToList</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+
+				<span class="nc">ChannelSupplier</span><span class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span class="o">)</span>
+						<span class="o">.</span><span class="na">transformWith</span><span class="o">(</span><span class="nc">ChannelDeserializer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="no">UTF8_SERIALIZER</span><span class="o">))</span>
+						<span class="o">.</span><span class="na">streamTo</span><span class="o">(</span><span class="n">consumer</span><span class="o">);</span>
+
+				<span class="n">consumer</span><span class="o">.</span><span class="na">getResult</span><span class="o">()</span>
+						<span class="o">.</span><span class="na">whenResult</span><span class="o">(</span><span class="n">list</span> <span class="o">-&gt;</span> <span class="n">list</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">));</span>
+
+			<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"Could not connect to server, make sure it is started: %s%n"</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+			<span class="o">}</span>
+		<span class="o">});</span>
+
+		<span class="n">eventloop</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/net/src/main/java/datastream/TcpClientExample.java">See full example on GitHub</a></p>
+
+<h3 id="datastream-tcp-server"><strong>Datastream TCP Server</strong></h3>
+<p>This server represents Server#2 from the illustration above:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">TcpServerExample</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+		<span class="nc">Eventloop</span> <span class="n">eventloop</span> <span class="o">=</span> <span class="nc">Eventloop</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+
+		<span class="n">eventloop</span><span class="o">.</span><span class="na">listen</span><span class="o">(</span><span class="k">new</span> <span class="nc">InetSocketAddress</span><span class="o">(</span><span class="s">"localhost"</span><span class="o">,</span> <span class="nc">TcpClientExample</span><span class="o">.</span><span class="na">PORT</span><span class="o">),</span> <span class="nc">ServerSocketSettings</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="mi">100</span><span class="o">),</span> <span class="n">channel</span> <span class="o">-&gt;</span> <span class="o">{</span>
+			<span class="nc">AsyncTcpSocket</span> <span class="n">socket</span><span class="o">;</span>
+
+			<span class="k">try</span> <span class="o">{</span>
+				<span class="n">socket</span> <span class="o">=</span> <span class="nc">AsyncTcpSocketNio</span><span class="o">.</span><span class="na">wrapChannel</span><span class="o">(</span><span class="n">eventloop</span><span class="o">,</span> <span class="n">channel</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Client connected: "</span> <span class="o">+</span> <span class="n">channel</span><span class="o">.</span><span class="na">getRemoteAddress</span><span class="o">());</span>
+			<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+				<span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+			<span class="o">}</span>
+
+			<span class="nc">ChannelSupplier</span><span class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span class="o">)</span>
+					<span class="o">.</span><span class="na">transformWith</span><span class="o">(</span><span class="nc">ChannelDeserializer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="no">INT_SERIALIZER</span><span class="o">))</span>
+					<span class="o">.</span><span class="na">transformWith</span><span class="o">(</span><span class="nc">StreamFilter</span><span class="o">.</span><span class="na">mapper</span><span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="s">" times 10 = "</span> <span class="o">+</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">10</span><span class="o">))</span>
+					<span class="o">.</span><span class="na">transformWith</span><span class="o">(</span><span class="nc">ChannelSerializer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="no">UTF8_SERIALIZER</span><span class="o">))</span>
+					<span class="o">.</span><span class="na">streamTo</span><span class="o">(</span><span class="nc">ChannelConsumer</span><span class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span class="o">));</span>
+		<span class="o">});</span>
+
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Connect to the server by running datastream.TcpClientExample"</span><span class="o">);</span>
+
+		<span class="n">eventloop</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/net/src/main/java/datastream/TcpServerExample.java">See full example on GitHub</a></p>
+
+    <div class="row docs-prevnext">
+        
+            <div class="col-sm-6">
+                <a class="docs-prevnext__button pull-left" href="datastream.html">Prev</a>
+            </div>
+        
+        
+            <div class="col-sm-6">
+                <a class="docs-prevnext__button pull-right" href="bytebuf.html">Next</a>
+            </div>
+        
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        
+        <div class="container justify-content-between footer">
+            <div class="col-md-4 col-lg-5"> &copy; 2021 ActiveJ LLC. All Rights Reserved</div>
+            <div class="col-md-4 col-lg-3">Contact us: contact@activej.io</div>
+            <div class="col-md-8 col-lg-4 footer__menu">
+                <a href="http://uikernel.io">UIKernel</a>
+                <a href="https://adkernel.com">AdKernel</a>
+                <a href="https://github.com/activej/activej">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="../static/js/leon.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

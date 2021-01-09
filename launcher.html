@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176574648-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176574648-1');
+    </script>
+    
+    <link rel='stylesheet' href='/static/css/pygment_trac.css'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <title>ActiveJ | Launcher, efficiently manage application lifecycle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" ActiveJ Launcher manages application lifecycle, starts and stops services and also has handy diagnostic tools. ">
+    <meta name="keywords" content=" launcher,java launcher,application lifecycle,java framework,spring alternative,netty alternative,jetty alternative ">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name="og:description" content="ActiveJ is an alternative Java platform built from the ground up as a replacement of Spring, Spark, Quarkus, Micronauts, and other solutions. It is minimalistic, boilerplate-free, and provides outstanding performance." />
+    <meta name="og:image" content="https://activej.io/static/images/AJ_Card.jpeg" />
+    <meta name="og:title" content="ActiveJ - An Alternative Java platform built for web, high load, and cloud development" />
+</head>
+<body>
+    <div class="navbar-container-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <ul class="navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                <div class="logo-link-title mr-5">
+                    <img src="/favicon.png" style="max-width: 25px">
+                    
+                    
+                    <a class="navbar-nav__link logo-link-title" href="/" style="margin-left: 5px">ActiveJ</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </ul>
+            <button class="navbar-toggler m-1 ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="container">
+                    
+                    
+                    <ul class="navbar-nav navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/tutorials/getting-started.html">
+                                Tutorials
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/http.html">
+                                Docs
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <span>
+              <ul class="navbar-nav expanded-links navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                  <li class="dropdown">
+                    <a class="nav-link nav-expanded">Components</a>
+                    <ul class="dropdown__content">
+                        
+                            <div class="dropdown__content-wrapper">
+                                
+                                    <a href="https://activej.io" class="dropdown__content__item  selected-link ">
+                                        <li>
+                                            <div href="https://activej.io">ActiveJ</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Redefining Java for modern web applications </p>
+                                    </a>
+                                
+                                    <a href="https://inject.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://inject.activej.io">ActiveJ Inject</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast and ultimately powerful DI library </p>
+                                    </a>
+                                
+                                    <a href="https://serializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://serializer.activej.io">ActiveJ Serializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> The fastest JVM serializer in the world </p>
+                                    </a>
+                                
+                                    <a href="https://codegen.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://codegen.activej.io">ActiveJ Codegen</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Dynamic bytecode generation without overhead of reflection </p>
+                                    </a>
+                                
+                                    <a href="https://specializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://specializer.activej.io">ActiveJ Specializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> A little bit of magic to speed up your code </p>
+                                    </a>
+                                
+                                    <a href="https://rpc.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://rpc.activej.io">ActiveJ RPC</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast binary protocol for microservices architecture </p>
+                                    </a>
+                                
+                                    <a href="https://fs.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://fs.activej.io">ActiveJ FS</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Tiny abstraction for managing local, remote, and distributed FS </p>
+                                    </a>
+                                
+                           </div>
+                        
+                    </ul>
+                </li>
+                  <li><a class="navbar-nav__link" href="https://activej.io/blog/release-notes.html">Blog</a> </li>
+                <li><a class="navbar-nav__link" href="http://uikernel.io">UIKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://adkernel.com">AdKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://github.com/activej/activej">GitHub</a></li>
+                <li><a class="navbar-nav__link" href="/about.html">About us</a></li>
+              </ul>
+            </span>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <div class="content">
+        
+            <div class="container">
+                <div class="row">
+                    <div class="px-0 mb-3 sidebar">
+    
+<h3>Async I/O</h3>
+<ul>
+    
+    
+    <li>
+        <a href="/http.html">HTTP</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/eventloop.html">Eventloop</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/promise.html">Promise</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/csp.html">CSP</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/datastream.html">Datastream</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/net.html">Net</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/dataflow.html">Dataflow</a>
+    </li>
+    
+    
+</ul>
+
+<h3>Boot</h3>
+<ul>
+    
+    
+    <li class="sidebar-item-selected-wrapper">
+        <div class="sidebar-item-selected">
+            <a href="/launcher.html">Launcher</a>
+        </div>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/service-graph.html">Service Graph</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/workers.html">Workers</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/config.html">Config</a>
+    </li>
+    
+    
+</ul>
+
+<h3>Misc</h3>
+<ul>
+    
+    
+    <li>
+        <a href="/bytebuf.html">ByteBuf</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/codec.html">Codec</a>
+    </li>
+    
+    
+</ul>
+
+</div>
+<div class="pr-3 markdown-content docs-content">
+    <div class="status-wrapper">
+        <h1>Launcher </h1>
+    </div>
+    <h2 id="features">Features</h2>
+
+<ul>
+  <li>Launcher is essentially a highly abstracted and generalized implementation of <em>main()</em> methods, combined with 
+<a href="/service-graph.html">Service Graph</a>, and support of start/stop semantics</li>
+  <li>Takes care of full application lifecycle and logging</li>
+  <li>Perfectly compatible with <a href="https://inject.activej.io">ActiveJ Inject</a></li>
+</ul>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/launcher/src/main/java/io/activej/launcher/Launcher.java">Launcher</a> is a 
+very explicit tool. You can understand how it works by simply looking at the implementation of its main method 
+<em>launch</em> in a nutshell:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">launch</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"=== INJECTING DEPENDENCIES"</span><span class="o">);</span>
+    <span class="nc">Injector</span> <span class="n">injector</span> <span class="o">=</span> <span class="n">createInjector</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+    <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Eager instances: "</span> <span class="o">+</span> <span class="n">injector</span><span class="o">.</span><span class="na">createEagerInstances</span><span class="o">());</span>
+    <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">LauncherService</span><span class="o">&gt;</span> <span class="n">services</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="k">new</span> <span class="nc">Key</span><span class="o">&lt;</span><span class="nc">Set</span><span class="o">&lt;</span><span class="nc">LauncherService</span><span class="o">&gt;&gt;()</span> <span class="o">{});</span>
+    <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">LauncherService</span><span class="o">&gt;</span> <span class="n">startedServices</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+    <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Post-inject instances: "</span> <span class="o">+</span> <span class="n">injector</span><span class="o">.</span><span class="na">postInjectInstances</span><span class="o">());</span>
+  		
+    <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"=== STARTING APPLICATION"</span><span class="o">);</span>
+    <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Starting LauncherServices: "</span> <span class="o">+</span> <span class="n">services</span><span class="o">);</span>
+    <span class="n">startServices</span><span class="o">(</span><span class="n">services</span><span class="o">,</span> <span class="n">startedServices</span><span class="o">);</span>
+    <span class="n">onStart</span><span class="o">();</span>
+    <span class="n">onStartFuture</span><span class="o">.</span><span class="na">complete</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+  
+    <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"=== RUNNING APPLICATION"</span><span class="o">);</span>
+    <span class="n">run</span><span class="o">();</span>
+    <span class="n">onRunFuture</span><span class="o">.</span><span class="na">complete</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+  
+    <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"=== STOPPING APPLICATION"</span><span class="o">);</span>
+    <span class="n">onStop</span><span class="o">();</span>
+    <span class="n">stopServices</span><span class="o">(</span><span class="n">startedServices</span><span class="o">);</span>
+    <span class="n">onCompleteFuture</span><span class="o">.</span><span class="na">complete</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Step-by-step examination:</p>
+<ul>
+  <li>Create the <a href="https://github.com/activej/activej/blob/v4.3/core-inject/src/main/java/io/activej/inject/Injector.java"><strong>Injector</strong></a> with the <a href="https://github.com/activej/activej/blob/v4.3/core-inject/src/main/java/io/activej/inject/module/Module.java"><strong>Modules</strong></a> provided in <strong>Launcher</strong></li>
+  <li>Inject top-level dependencies into the <strong>Launcher</strong> instance itself</li>
+  <li>Instantiate all keys marked as <a href="https://github.com/activej/activej/blob/v4.3/core-inject/src/main/java/io/activej/inject/annotation/Eager.java"><em>@Eager</em></a> multibinder keygroup, exported by <strong>Launcher’s Modules</strong></li>
+  <li>Start all services from <strong>Set&lt;LauncherService&gt;</strong> multibinder set, exported by <strong>Launcher’s Modules</strong>, and execute <em>onStart()</em> method</li>
+  <li>Execute <em>run()</em> method</li>
+  <li>After <em>run()</em> is finished (either due to finishing all app-specific computations or by responding to a shutdown request such as SIGKILL), execute <em>onStop()</em> method and stop all services</li>
+</ul>
+
+<p>Here is an example of <strong>Launcher</strong> lifecycle represented as logs (particularly, 
+<a href="https://github.com/activej/activej/blob/v4.3/launchers/http/src/main/java/io/activej/launchers/http/HttpServerLauncher.java"><strong>HttpServerLauncher</strong></a> 
+subclass that provides an <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/AsyncHttpServer.java"><strong>AsyncHttpServer</strong></a>, an <a href="/eventloop.html"><strong>Eventloop</strong></a> and <a href="/config.html">Config</a>). Launch 
+<a href="/tutorials/getting-started.html">this</a> example:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">HttpHelloWorldExample</span> <span class="kd">extends</span> <span class="nc">HttpServerLauncher</span> <span class="o">{</span>
+	<span class="nd">@Provides</span>
+	<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello World"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Launcher</span> <span class="n">launcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HttpHelloWorldExample</span><span class="o">();</span>
+		<span class="n">launcher</span><span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>to see alike logs:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="o">===</span> INJECTING DEPENDENCIES
+Created eager singletons
+Post-injected instances: <span class="o">[</span>HttpHelloWorldExample]
+
+<span class="o">===</span> STARTING APPLICATION
+Starting LauncherServices: <span class="o">[</span>io.active.net.jmx.JmxModule, io.active.net.service.ServiceGraphModule]
+Starting LauncherService: io.active.net.jmx.JmxModule
+Starting LauncherService: io.active.net.service.ServiceGraphModule
+Creating ServiceGraph...
+Starting services
+Listening on <span class="o">[</span>/0.0.0.0:8080]: AsyncHttpServer<span class="o">{</span><span class="nv">listenAddresses</span><span class="o">=[</span>/0.0.0.0:8080]<span class="o">}</span>
+Started io.active.net.http.AsyncHttpServer
+
+<span class="o">===</span> RUNNING APPLICATION
+HTTP Server is listening on http://localhost:8080/
+ 
+<span class="o">===</span> STOPPING APPLICATION
+Stopping LauncherService: io.active.net.jmx.JmxModule
+Stopping LauncherService: io.active.net.service.ServiceGraphModule
+Stopping ServiceGraph...
+Stopping services</code></pre></figure>
+
+<ul>
+  <li><strong>Launcher</strong> optionally requires the following dependencies from its <strong>Modules</strong>:
+    <ul>
+      <li><em>@Eager</em> multibinder keygroup</li>
+      <li><strong>Set&lt;LauncherService&gt;</strong> multibinder set</li>
+    </ul>
+  </li>
+</ul>
+
+<p><b>Launcher</b> exports the following dependencies to its <b>Modules</b>:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Launcher</span><span class="o">{</span>
+ 	<span class="nd">@NotNull</span>
+	<span class="kd">public</span> <span class="kd">final</span> <span class="nc">Injector</span> <span class="nf">createInjector</span><span class="o">()</span> <span class="o">{</span>
+	   <span class="k">return</span> <span class="nc">Injector</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">getInternalModule</span><span class="o">()</span>
+	                  <span class="o">.</span><span class="na">combineWith</span><span class="o">(</span><span class="n">getModule</span><span class="o">())</span>
+	                  <span class="o">.</span><span class="na">overrideWith</span><span class="o">(</span><span class="n">getOverrideModule</span><span class="o">()));</span>
+	<span class="o">}</span>
+  
+  <span class="kd">private</span> <span class="nc">Module</span> <span class="nf">getInternalModule</span><span class="o">()</span> <span class="o">{</span>
+     <span class="nc">Class</span><span class="o">&lt;</span><span class="nc">Launcher</span><span class="o">&gt;</span> <span class="n">launcherClass</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Class</span><span class="o">&lt;</span><span class="nc">Launcher</span><span class="o">&gt;)</span> <span class="n">getClass</span><span class="o">();</span>
+     <span class="nc">Key</span><span class="o">&lt;</span><span class="nc">CompletionStage</span><span class="o">&lt;</span><span class="nc">Void</span><span class="o">&gt;&gt;</span> <span class="n">completionStageKey</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Key</span><span class="o">&lt;</span><span class="nc">CompletionStage</span><span class="o">&lt;</span><span class="nc">Void</span><span class="o">&gt;&gt;()</span> <span class="o">{};</span>
+
+     <span class="k">return</span> <span class="nc">Module</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+         <span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="nc">String</span><span class="o">[].</span><span class="na">class</span><span class="o">).</span><span class="na">annotatedWith</span><span class="o">(</span><span class="nc">Args</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">toInstance</span><span class="o">(</span><span class="n">args</span><span class="o">)</span>
+         <span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="nc">Launcher</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">to</span><span class="o">(</span><span class="n">launcherClass</span><span class="o">)</span>
+         <span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">launcherClass</span><span class="o">).</span><span class="na">toInstance</span><span class="o">(</span><span class="k">this</span><span class="o">)</span>
+
+         <span class="o">.</span><span class="na">postInjectInto</span><span class="o">(</span><span class="n">launcherClass</span><span class="o">)</span>
+         <span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">completionStageKey</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="nc">OnStart</span><span class="o">.</span><span class="na">class</span><span class="o">)).</span><span class="na">toInstance</span><span class="o">(</span><span class="n">onStartFuture</span><span class="o">)</span>
+         <span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">completionStageKey</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="nc">OnRun</span><span class="o">.</span><span class="na">class</span><span class="o">)).</span><span class="na">toInstance</span><span class="o">(</span><span class="n">onRunFuture</span><span class="o">)</span>
+         <span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="n">completionStageKey</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="nc">OnComplete</span><span class="o">.</span><span class="na">class</span><span class="o">)).</span><span class="na">toInstance</span><span class="o">(</span><span class="n">onCompleteFuture</span><span class="o">)</span>
+
+         <span class="o">.</span><span class="na">scan</span><span class="o">(</span><span class="nc">Launcher</span><span class="o">.</span><span class="na">this</span><span class="o">);</span>
+	<span class="o">}</span>
+  
+  <span class="c1">// this method can be overridden by subclasses which extend Launcher,</span>
+  <span class="c1">// provides business logic modules (for example, ConfigModule)</span>
+  <span class="kd">protected</span> <span class="nc">Module</span> <span class="nf">getModule</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="nc">Module</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+  <span class="o">}</span>
+  
+  <span class="c1">// this method can be overridden by subclasses which extend Launcher,</span>
+  <span class="c1">// overrides definitions in internal module</span>
+  <span class="kd">protected</span> <span class="nc">Module</span> <span class="nf">getOverrideModule</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="nc">Module</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<ul>
+  <li><em>@Args String[]</em> arguments of its <em>Launcher.launch(String[] args)</em> method, corresponding to <em>main(String[] args)</em> method</li>
+  <li>The <strong>Launcher</strong> instance itself</li>
+  <li><em>@OnStart</em> <strong>CompletionStage&lt;Void&gt;</strong> future which is completed when application is wired and started</li>
+  <li><em>@OnRun</em> <strong>CompletionStage&lt;Void&gt;</strong> future which is completed when <em>Launcher.run()</em> is complete.</li>
+  <li><em>@OnComplete</em> <strong>CompletionStage&lt;Void&gt;</strong> future which is completed when application is stopped</li>
+</ul>
+
+<p><strong>Launcher</strong> also has handy diagnostic and JMX properties:</p>
+<ul>
+  <li>Instant of launch, start, run, stop, and complete</li>
+  <li>Duration of start, run, stop, and total duration</li>
+  <li>Throwable <em>applicationError</em> property</li>
+</ul>
+
+<h2 id="more-examples">More examples</h2>
+
+<div class="note-wrapper">
+    <div class="note">
+        <b>Note:</b>
+        To run the examples, you need to clone ActiveJ from GitHub: 
+<br /> <b>$ git clone https://github.com/activej/activej</b> 
+<br /> And import it as a Maven project. Check out tag <b>v4.3</b>. Before running the examples, build the project.
+<br /> The two following examples are located at <b>activej -&gt; examples -&gt; core -&gt; boot</b> 
+and <b>activej -&gt; examples -&gt; core -&gt; http</b> respectively
+    </div>
+</div>
+
+<h3 id="hello-world-example">Hello World Example</h3>
+<p>Here is a simple “Hello World” Launcher application using ActiveJ Inject:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">HelloWorldExample</span> <span class="kd">extends</span> <span class="nc">Launcher</span> <span class="o">{</span>
+	<span class="nd">@Inject</span>
+	<span class="nc">String</span> <span class="n">message</span><span class="o">;</span>
+
+	<span class="nd">@Provides</span>
+	<span class="nc">String</span> <span class="nf">message</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="s">"Hello, world!"</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Launcher</span> <span class="n">launcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HelloWorldExample</span><span class="o">();</span>
+		<span class="n">launcher</span><span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/boot/src/main/java/HelloWorldExample.java">See full example on GitHub</a></p>
+
+<h3 id="http-server-from-scratch-using-launcher">HTTP Server from scratch using Launcher</h3>
+<p>When creating HTTP servers or any other applications, you can either use some predefined solutions 
+(<a href="/http.html#hello-world-server-with-pre-defined-launcher">see examples</a>) or simple Launcher instead. In this 
+case, you’ll need to take care of all of the needed dependencies and override some basic methods:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">CustomHttpServerExample</span> <span class="kd">extends</span> <span class="nc">Launcher</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">PORT</span> <span class="o">=</span> <span class="mi">8080</span><span class="o">;</span>
+
+	<span class="nd">@Provides</span>
+	<span class="nc">Eventloop</span> <span class="nf">eventloop</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">Eventloop</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Provides</span>
+	<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from HTTP server"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Provides</span>
+	<span class="nd">@Eager</span>
+	<span class="nc">AsyncHttpServer</span> <span class="nf">server</span><span class="o">(</span><span class="nc">Eventloop</span> <span class="n">eventloop</span><span class="o">,</span> <span class="nc">AsyncServlet</span> <span class="n">servlet</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">AsyncHttpServer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span class="o">,</span> <span class="n">servlet</span><span class="o">).</span><span class="na">withListenPort</span><span class="o">(</span><span class="no">PORT</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="nc">Module</span> <span class="nf">getModule</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">ServiceGraphModule</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"HTTP Server is now available at http://localhost:"</span> <span class="o">+</span> <span class="no">PORT</span><span class="o">);</span>
+		<span class="n">awaitShutdown</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Launcher</span> <span class="n">launcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CustomHttpServerExample</span><span class="o">();</span>
+		<span class="n">launcher</span><span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/CustomHttpServerExample.java">See full example on GitHub</a></p>
+
+<h3 id="working-with-program-arguments">Working with program arguments</h3>
+<p>To access program arguments from within <code class="language-plaintext highlighter-rouge">Launcher</code> you need to pass those arguments to <code class="language-plaintext highlighter-rouge">Launcher#launch</code> method.
+Then there are two ways for accessing arguments:</p>
+<ul>
+  <li>Using <code class="language-plaintext highlighter-rouge">Launcher</code>’s <code class="language-plaintext highlighter-rouge">String[] args</code> field</li>
+  <li>Requesting arguments using Dependency Injection. A key is <code class="language-plaintext highlighter-rouge">String[].class</code> annotated with <code class="language-plaintext highlighter-rouge">@Args</code> annotation.
+The following example illustrates both cases:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">LauncherArgsExample</span> <span class="kd">extends</span> <span class="nc">Launcher</span> <span class="o">{</span>
+
+	<span class="nd">@Inject</span>
+	<span class="nc">Injector</span> <span class="n">injector</span><span class="o">;</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Received args: "</span> <span class="o">+</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">args</span><span class="o">));</span>
+
+		<span class="nc">String</span><span class="o">[]</span> <span class="n">injectedArgs</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="nc">Key</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="nc">String</span><span class="o">[].</span><span class="na">class</span><span class="o">,</span> <span class="nc">Args</span><span class="o">.</span><span class="na">class</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Args retrieved from DI: "</span> <span class="o">+</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">injectedArgs</span><span class="o">));</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="k">new</span> <span class="nf">LauncherArgsExample</span><span class="o">().</span><span class="na">launch</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/boot/src/main/java/LauncherArgsExample.java">See full example on GitHub</a></p>
+
+    <div class="row docs-prevnext">
+        
+            <div class="col-sm-6"></div>
+        
+        
+            <div class="col-sm-6">
+                <a class="docs-prevnext__button pull-right" href="service-graph.html">Next</a>
+            </div>
+        
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        
+        <div class="container justify-content-between footer">
+            <div class="col-md-4 col-lg-5"> &copy; 2021 ActiveJ LLC. All Rights Reserved</div>
+            <div class="col-md-4 col-lg-3">Contact us: contact@activej.io</div>
+            <div class="col-md-8 col-lg-4 footer__menu">
+                <a href="http://uikernel.io">UIKernel</a>
+                <a href="https://adkernel.com">AdKernel</a>
+                <a href="https://github.com/activej/activej">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="../static/js/leon.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

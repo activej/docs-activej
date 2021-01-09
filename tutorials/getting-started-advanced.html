@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176574648-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176574648-1');
+    </script>
+    
+    <link rel='stylesheet' href='/static/css/pygment_trac.css'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <title>ActiveJ | Deploying ActiveJ Server to AWS Using Docker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Step-by-step guide of deploying an HTTP server written in Java to AWS using Docker. ">
+    <meta name="keywords" content=" java,java for beginners,java framework,guide,tutorial,web application,async,server,spring,spring alternative,netty alternative,jetty alternative,aws,amazon web services,docker,docker image,deploy ">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name="og:description" content="ActiveJ is an alternative Java platform built from the ground up as a replacement of Spring, Spark, Quarkus, Micronauts, and other solutions. It is minimalistic, boilerplate-free, and provides outstanding performance." />
+    <meta name="og:image" content="https://activej.io/static/images/AJ_Card.jpeg" />
+    <meta name="og:title" content="ActiveJ - An Alternative Java platform built for web, high load, and cloud development" />
+</head>
+<body>
+    <div class="navbar-container-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <ul class="navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                <div class="logo-link-title mr-5">
+                    <img src="/favicon.png" style="max-width: 25px">
+                    
+                    
+                    <a class="navbar-nav__link logo-link-title" href="/" style="margin-left: 5px">ActiveJ</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </ul>
+            <button class="navbar-toggler m-1 ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="container">
+                    
+                    
+                    <ul class="navbar-nav navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/tutorials/getting-started.html">
+                                Tutorials
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/http.html">
+                                Docs
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <span>
+              <ul class="navbar-nav expanded-links navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                  <li class="dropdown">
+                    <a class="nav-link nav-expanded">Components</a>
+                    <ul class="dropdown__content">
+                        
+                            <div class="dropdown__content-wrapper">
+                                
+                                    <a href="https://activej.io" class="dropdown__content__item  selected-link ">
+                                        <li>
+                                            <div href="https://activej.io">ActiveJ</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Redefining Java for modern web applications </p>
+                                    </a>
+                                
+                                    <a href="https://inject.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://inject.activej.io">ActiveJ Inject</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast and ultimately powerful DI library </p>
+                                    </a>
+                                
+                                    <a href="https://serializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://serializer.activej.io">ActiveJ Serializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> The fastest JVM serializer in the world </p>
+                                    </a>
+                                
+                                    <a href="https://codegen.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://codegen.activej.io">ActiveJ Codegen</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Dynamic bytecode generation without overhead of reflection </p>
+                                    </a>
+                                
+                                    <a href="https://specializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://specializer.activej.io">ActiveJ Specializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> A little bit of magic to speed up your code </p>
+                                    </a>
+                                
+                                    <a href="https://rpc.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://rpc.activej.io">ActiveJ RPC</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast binary protocol for microservices architecture </p>
+                                    </a>
+                                
+                                    <a href="https://fs.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://fs.activej.io">ActiveJ FS</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Tiny abstraction for managing local, remote, and distributed FS </p>
+                                    </a>
+                                
+                           </div>
+                        
+                    </ul>
+                </li>
+                  <li><a class="navbar-nav__link" href="https://activej.io/blog/release-notes.html">Blog</a> </li>
+                <li><a class="navbar-nav__link" href="http://uikernel.io">UIKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://adkernel.com">AdKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://github.com/activej/activej">GitHub</a></li>
+                <li><a class="navbar-nav__link" href="/about.html">About us</a></li>
+              </ul>
+            </span>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <div class="content">
+        
+            <div class="container">
+                <div class="row">
+                    <div class="px-0 mb-3 sidebar">
+    
+<h3>Tutorials</h3>
+<ul>
+    
+    
+    <li>
+        <a href="/tutorials/getting-started.html">Getting-Started</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/tutorials/template-engine-integration.html">Template Engine Integration</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/tutorials/http-decoder.html">HTTP Decoder</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/tutorials/authorization-tutorial.html">Authorization and Session Management</a>
+    </li>
+    
+    
+    
+    <li class="sidebar-item-selected-wrapper">
+        <div class="sidebar-item-selected">
+            <a href="/tutorials/getting-started-advanced.html">ActiveJ + Docker + AWS</a>
+        </div>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/tutorials/using-react.html">ActiveJ + React (getting started)</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/tutorials/todo-list-tutorial.html">ActiveJ + React (advanced)</a>
+    </li>
+    
+    
+</ul>
+
+
+</div>
+<div class="pr-3 markdown-content docs-content">
+    <div class="status-wrapper">
+        <h1>ActiveJ | Deploying ActiveJ Server to AWS Using Docker </h1>
+    </div>
+    <h2 id="purpose">Purpose</h2>
+<p>In this tutorial we will deploy the HTTP Server created in the 
+<a href="/tutorials/getting-started.html">getting started tutorial</a> to AWS. We will use Docker for this purpose.</p>
+
+<h2 id="1-assemble-jar-file">1. Assemble JAR-file.</h2>
+<p>Open your <a href="/tutorials/getting-started.html">server’s</a> <code class="language-plaintext highlighter-rouge">pom.xml</code> file and insert this config:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;plugins&gt;</span>
+        <span class="c">&lt;!-- Make this jar executable --&gt;</span>
+        <span class="nt">&lt;plugin&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>maven-shade-plugin<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;executions&gt;</span>
+                <span class="nt">&lt;execution&gt;</span>
+                    <span class="nt">&lt;phase&gt;</span>package<span class="nt">&lt;/phase&gt;</span>
+                    <span class="nt">&lt;goals&gt;</span>
+                        <span class="nt">&lt;goal&gt;</span>shade<span class="nt">&lt;/goal&gt;</span>
+                    <span class="nt">&lt;/goals&gt;</span>
+                    <span class="nt">&lt;configuration&gt;</span>
+                        <span class="nt">&lt;transformers&gt;</span>
+                            <span class="nt">&lt;transformer</span>
+                                    <span class="na">implementation=</span><span class="s">"org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;mainClass&gt;</span>HttpHelloWorldExample<span class="nt">&lt;/mainClass&gt;</span>
+                            <span class="nt">&lt;/transformer&gt;</span>
+                        <span class="nt">&lt;/transformers&gt;</span>
+                        <span class="nt">&lt;finalName&gt;</span>HelloWorldExample<span class="nt">&lt;/finalName&gt;</span>
+                    <span class="nt">&lt;/configuration&gt;</span>
+                <span class="nt">&lt;/execution&gt;</span>
+            <span class="nt">&lt;/executions&gt;</span>
+        <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+<span class="nt">&lt;/build&gt;</span></code></pre></figure>
+
+<p>Next, type the following commands:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mvn clean</code></li>
+  <li><code class="language-plaintext highlighter-rouge">mvn package -DskipTests=true</code></li>
+</ul>
+
+<p>These actions will produce a <strong>HelloWorldExample.jar</strong> archive.
+You can find it in the <code class="language-plaintext highlighter-rouge">target</code> folder of your project.
+It is a typical way to distribute and run Java applications.</p>
+
+<h2 id="2-wrap-it-to-docker-image">2. Wrap it to Docker image.</h2>
+
+<p>If you don’t have Docker installed on your machine, you can follow <a href="https://www.docker.com/get-started">this guide</a>.</p>
+
+<p>Docker is a de-facto standard for deploying any cloud-based application.
+We are following this standard and propose you to wrap your ActiveJ application in Docker image.</p>
+
+<p>Here is a minimal <strong>Dockerfile</strong> example:</p>
+
+<figure class="highlight"><pre><code class="language-docker" data-lang="docker"><span class="k">FROM</span><span class="s"> openjdk:8-jre-alpine</span>
+
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span><span class="s"> target/HelloWorldExample.jar ./</span>
+<span class="k">EXPOSE</span><span class="s"> 8080</span>
+
+<span class="k">ENTRYPOINT</span><span class="s"> java $SYS_PROPS -jar HelloWorldExample.jar</span></code></pre></figure>
+
+<div class="note-wrapper">
+    <div class="note">
+        <b>Note:</b>
+        This application uses JDK/JRE 8 with Linux Alpine inside.
+    </div>
+</div>
+
+<p>Short logic description:</p>
+<ul>
+  <li>First of all, we should build our application. It copies all necessary data for JAR file creation and builds it.</li>
+  <li>Later, it moves JAR file to the application root and launches it on port <code class="language-plaintext highlighter-rouge">8080</code>.</li>
+</ul>
+
+<p>You can build it using the following command: <code class="language-plaintext highlighter-rouge">docker build -t dkapp .</code>,</p>
+
+<p>and run this image on docker daemon: <code class="language-plaintext highlighter-rouge">docker run --rm -p8080:8080 dkapp</code>.</p>
+
+<p>All actions will be the same if you are using <strong>docker-machine</strong>.</p>
+
+<h2 id="3-deploying-your-application-to-the-cloud-aws-as-an-example">3. Deploying your application to the cloud (AWS, as an example).</h2>
+
+<p>First of all, you should own an Amazon AWS EC2 account and have a running EC2 instance.</p>
+
+<p>Here is a guide on how to deploy your application (not Docker image):</p>
+<ul>
+  <li>Download your Amazon key (<em>key_name.pem</em>).</li>
+  <li>Execute <code class="language-plaintext highlighter-rouge">chmod 400 key_name.pem</code> for granting read-only property to this file.</li>
+  <li>Connect to your EC2 instance via <code class="language-plaintext highlighter-rouge">ssh</code>:
+  <code class="language-plaintext highlighter-rouge">ssh -i key_name.pem user@instance-id</code></li>
+  <li>Open new Terminal/iTerm tab and try to send your JAR file via FTP protocol:
+  <code class="language-plaintext highlighter-rouge">scp -i key_name.pem your/app/path/HelloWorldServer.jar ubuntu@instance-id:</code></li>
+  <li>Wait until your file uploads.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">java -jar HelloWorld.jar</code> in your ssh tab.</li>
+</ul>
+
+<p>Voila! You are running your application on AWS instance. Check it out on your IP address.</p>
+
+<h2 id="4-deploying-docker-container">4. Deploying Docker container</h2>
+
+<p>Here is a guide on how to deploy your Docker image:</p>
+<ul>
+  <li>Download your Amazon key (<em>key_name.pem</em>).</li>
+  <li>Execute <code class="language-plaintext highlighter-rouge">chmod 400 key_name.pem</code> for granting read-only property to this file.</li>
+  <li>Transform Docker image to <code class="language-plaintext highlighter-rouge">tar</code> archive : <code class="language-plaintext highlighter-rouge">sudo docker save dkapp &gt;&gt; dkapp.tar</code></li>
+  <li>Connect to your EC2 instance via <code class="language-plaintext highlighter-rouge">ssh</code> :
+  <code class="language-plaintext highlighter-rouge">ssh -i key_name.pem user@instance-id</code></li>
+  <li>
+    <p>Open new Terminal/iTerm tab and try to send your JAR file via FTP protocol:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">scp -i key_name.pem your/image/path/dkapp.tar ubuntu@instance-id:</code></p>
+  </li>
+  <li>Wait until your file uploads.</li>
+  <li>Run such commands in your ssh tab:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt-get update -y</code> to update cloud repository of Linux system.</li>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt-get install -y docker.io</code> to install Docker.</li>
+      <li><code class="language-plaintext highlighter-rouge">dockerd</code> to launch Docker daemon.</li>
+      <li><code class="language-plaintext highlighter-rouge">docker load -i dkapp.tar</code> to unzip archived image.</li>
+      <li><code class="language-plaintext highlighter-rouge">docker run -p 8080:8080 dkapp</code> to launch your application in Docker container.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Hurray! You are running your Docker image with the ActiveJ app on AWS instance.
+Check it out on your IP address.</p>
+
+
+    <div class="row docs-prevnext">
+        
+            <div class="col-sm-6">
+                <a class="docs-prevnext__button pull-left" href="authorization-tutorial">Prev</a>
+            </div>
+        
+        
+            <div class="col-sm-6">
+                <a class="docs-prevnext__button pull-right" href="using-react">Next</a>
+            </div>
+        
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        
+        <div class="container justify-content-between footer">
+            <div class="col-md-4 col-lg-5"> &copy; 2021 ActiveJ LLC. All Rights Reserved</div>
+            <div class="col-md-4 col-lg-3">Contact us: contact@activej.io</div>
+            <div class="col-md-8 col-lg-4 footer__menu">
+                <a href="http://uikernel.io">UIKernel</a>
+                <a href="https://adkernel.com">AdKernel</a>
+                <a href="https://github.com/activej/activej">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="../static/js/leon.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

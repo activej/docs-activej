@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176574648-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176574648-1');
+    </script>
+    
+    <link rel='stylesheet' href='/static/css/pygment_trac.css'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <title>ActiveJ | HTTP, lightweight and high-performance alternative to Jetty and Vet.x</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" Create legacy-free asynchronous HTTP server and client applications with ActiveJ ">
+    <meta name="keywords" content=" java http,java,http server,http client,java http server,java http client,java framework,spring alternative,netty alternative,jetty alternative ">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name="og:description" content="ActiveJ is an alternative Java platform built from the ground up as a replacement of Spring, Spark, Quarkus, Micronauts, and other solutions. It is minimalistic, boilerplate-free, and provides outstanding performance." />
+    <meta name="og:image" content="https://activej.io/static/images/AJ_Card.jpeg" />
+    <meta name="og:title" content="ActiveJ - An Alternative Java platform built for web, high load, and cloud development" />
+</head>
+<body>
+    <div class="navbar-container-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <ul class="navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                <div class="logo-link-title mr-5">
+                    <img src="/favicon.png" style="max-width: 25px">
+                    
+                    
+                    <a class="navbar-nav__link logo-link-title" href="/" style="margin-left: 5px">ActiveJ</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </ul>
+            <button class="navbar-toggler m-1 ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="container">
+                    
+                    
+                    <ul class="navbar-nav navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/tutorials/getting-started.html">
+                                Tutorials
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/http.html">
+                                Docs
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <span>
+              <ul class="navbar-nav expanded-links navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                  <li class="dropdown">
+                    <a class="nav-link nav-expanded">Components</a>
+                    <ul class="dropdown__content">
+                        
+                            <div class="dropdown__content-wrapper">
+                                
+                                    <a href="https://activej.io" class="dropdown__content__item  selected-link ">
+                                        <li>
+                                            <div href="https://activej.io">ActiveJ</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Redefining Java for modern web applications </p>
+                                    </a>
+                                
+                                    <a href="https://inject.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://inject.activej.io">ActiveJ Inject</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast and ultimately powerful DI library </p>
+                                    </a>
+                                
+                                    <a href="https://serializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://serializer.activej.io">ActiveJ Serializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> The fastest JVM serializer in the world </p>
+                                    </a>
+                                
+                                    <a href="https://codegen.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://codegen.activej.io">ActiveJ Codegen</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Dynamic bytecode generation without overhead of reflection </p>
+                                    </a>
+                                
+                                    <a href="https://specializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://specializer.activej.io">ActiveJ Specializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> A little bit of magic to speed up your code </p>
+                                    </a>
+                                
+                                    <a href="https://rpc.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://rpc.activej.io">ActiveJ RPC</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast binary protocol for microservices architecture </p>
+                                    </a>
+                                
+                                    <a href="https://fs.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://fs.activej.io">ActiveJ FS</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Tiny abstraction for managing local, remote, and distributed FS </p>
+                                    </a>
+                                
+                           </div>
+                        
+                    </ul>
+                </li>
+                  <li><a class="navbar-nav__link" href="https://activej.io/blog/release-notes.html">Blog</a> </li>
+                <li><a class="navbar-nav__link" href="http://uikernel.io">UIKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://adkernel.com">AdKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://github.com/activej/activej">GitHub</a></li>
+                <li><a class="navbar-nav__link" href="/about.html">About us</a></li>
+              </ul>
+            </span>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <div class="content">
+        
+            <div class="container">
+                <div class="row">
+                    <div class="px-0 mb-3 sidebar">
+    
+<h3>Async I/O</h3>
+<ul>
+    
+    
+    <li class="sidebar-item-selected-wrapper">
+        <div class="sidebar-item-selected">
+            <a href="/http.html">HTTP</a>
+        </div>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/eventloop.html">Eventloop</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/promise.html">Promise</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/csp.html">CSP</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/datastream.html">Datastream</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/net.html">Net</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/dataflow.html">Dataflow</a>
+    </li>
+    
+    
+</ul>
+
+<h3>Boot</h3>
+<ul>
+    
+    
+    <li>
+        <a href="/launcher.html">Launcher</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/service-graph.html">Service Graph</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/workers.html">Workers</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/config.html">Config</a>
+    </li>
+    
+    
+</ul>
+
+<h3>Misc</h3>
+<ul>
+    
+    
+    <li>
+        <a href="/bytebuf.html">ByteBuf</a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/codec.html">Codec</a>
+    </li>
+    
+    
+</ul>
+
+</div>
+<div class="pr-3 markdown-content docs-content">
+    <div class="status-wrapper">
+        <h1>HTTP </h1>
+    </div>
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#features">Features</a></li>
+<li class="toc-entry toc-h2"><a href="#benchmarks">Benchmarks</a></li>
+<li class="toc-entry toc-h2"><a href="#examples">Examples</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#simple-hello-world-server">Simple “Hello World” Server</a></li>
+<li class="toc-entry toc-h3"><a href="#hello-world-server-with-pre-defined-launcher">“Hello World” Server with pre-defined Launcher</a></li>
+<li class="toc-entry toc-h3"><a href="#custom-server">Custom Server</a></li>
+<li class="toc-entry toc-h3"><a href="#multithreaded-server-example">Multithreaded Server Example</a></li>
+<li class="toc-entry toc-h3"><a href="#request-parameters-example">Request Parameters Example</a></li>
+<li class="toc-entry toc-h3"><a href="#static-servlet-example">Static Servlet Example</a></li>
+<li class="toc-entry toc-h3"><a href="#servlet-decorator-example">Servlet Decorator Example</a></li>
+<li class="toc-entry toc-h3"><a href="#routing-servlet-example">Routing Servlet Example</a></li>
+<li class="toc-entry toc-h3"><a href="#dynamic-routing-examples">Dynamic Routing Examples</a></li>
+<li class="toc-entry toc-h3"><a href="#routing-servlet-multibinder">Routing Servlet Multibinder</a></li>
+<li class="toc-entry toc-h3"><a href="#blocking-servlet-example">Blocking Servlet Example</a></li>
+<li class="toc-entry toc-h3"><a href="#file-upload-example">File Upload Example</a></li>
+<li class="toc-entry toc-h3"><a href="#client-example">Client Example</a></li>
+<li class="toc-entry toc-h3"><a href="#multipart-data-handling-example">Multipart Data Handling Example</a></li>
+<li class="toc-entry toc-h3"><a href="#websocket-pong-server">WebSocket Pong Server</a></li>
+<li class="toc-entry toc-h3"><a href="#websocket-ping-client">WebSocket Ping Client</a></li>
+</ul>
+</li>
+</ul><p>Concise and more efficient alternative to Spring, Jetty, Vert.x, and other similar solutions built on their top. 
+ActiveJ HTTP significantly outperforms them, which is proven by <a href="#benchmarks">benchmarks</a>. This component can be used 
+separately from ActiveJ platform.</p>
+
+<h2 id="features">
+<a class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<p>Provides tools for building HTTP servers and clients with asynchronous I/O in a simple and convenient way:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">HttpHelloWorldExample</span> <span class="kd">extends</span> <span class="nc">HttpServerLauncher</span> <span class="o">{</span>
+	<span class="nd">@Provides</span>
+	<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello World"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Launcher</span> <span class="n">launcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HttpHelloWorldExample</span><span class="o">();</span>
+		<span class="n">launcher</span><span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Legacy-free approach, designed to be asynchronous</p>
+<ul>
+  <li>no legacy layers of adapters</li>
+  <li>uses low-overhead, but high-level abstractions: <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/AsyncServlet.java"><strong>AsyncServlet</strong></a>, <a href="/promise.html"><strong>Promises</strong></a> and <a href="/csp.html">CSP channels</a>
+</li>
+  <li>can be used as an application web server: supports externally provided <a href="https://inject.activej.io">ActiveJ Inject (DI)</a> Modules with business logic and <strong>AsyncServlets</strong>
+</li>
+</ul>
+
+<p>Simple <strong>AsyncServlet</strong> interface</p>
+<ul>
+  <li>basically, it’s just an async function, mapping <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/HttpRequest.java"><strong>HttpRequest</strong></a> to <strong>Promise&lt;<a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/HttpResponse.java">HttpResponse</a>&gt;</strong>
+</li>
+  <li>collection of pre-defined <strong>AsyncServlets</strong> out of the box (<a href="#static-servlet-example"><strong>StaticServlet</strong></a>, 
+ <a href="#blocking-servlet-example"><strong>BlockingServlet</strong></a>, <a href="#routing-servlet-example"><strong>RoutingServlet</strong></a>, etc.)</li>
+  <li>extensive support of functional composition of <strong>AsyncServlets</strong>
+</li>
+</ul>
+
+<p><a href="#routing-servlet-example"><strong>RoutingServlet</strong></a> for building servlet routing</p>
+<ul>
+  <li>flexible mapping of HTTP paths and methods to <strong>AsyncServlets</strong> (including other RoutingServlets)</li>
+  <li>support of path parameters (like <em>/users/:id</em>) and relative paths</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+			<span class="c1">//[START REGION_2]</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+					<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+							<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;Go to some pages&lt;/h1&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/path1\"&gt; Path 1 &lt;/a&gt;&lt;br&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/path2\"&gt; Path 2 &lt;/a&gt;&lt;br&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/user/0\"&gt; Data for user with ID 0 &lt;/a&gt;&lt;br&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;br&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/path3\"&gt; Non existent &lt;/a&gt;"</span><span class="o">))</span>
+			<span class="c1">//[END REGION_2]</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/path1"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+					<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+							<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;Hello from the first path!&lt;/h1&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/\"&gt;Go home&lt;/a&gt;"</span><span class="o">))</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/path2"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+					<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+							<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;Hello from the second path!&lt;/h1&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/\"&gt;Go home&lt;/a&gt;"</span><span class="o">))</span>
+
+			<span class="c1">//[START REGION_3]</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/user/:user_id"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="o">{</span>
+				<span class="nc">String</span> <span class="n">userId</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getPathParameter</span><span class="o">(</span><span class="s">"user_id"</span><span class="o">);</span>
+				<span class="k">return</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+						<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;You have requested data for user with ID: "</span> <span class="o">+</span> <span class="n">userId</span> <span class="o">+</span> <span class="s">"&lt;/h1&gt;"</span> <span class="o">+</span>
+								<span class="s">"&lt;h3&gt;Try changing URL after &lt;i&gt;'.../user/'&lt;/i&gt; to get data for users with different IDs&lt;/h3&gt;"</span><span class="o">);</span>
+			<span class="o">})</span>
+			<span class="c1">//[END REGION_3]</span>
+
+			<span class="c1">//[START REGION_4]</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="s">"/*"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+					<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ofCode</span><span class="o">(</span><span class="mi">404</span><span class="o">)</span>
+							<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;404&lt;/h1&gt;&lt;p&gt;Path '"</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="na">getRelativePath</span><span class="o">()</span> <span class="o">+</span> <span class="s">"' not found&lt;/p&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/\"&gt;Go home&lt;/a&gt;"</span><span class="o">));</span>
+			<span class="c1">//[END REGION_4]</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><a href="#servlet-decorator-example"><strong>AsyncServletDecorators</strong></a> for pre- and post- processing of <strong>HttpRequest</strong> and <strong>HttpResponse</strong>:</p>
+<ul>
+  <li>
+<strong>HttpRequest</strong> and <strong>HttpResponse</strong> listeners</li>
+  <li>mappers of <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/HttpException.java"><strong>HttpExceptions</strong></a> to <strong>HttpResponse</strong> (to render application errors across entire servlet tree in a consistent manner)</li>
+  <li>
+<strong>HttpRequest</strong> body preload</li>
+  <li>functional composition of <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/AsyncServletDecorator.java"><strong>AsyncServletDecorators</strong></a>
+</li>
+  <li>can be compared to Node.js ‘middleware’ pre- and post- filters, but with heavy emphasis on functional Java 8+ programming style</li>
+</ul>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/decoder"><strong>HttpDecoder</strong></a> mini-framework:</p>
+<ul>
+  <li>brief DSL for building user-defined reusable decoders of <strong>HttpRequests</strong> into structured app-specific POJO classes</li>
+  <li>built-in support of user-provided validators and error messages</li>
+  <li>error messages can be fully localized, while being template engines-friendly</li>
+</ul>
+
+<p>Highly optimized and GC-friendly:</p>
+<ul>
+  <li>automatic recycling of <a href="/bytebuf.html"><strong>ByteBufs</strong></a> associated with <strong>HttpRequest</strong>/<strong>HttpResponse</strong> 
+ and also <strong>ByteBufs</strong> received from <a href="/net.html">Net async sockets</a>
+</li>
+  <li>optimized headers multimap and internal URL representation with low yield of garbage objects</li>
+  <li>specialized headers subclasses render their content directly into <strong>ByteBuf</strong>, without intermediate garbage objects</li>
+</ul>
+
+<h2 id="benchmarks">
+<a class="anchor" href="#benchmarks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Benchmarks</h2>
+<p>We’ve measured <strong>HTTP</strong> <em>GET</em> request performance using JMH as the benchmark tool:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">Time: 29112ms; Average time: 5822.4ms; Best time: 5757ms; Worst time: 5892ms; Requests per second: 171750</code></pre></figure>
+
+<p><strong>ActiveJ</strong> result is <strong>171.8K RPS</strong> on a single CPU. Not only is it faster than highly-specialized <strong>Vert.x 
+(162.9K RPS)</strong>, but also with 50% less CPU load.</p>
+
+<p>When using HTTP pipelining, performance reaches <strong>1.5M RPS</strong>.</p>
+
+<p>ActiveJ has also placed <strong>first</strong> in <a href="https://github.com/the-benchmarker/web-frameworks">the-benchmarker’s web frameworks benchmark</a> as per <strong>2021-01-08</strong>.</p>
+
+<p><strong>You can find HTTP benchmark sources on <a href="https://github.com/activej/activej/blob/v4.3/benchmarks/http/src/main/java/io/activej/http/HttpServerWorkloadBenchmark.java">GitHub</a></strong></p>
+
+<h2 id="examples">
+<a class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+<ul>
+  <li>
+<a href="#simple-hello-world-server">Simple “Hello World” Server</a> - simple async server created using <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/AsyncHttpServer.java"><strong>AsyncHttpServer</strong></a>.</li>
+  <li>
+<a href="#hello-world-server-with-pre-defined-launcher">“Hello World” Server with Pre-defined Launcher</a> - HTTP module 
+ provides you with some pre-defined launchers, which are extremely simple to use to create servers.</li>
+  <li>
+<a href="#custom-server">Custom Server</a> - example of creating a server from scratch using <a href="/launcher.html"><strong>Launcher</strong></a>.</li>
+  <li>
+<a href="#multithreaded-server-example">Multithreaded Server Example</a> - HTTP multithreaded server example.</li>
+  <li>
+<a href="#request-parameters-example">Request Parameters Example</a> - example of processing requests with parameter.</li>
+  <li>
+<a href="#static-servlet-example">Static Servlet Example</a> - example of <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/StaticServlet.java"><strong>StaticServlet</strong></a> utilizing.</li>
+  <li>
+<a href="#servlet-decorator-example">Servlet Decorator Example</a> - example of using <strong>AsyncServletDecorator</strong>, a wrapper over <strong>AsyncServlet</strong>.</li>
+  <li>
+<a href="#routing-servlet-example">Routing Servlet Example</a> - example of <strong>RoutingServlet</strong> usage for creating servlet tree.</li>
+  <li>
+<a href="#dynamic-routing-examples">Dynamic Routing Examples</a> - various examples of routing based on host, cookie, mime-type, etc.</li>
+  <li>
+<a href="#routing-servlet-multibinder">Routing Servlet Multibinder</a> - example of using <strong>Multibinder</strong> to merge conflicting <strong>RoutingServlet</strong>s</li>
+  <li>
+<a href="#blocking-servlet-example">Blocking Servlet Example</a> - example of handling complex operations on server in a new thread.</li>
+  <li>
+<a href="#file-upload-example">File Upload Example</a> - example of uploading a file from client local storage to server.</li>
+  <li>
+<a href="#client-example">Client Example</a> - creating an HTTP client utilizing <strong>Launcher</strong>.</li>
+  <li>
+<a href="#multipart-data-handling-example">Multipart Data Handling Example</a> - simple server that handles <strong>Multipart/form-data</strong>
+</li>
+  <li>
+<a href="#websocket-pong-server">WebSocket Echo Server Example</a> - creating a basic server with WebSocket communication protocol.</li>
+  <li>
+<a href="#websocket-ping-client">WebSocket Client Example</a> - setting up a client with WebSocket communication protocol.</li>
+</ul>
+
+<div class="note-wrapper">
+    <div class="note">
+        <b>Note:</b>
+        To run the examples, you need to clone ActiveJ from GitHub: 
+<br> <b>$ git clone https://github.com/activej/activej</b> 
+<br> And import it as a Maven project. Check out tag <b>v4.3</b>. Before running the examples, build the project.
+<br> These examples are located at <b>activej -&gt; examples -&gt; core -&gt; http</b>
+    </div>
+</div>
+
+<h3 id="simple-hello-world-server">
+<a class="anchor" href="#simple-hello-world-server" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple “Hello World” Server</h3>
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/HelloWorldExample.java"><strong>HelloWorldExample</strong></a> uses <strong>AsyncHttpServer</strong> class of HTTP module. It is a non-blocking server, which works in an eventloop:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+	<span class="nc">Eventloop</span> <span class="n">eventloop</span> <span class="o">=</span> <span class="nc">Eventloop</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+	<span class="nc">AsyncHttpServer</span> <span class="n">server</span> <span class="o">=</span> <span class="nc">AsyncHttpServer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span class="o">,</span>
+			<span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+					<span class="o">.</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello world!"</span><span class="o">))</span>
+			<span class="o">.</span><span class="na">withListenPort</span><span class="o">(</span><span class="mi">8080</span><span class="o">);</span>
+
+	<span class="n">server</span><span class="o">.</span><span class="na">listen</span><span class="o">();</span>
+
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Server is running"</span><span class="o">);</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You can connect from browser by visiting 'http://localhost:8080/'"</span><span class="o">);</span>
+
+	<span class="n">eventloop</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>This server runs in the provided eventloop and waits for connections on port <code class="language-plaintext highlighter-rouge">8080</code>. When server receives a request, 
+it sends back a <strong>Promise</strong> of greeting response.</p>
+
+<div class="note-wrapper">
+    <div class="note">
+        <b>Note:</b>
+         To add support for HTTPS to <code>AsyncHttpServer</code> you need to call <code>withSslListenAddress</code> or <code>withSslListenAddresses</code> method and pass <code>SSLContext</code>, <code>Executor</code>, and a port or address for the server to be listening on.
+    </div>
+</div>
+
+<p>To check how the example works, open your favorite browser and go to <a href="http://localhost:8080" data-proofer-ignore="true">localhost:8080</a>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/HelloWorldExample.java">See full example on GitHub</a></p>
+
+<h3 id="hello-world-server-with-pre-defined-launcher">
+<a class="anchor" href="#hello-world-server-with-pre-defined-launcher" aria-hidden="true"><span class="octicon octicon-link"></span></a>“Hello World” Server with pre-defined Launcher</h3>
+<p><strong>Launcher</strong>s manage application lifecycle and allow to create applications in a simple manner:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">HttpHelloWorldExample</span> <span class="kd">extends</span> <span class="nc">HttpServerLauncher</span> <span class="o">{</span>
+	<span class="nd">@Provides</span>
+	<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello World"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Launcher</span> <span class="n">launcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HttpHelloWorldExample</span><span class="o">();</span>
+		<span class="n">launcher</span><span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>All you need to do is provide a servlet which processes the requests and launch the application. 
+<a href="https://github.com/activej/activej/blob/v4.3/launchers/http/src/main/java/io/activej/launchers/http/HttpServerLauncher.java"><strong>HttpServerLauncher</strong></a> will take care of everything else.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/tutorials/getting-started/src/main/java/HttpHelloWorldExample.java">See full example on GitHub</a></p>
+
+<h3 id="custom-server">
+<a class="anchor" href="#custom-server" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Server</h3>
+<p>With <strong>Launcher</strong> you can easily create HTTP servers from scratch. In this example we’re creating a simple server which 
+sends a greeting:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">CustomHttpServerExample</span> <span class="kd">extends</span> <span class="nc">Launcher</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">PORT</span> <span class="o">=</span> <span class="mi">8080</span><span class="o">;</span>
+
+	<span class="nd">@Provides</span>
+	<span class="nc">Eventloop</span> <span class="nf">eventloop</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">Eventloop</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Provides</span>
+	<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from HTTP server"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Provides</span>
+	<span class="nd">@Eager</span>
+	<span class="nc">AsyncHttpServer</span> <span class="nf">server</span><span class="o">(</span><span class="nc">Eventloop</span> <span class="n">eventloop</span><span class="o">,</span> <span class="nc">AsyncServlet</span> <span class="n">servlet</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">AsyncHttpServer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span class="o">,</span> <span class="n">servlet</span><span class="o">).</span><span class="na">withListenPort</span><span class="o">(</span><span class="no">PORT</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="nc">Module</span> <span class="nf">getModule</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">ServiceGraphModule</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"HTTP Server is now available at http://localhost:"</span> <span class="o">+</span> <span class="no">PORT</span><span class="o">);</span>
+		<span class="n">awaitShutdown</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Launcher</span> <span class="n">launcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CustomHttpServerExample</span><span class="o">();</span>
+		<span class="n">launcher</span><span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>First, we provide an eventloop, a servlet, and an async server itself. Then, we override <em>getModule</em> method to provide 
+our server with configs and <a href="https://github.com/activej/activej/blob/v4.3/boot-servicegraph/src/main/java/io/activej/service/ServiceGraphModule.java"><strong>ServiceGraphModule</strong></a> 
+for building dependency graph of services.</p>
+
+<p>Finally, we override <strong>Launcher</strong> main method <em>run()</em> and then define <em>main</em> method of the example.</p>
+
+<p>To check how the example works, open your favorite browser and go to <a href="http://localhost:8080" data-proofer-ignore="true">localhost:8080</a>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/CustomHttpServerExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="multithreaded-server-example">
+<a class="anchor" href="#multithreaded-server-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multithreaded Server Example</h3>
+<p>In this example we are using pre-defined <a href="https://github.com/activej/activej/blob/v4.3/launchers/http/src/main/java/io/activej/launchers/http/MultithreadedHttpServerLauncher.java"><strong>MultithreadedHttpServerLauncher</strong></a> to create a multithreaded HTTP server. By 
+default, there will be 4 worker servlets with <em>workerId</em>s. Each of them sends back a greeting and number of the worker 
+that served the connection:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MultithreadedHttpServerExample</span> <span class="kd">extends</span> <span class="nc">MultithreadedHttpServerLauncher</span> <span class="o">{</span>
+	<span class="nd">@Provides</span>
+	<span class="nd">@Worker</span>
+	<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">(</span><span class="nd">@WorkerId</span> <span class="kt">int</span> <span class="n">workerId</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from worker server #"</span> <span class="o">+</span> <span class="n">workerId</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">MultithreadedHttpServerExample</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MultithreadedHttpServerExample</span><span class="o">();</span>
+		<span class="n">example</span><span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>To check how the example works, open your favorite browser and go to <a href="http://localhost:8080" data-proofer-ignore="true">localhost:8080</a>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/MultithreadedHttpServerExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="request-parameters-example">
+<a class="anchor" href="#request-parameters-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Request Parameters Example</h3>
+<p>This example represents requests with parameters which are received with methods <em>getPostParameters</em> and <em>getQueryParameter</em></p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">(</span><span class="nc">Executor</span> <span class="n">executor</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">POST</span><span class="o">,</span> <span class="s">"/hello"</span><span class="o">,</span> <span class="n">loadBody</span><span class="o">()</span>
+					<span class="o">.</span><span class="na">serve</span><span class="o">(</span><span class="n">request</span> <span class="o">-&gt;</span> <span class="o">{</span>
+						<span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getPostParameters</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span>
+						<span class="k">return</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+								<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;&lt;center&gt;Hello from POST, "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"!&lt;/center&gt;&lt;/h1&gt;"</span><span class="o">);</span>
+					<span class="o">}))</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/hello"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="o">{</span>
+				<span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getQueryParameter</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span>
+				<span class="k">return</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+						<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;&lt;center&gt;Hello from GET, "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"!&lt;/center&gt;&lt;/h1&gt;"</span><span class="o">);</span>
+			<span class="o">})</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="s">"/*"</span><span class="o">,</span> <span class="nc">StaticServlet</span><span class="o">.</span><span class="na">ofClassPath</span><span class="o">(</span><span class="n">executor</span><span class="o">,</span> <span class="no">RESOURCE_DIR</span><span class="o">)</span>
+					<span class="o">.</span><span class="na">withIndexHtml</span><span class="o">());</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>To check how the example works, open your favorite browser and go to <a href="http://localhost:8080" data-proofer-ignore="true">localhost:8080</a>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/HttpRequestParametersExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="static-servlet-example">
+<a class="anchor" href="#static-servlet-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static Servlet Example</h3>
+<p>Shows how to set up and utilize <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/StaticServlet.java"><strong>StaticServlet</strong></a> to create servlets with some static content, in our case it will get 
+content from <code class="language-plaintext highlighter-rouge">static/site</code> directory.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">(</span><span class="nc">Executor</span> <span class="n">executor</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">StaticServlet</span><span class="o">.</span><span class="na">ofClassPath</span><span class="o">(</span><span class="n">executor</span><span class="o">,</span> <span class="s">"static/site"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withIndexHtml</span><span class="o">();</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>To check how the example works, open your favorite browser and go to <a href="http://localhost:8080" data-proofer-ignore="true">localhost:8080</a>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/StaticServletExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="servlet-decorator-example">
+<a class="anchor" href="#servlet-decorator-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Servlet Decorator Example</h3>
+<p>Shows basic functionality of 
+<strong><a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/AsyncServletDecorator.java">AsyncServletDecorator</a></strong> 
+class. It creates a wrap over <strong>AsyncServlet</strong>s and adds behaviour for particular events, for example, exception handling or 
+processing received responses. 
+In the example, we made loading of request body default on the servlet using <em>loadBody()</em>:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">(</span><span class="nc">Executor</span> <span class="n">executor</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nf">loadBody</span><span class="o">().</span><span class="na">serve</span><span class="o">(</span>
+			<span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+					<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/"</span><span class="o">,</span> <span class="nc">StaticServlet</span><span class="o">.</span><span class="na">ofClassPath</span><span class="o">(</span><span class="n">executor</span><span class="o">,</span> <span class="s">"static/wrapper"</span><span class="o">)</span>
+							<span class="o">.</span><span class="na">withMappingTo</span><span class="o">(</span><span class="s">"page.html"</span><span class="o">))</span>
+					<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">POST</span><span class="o">,</span> <span class="s">"/"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="o">{</span>
+						<span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getPostParameter</span><span class="o">(</span><span class="s">"text"</span><span class="o">);</span>
+						<span class="k">if</span> <span class="o">(</span><span class="n">text</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+							<span class="k">return</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">redirect302</span><span class="o">(</span><span class="s">"/"</span><span class="o">);</span>
+						<span class="o">}</span>
+						<span class="k">return</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Message: "</span> <span class="o">+</span> <span class="n">text</span><span class="o">);</span>
+					<span class="o">})</span>
+					<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/failPage"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="o">{</span>
+						<span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"fail"</span><span class="o">);</span>
+					<span class="o">})</span>
+					<span class="o">.</span><span class="na">then</span><span class="o">(</span><span class="n">catchRuntimeExceptions</span><span class="o">())</span>
+					<span class="o">.</span><span class="na">then</span><span class="o">(</span><span class="n">mapException</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ofCode</span><span class="o">(</span><span class="mi">404</span><span class="o">).</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Error: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">))));</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>To check how the example works, open your favorite browser and go to <a href="http://localhost:8080" data-proofer-ignore="true">localhost:8080</a>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/ServletDecoratorExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="routing-servlet-example">
+<a class="anchor" href="#routing-servlet-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Routing Servlet Example</h3>
+<p>Represents how to set up servlet routing tree. This process resembles Express approach. To add a route to a 
+<a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/RoutingServlet.java"><strong>RoutingServlet</strong></a>, you should use method <em>map</em>:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+		<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;Go to some pages&lt;/h1&gt;"</span> <span class="o">+</span>
+						<span class="s">"&lt;a href=\"/path1\"&gt; Path 1 &lt;/a&gt;&lt;br&gt;"</span> <span class="o">+</span>
+						<span class="s">"&lt;a href=\"/path2\"&gt; Path 2 &lt;/a&gt;&lt;br&gt;"</span> <span class="o">+</span>
+						<span class="s">"&lt;a href=\"/user/0\"&gt; Data for user with ID 0 &lt;/a&gt;&lt;br&gt;"</span> <span class="o">+</span>
+						<span class="s">"&lt;br&gt;"</span> <span class="o">+</span>
+						<span class="s">"&lt;a href=\"/path3\"&gt; Non existent &lt;/a&gt;"</span><span class="o">))</span></code></pre></figure>
+
+<ul>
+  <li>
+<em>method</em> (optional) is one of the HTTP methods (<code class="language-plaintext highlighter-rouge">GET</code>, <code class="language-plaintext highlighter-rouge">POST</code>, etc)</li>
+  <li>
+<em>path</em> is the path on the server</li>
+  <li>
+<em>servlet</em> defines the logic of request processing.</li>
+</ul>
+
+<p>The whole servlet tree will look as follows:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+			<span class="c1">//[START REGION_2]</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+					<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+							<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;Go to some pages&lt;/h1&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/path1\"&gt; Path 1 &lt;/a&gt;&lt;br&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/path2\"&gt; Path 2 &lt;/a&gt;&lt;br&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/user/0\"&gt; Data for user with ID 0 &lt;/a&gt;&lt;br&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;br&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/path3\"&gt; Non existent &lt;/a&gt;"</span><span class="o">))</span>
+			<span class="c1">//[END REGION_2]</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/path1"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+					<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+							<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;Hello from the first path!&lt;/h1&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/\"&gt;Go home&lt;/a&gt;"</span><span class="o">))</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/path2"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+					<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+							<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;Hello from the second path!&lt;/h1&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/\"&gt;Go home&lt;/a&gt;"</span><span class="o">))</span>
+
+			<span class="c1">//[START REGION_3]</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/user/:user_id"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="o">{</span>
+				<span class="nc">String</span> <span class="n">userId</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getPathParameter</span><span class="o">(</span><span class="s">"user_id"</span><span class="o">);</span>
+				<span class="k">return</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+						<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;You have requested data for user with ID: "</span> <span class="o">+</span> <span class="n">userId</span> <span class="o">+</span> <span class="s">"&lt;/h1&gt;"</span> <span class="o">+</span>
+								<span class="s">"&lt;h3&gt;Try changing URL after &lt;i&gt;'.../user/'&lt;/i&gt; to get data for users with different IDs&lt;/h3&gt;"</span><span class="o">);</span>
+			<span class="o">})</span>
+			<span class="c1">//[END REGION_3]</span>
+
+			<span class="c1">//[START REGION_4]</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="s">"/*"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+					<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ofCode</span><span class="o">(</span><span class="mi">404</span><span class="o">)</span>
+							<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;404&lt;/h1&gt;&lt;p&gt;Path '"</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="na">getRelativePath</span><span class="o">()</span> <span class="o">+</span> <span class="s">"' not found&lt;/p&gt;"</span> <span class="o">+</span>
+									<span class="s">"&lt;a href=\"/\"&gt;Go home&lt;/a&gt;"</span><span class="o">));</span>
+			<span class="c1">//[END REGION_4]</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>You can map path parameters with <code class="language-plaintext highlighter-rouge">/:param</code> syntax:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/user/:user_id"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="o">{</span>
+	<span class="nc">String</span> <span class="n">userId</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getPathParameter</span><span class="o">(</span><span class="s">"user_id"</span><span class="o">);</span>
+	<span class="k">return</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+			<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;You have requested data for user with ID: "</span> <span class="o">+</span> <span class="n">userId</span> <span class="o">+</span> <span class="s">"&lt;/h1&gt;"</span> <span class="o">+</span>
+					<span class="s">"&lt;h3&gt;Try changing URL after &lt;i&gt;'.../user/'&lt;/i&gt; to get data for users with different IDs&lt;/h3&gt;"</span><span class="o">);</span>
+<span class="o">})</span></code></pre></figure>
+
+<p>Path parameters can be retrieved by calling <code class="language-plaintext highlighter-rouge">HttpRequest#getPathParameter</code> method and passing the name of the path parameter.</p>
+
+<p>You may also use wildcard route <code class="language-plaintext highlighter-rouge">*</code>:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="s">"/*"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+		<span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ofCode</span><span class="o">(</span><span class="mi">404</span><span class="o">)</span>
+				<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;h1&gt;404&lt;/h1&gt;&lt;p&gt;Path '"</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="na">getRelativePath</span><span class="o">()</span> <span class="o">+</span> <span class="s">"' not found&lt;/p&gt;"</span> <span class="o">+</span>
+						<span class="s">"&lt;a href=\"/\"&gt;Go home&lt;/a&gt;"</span><span class="o">));</span></code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">*</code> states that whichever next path segment is received, it will be processed by this servlet.</p>
+
+<p>To check how the example works, open your favorite browser and go to <a href="http://localhost:8080" data-proofer-ignore="true">localhost:8080</a>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/RoutingServletExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="dynamic-routing-examples">
+<a class="anchor" href="#dynamic-routing-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic Routing Examples</h3>
+<p>A few examples that demonstrate how to route HTTP requests by some dynamic values rather than by predefined paths:</p>
+
+<ul>
+  <li><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/HostRoutingExample.java">Routing based on host</a></li>
+  <li><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/MimeTypeRoutingExample.java">Routing based on MIME type</a></li>
+  <li><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/CookieRoutingExample.java">Routing based on Cookie</a></li>
+  <li><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/DynamicRoutingExample.java">Randomized routing</a></li>
+</ul>
+
+<h3 id="routing-servlet-multibinder">
+<a class="anchor" href="#routing-servlet-multibinder" aria-hidden="true"><span class="octicon octicon-link"></span></a>Routing Servlet Multibinder</h3>
+<p>Using <a href="https://inject.activej.io">Dependency Injection</a> you may provide <strong>RoutingServlet</strong>s in different modules.
+Such bindings would result in <strong>DI</strong> throwing an exception for conflicting keys <code class="language-plaintext highlighter-rouge">RoutingServlet.class</code>. However, you may
+instruct the <strong>DI</strong> to resolve conflicts by merging <code class="language-plaintext highlighter-rouge">RoutingServlet</code>s into a single <code class="language-plaintext highlighter-rouge">RoutingServlet</code> that contains all of 
+the routes specified in other routing servlets.</p>
+
+<p>In the example we declare several modules that provide <code class="language-plaintext highlighter-rouge">RoutingServlet</code> with different routes:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">ModuleA</span> <span class="kd">extends</span> <span class="nc">AbstractModule</span> <span class="o">{</span>
+	<span class="nd">@Provides</span>
+	<span class="nc">RoutingServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/a"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from '/a' path\n"</span><span class="o">))</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/b"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from '/b' path\n"</span><span class="o">))</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from '/' path\n"</span><span class="o">));</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">ModuleB</span> <span class="kd">extends</span> <span class="nc">AbstractModule</span> <span class="o">{</span>
+	<span class="nd">@Provides</span>
+	<span class="nc">RoutingServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/a/b"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from '/a/b' path\n"</span><span class="o">))</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/b/a"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from '/b/a' path\n"</span><span class="o">))</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/d"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from '/d' path\n"</span><span class="o">));</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">ModuleC</span> <span class="kd">extends</span> <span class="nc">AbstractModule</span> <span class="o">{</span>
+	<span class="nd">@Provides</span>
+	<span class="nc">RoutingServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/a/c"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from '/a/c' path\n"</span><span class="o">))</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/b/c"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from '/b/c' path\n"</span><span class="o">))</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">POST</span><span class="o">,</span> <span class="s">"/d"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Hello from POST '/d' path\n"</span><span class="o">));</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Next, we define a <a href="https://github.com/activej/activej/blob/v4.3/core-inject/src/main/java/io/activej/inject/binding/Multibinder.java">Multibinder</a>
+which merges conflicting servlets:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Multibinder</span><span class="o">&lt;</span><span class="nc">RoutingServlet</span><span class="o">&gt;</span> <span class="no">SERVLET_MULTIBINDER</span> <span class="o">=</span> <span class="nc">Multibinders</span><span class="o">.</span><span class="na">ofBinaryOperator</span><span class="o">((</span><span class="n">servlet1</span><span class="o">,</span> <span class="n">servlet2</span><span class="o">)</span> <span class="o">-&gt;</span>
+		<span class="n">servlet1</span><span class="o">.</span><span class="na">merge</span><span class="o">(</span><span class="n">servlet2</span><span class="o">));</span></code></pre></figure>
+
+<p>At last, we override <code class="language-plaintext highlighter-rouge">HttpServerLauncher#getBusinesLogicModule</code> method to provide a combined DI <code class="language-plaintext highlighter-rouge">Module</code> that contains 
+<code class="language-plaintext highlighter-rouge">ModuleA</code>, <code class="language-plaintext highlighter-rouge">ModuleB</code>, <code class="language-plaintext highlighter-rouge">ModuleC</code> as well as an installed <code class="language-plaintext highlighter-rouge">Multibinder</code> for DI Key <code class="language-plaintext highlighter-rouge">RoutingServlet.class</code>.</p>
+
+<p>If we launch the example, we can see that there are no conflicts as conflicting servlets where successfully merged together.
+We may open a web browser and visit any of the specified routes to ensure that routing works correctly:</p>
+
+<ul>
+  <li><a href="http://localhost:8080" data-proofer-ignore="true">/</a></li>
+  <li><a href="http://localhost:8080/a" data-proofer-ignore="true">/a</a></li>
+  <li><a href="http://localhost:8080/a/b" data-proofer-ignore="true">/a/b</a></li>
+  <li><a href="http://localhost:8080/a/c" data-proofer-ignore="true">/a/c</a></li>
+  <li><a href="http://localhost:8080/b" data-proofer-ignore="true">/b</a></li>
+  <li><a href="http://localhost:8080/b/a" data-proofer-ignore="true">/b/a</a></li>
+  <li><a href="http://localhost:8080/b/c" data-proofer-ignore="true">/b/c</a></li>
+  <li><a href="http://localhost:8080/d" data-proofer-ignore="true">/d</a></li>
+</ul>
+
+<p><strong>Note, that if you try to merge RoutingServlets that have identical routes mapped, an exception would be thrown</strong></p>
+
+<p><a href="https://github.com/activej/activej/blob/examples/examples/core/http/src/main/java/RoutingServletMultibinderExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="blocking-servlet-example">
+<a class="anchor" href="#blocking-servlet-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blocking Servlet Example</h3>
+<p>Shows how to create a new thread for processing some complex operations on a <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/BlockingServlet.java"><strong>BlockingServlet</strong></a>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">(</span><span class="nc">Executor</span> <span class="n">executor</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="s">"/"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+					<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"&lt;a href='hardWork'&gt;Do hard work&lt;/a&gt;"</span><span class="o">))</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="s">"/hardWork"</span><span class="o">,</span> <span class="nc">AsyncServlet</span><span class="o">.</span><span class="na">ofBlocking</span><span class="o">(</span><span class="n">executor</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="o">{</span>
+				<span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">);</span> <span class="c1">//Hard work</span>
+				<span class="k">return</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">()</span>
+						<span class="o">.</span><span class="na">withHtml</span><span class="o">(</span><span class="s">"Hard work is done"</span><span class="o">);</span>
+			<span class="o">}));</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>To check how the example works, open your favorite browser and go to <a href="http://localhost:8080" data-proofer-ignore="true">localhost:8080</a>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/BlockingServletExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="file-upload-example">
+<a class="anchor" href="#file-upload-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>File Upload Example</h3>
+<p>In this example user uploads a file from local storage to the server:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">(</span><span class="nc">Executor</span> <span class="n">executor</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">GET</span><span class="o">,</span> <span class="s">"/*"</span><span class="o">,</span> <span class="nc">StaticServlet</span><span class="o">.</span><span class="na">ofClassPath</span><span class="o">(</span><span class="n">executor</span><span class="o">,</span> <span class="s">"static/multipart/"</span><span class="o">)</span>
+					<span class="o">.</span><span class="na">withIndexHtml</span><span class="o">())</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">POST</span><span class="o">,</span> <span class="s">"/test"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span>
+					<span class="n">request</span><span class="o">.</span><span class="na">handleMultipart</span><span class="o">(</span><span class="nc">MultipartDataHandler</span><span class="o">.</span><span class="na">file</span><span class="o">(</span><span class="n">fileName</span> <span class="o">-&gt;</span> <span class="nc">ChannelFileWriter</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">executor</span><span class="o">,</span> <span class="n">path</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="n">fileName</span><span class="o">))))</span>
+							<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="err">$</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span class="o">(</span><span class="s">"Upload successful"</span><span class="o">)));</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>To check how the example works, open your favorite browser and go to <a href="http://localhost:8080" data-proofer-ignore="true">localhost:8080</a>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/FileUploadExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="client-example">
+<a class="anchor" href="#client-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Client Example</h3>
+<p>This example shows how to create an HTTP client using <strong>Launcher</strong>, pre-defined 
+<a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/AsyncHttpClient.java"><strong>AsyncHttpClient</strong></a>, 
+and <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/dns/AsyncDnsClient.java"><strong>AsyncDnsClient</strong></a> 
+(maps given domains to the corresponding IP addresses):</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncHttpClient</span> <span class="nf">client</span><span class="o">(</span><span class="nc">Eventloop</span> <span class="n">eventloop</span><span class="o">,</span> <span class="nc">AsyncDnsClient</span> <span class="n">dnsClient</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">AsyncHttpClient</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withDnsClient</span><span class="o">(</span><span class="n">dnsClient</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="nd">@Provides</span>
+<span class="nc">AsyncDnsClient</span> <span class="nf">dnsClient</span><span class="o">(</span><span class="nc">Eventloop</span> <span class="n">eventloop</span><span class="o">,</span> <span class="nc">Config</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">RemoteAsyncDnsClient</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withDnsServerAddress</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">ofInetAddress</span><span class="o">(),</span> <span class="s">"dns.address"</span><span class="o">))</span>
+			<span class="o">.</span><span class="na">withTimeout</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">ofDuration</span><span class="o">(),</span> <span class="s">"dns.timeout"</span><span class="o">));</span>
+<span class="o">}</span></code></pre></figure>
+
+<div class="note-wrapper">
+    <div class="note">
+        <b>Note:</b>
+         To add support for HTTPS to <code>AsyncHttpClient</code> you need to call <code>withSslEnabled</code> method and pass <code>SSLContext</code> and <code>Executor</code>.
+    </div>
+</div>
+
+<p>Override Launcher <em>getModule</em> method to provide needed <a href="/config.html">configs</a> and <a href="/service-graph.html"><strong>ServiceGraph</strong></a> dependency graph:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="nc">Module</span> <span class="nf">getModule</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nf">combine</span><span class="o">(</span>
+			<span class="nc">ServiceGraphModule</span><span class="o">.</span><span class="na">create</span><span class="o">(),</span>
+			<span class="nc">ConfigModule</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+					<span class="o">.</span><span class="na">withEffectiveConfigLogger</span><span class="o">());</span>
+<span class="o">}</span>
+
+<span class="nd">@Provides</span>
+<span class="nc">Config</span> <span class="nf">config</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">Config</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+			<span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"dns.address"</span><span class="o">,</span> <span class="s">"8.8.8.8"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"dns.timeout"</span><span class="o">,</span> <span class="s">"5 seconds"</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">overrideWith</span><span class="o">(</span><span class="nc">Config</span><span class="o">.</span><span class="na">ofSystemProperties</span><span class="o">(</span><span class="s">"config"</span><span class="o">));</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Since our client extends <strong>Launcher</strong>, it overrides method <em>run</em> which defines the main functionality. In our case, it 
+sends a request, waits for server response (either successful or failed) and then processes it:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">ExecutionException</span><span class="o">,</span> <span class="nc">InterruptedException</span> <span class="o">{</span>
+	<span class="nc">String</span> <span class="n">url</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="na">length</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">:</span> <span class="s">"http://127.0.0.1:8080/"</span><span class="o">;</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\nHTTP request: "</span> <span class="o">+</span> <span class="n">url</span><span class="o">);</span>
+	<span class="nc">CompletableFuture</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">future</span> <span class="o">=</span> <span class="n">eventloop</span><span class="o">.</span><span class="na">submit</span><span class="o">(()</span> <span class="o">-&gt;</span>
+			<span class="n">httpClient</span><span class="o">.</span><span class="na">request</span><span class="o">(</span><span class="nc">HttpRequest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">url</span><span class="o">))</span>
+					<span class="o">.</span><span class="na">then</span><span class="o">(</span><span class="nl">HttpMessage:</span><span class="o">:</span><span class="n">loadBody</span><span class="o">)</span>
+					<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">body</span> <span class="o">-&gt;</span> <span class="n">body</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="no">UTF_8</span><span class="o">))</span>
+	<span class="o">);</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"HTTP response: "</span> <span class="o">+</span> <span class="n">future</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><em>eventloop.submit</em> submits request sending and response receiving to the eventloop thread. So, our main thread will wait until 
+<em>future</em> in the eventloop thread will return a result and only then the response will be printed out.</p>
+
+<p>To check how the client works, launch <a href="#simple-hello-world-server">Simple “Hello World” Server</a> or 
+<a href="#custom-server">Custom HTTP server</a> and then run <strong>ClientExample</strong>.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/HttpClientExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="multipart-data-handling-example">
+<a class="anchor" href="#multipart-data-handling-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multipart Data Handling Example</h3>
+<p>POST requests sometimes may be encoded as <strong>Multipart/form-data</strong>. Such requests may contain multiple fields and files.
+To handle a request containing multipart data you may use <code class="language-plaintext highlighter-rouge">HttpRequest#handleMultipart</code> method. You need to pass an 
+instance of <code class="language-plaintext highlighter-rouge">MultipartDataHandler</code> to this method. 
+There are several common handlers in <code class="language-plaintext highlighter-rouge">MultipartDataHandler</code> class. You can use them to collect fields to a map, send a
+a file to some <code class="language-plaintext highlighter-rouge">ChannelConsumer&lt;ByteBuf&gt;</code>, etc. Or you may write your own <code class="language-plaintext highlighter-rouge">MultipartDataHandler</code> if that is not enough.</p>
+
+<p>In this example we will collect fields to a map end upload received files to some directory. After this we will log the 
+collected fields and the number of uploaded files:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="no">POST</span><span class="o">,</span> <span class="s">"/handleMultipart"</span><span class="o">,</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="o">{</span>
+				<span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">fields</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+
+				<span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="na">handleMultipart</span><span class="o">(</span><span class="nc">MultipartDataHandler</span><span class="o">.</span><span class="na">fieldsToMap</span><span class="o">(</span><span class="n">fields</span><span class="o">,</span> <span class="k">this</span><span class="o">::</span><span class="n">upload</span><span class="o">))</span>
+						<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="err">$</span> <span class="o">-&gt;</span> <span class="o">{</span>
+							<span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Received fields: "</span> <span class="o">+</span> <span class="n">fields</span><span class="o">);</span>
+							<span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Uploaded "</span> <span class="o">+</span> <span class="n">fileUploadsCount</span> <span class="o">+</span> <span class="s">" files total"</span><span class="o">);</span>
+							<span class="k">return</span> <span class="nc">HttpResponse</span><span class="o">.</span><span class="na">ok200</span><span class="o">();</span>
+						<span class="o">});</span>
+			<span class="o">});</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>To upload the received file to a file system we will use a 
+<a href="https://github.com/activej/activej/blob/v4.3/core-csp/src/main/java/io/activej/csp/file/ChannelFileWriter.java">ChannelFileWritter</a>:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@NotNull</span>
+<span class="kd">private</span> <span class="nc">Promise</span><span class="o">&lt;</span><span class="nc">ChannelConsumer</span><span class="o">&lt;</span><span class="nc">ByteBuf</span><span class="o">&gt;&gt;</span> <span class="nf">upload</span><span class="o">(</span><span class="nc">String</span> <span class="n">filename</span><span class="o">)</span> <span class="o">{</span>
+	<span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Uploading file '{}' to {}"</span><span class="o">,</span> <span class="n">filename</span><span class="o">,</span> <span class="n">path</span><span class="o">);</span>
+	<span class="k">return</span> <span class="nc">ChannelFileWriter</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">executor</span><span class="o">,</span> <span class="n">path</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="n">filename</span><span class="o">))</span>
+			<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">writer</span> <span class="o">-&gt;</span> <span class="n">writer</span><span class="o">.</span><span class="na">withAcknowledgement</span><span class="o">(</span><span class="n">ack</span> <span class="o">-&gt;</span>
+					<span class="n">ack</span><span class="o">.</span><span class="na">whenResult</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+						<span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Upload of file '{}' finished"</span><span class="o">,</span> <span class="n">filename</span><span class="o">);</span>
+						<span class="n">fileUploadsCount</span><span class="o">++;</span>
+					<span class="o">})));</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>The <strong>Multipart/form-data</strong> request is manually forged and contains several fields and files. After running the example you 
+should see a similar logging output:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Uploading file 'data.txt' to /tmp/multipart-data-files4909047508332989372
+Upload of file 'data.txt' finished
+Uploading file 'key.txt' to /tmp/multipart-data-files4909047508332989372
+Upload of file 'key.txt' finished
+Received fields: {last name=Johnson, first name=Alice, id=12345}
+Uploaded 2 files total</code></pre></figure>
+
+<p>You may inspect the directory from logging output to ensure the files are uploaded.</p>
+
+<p><a href="https://github.com/activej/activej/blob/examples/examples/core/http/src/main/java/MultipartDataHandlingExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="websocket-pong-server">
+<a class="anchor" href="#websocket-pong-server" aria-hidden="true"><span class="octicon octicon-link"></span></a>WebSocket Pong Server</h3>
+<p>Let’s create a “Pong” WebSocket server. For this purpose we need to 
+provide a <strong>RoutingServlet</strong> and use <em>mapWebSocket</em> method to map a <strong>Consumer</strong> of <strong>WebSocket</strong> as a servlet on <code class="language-plaintext highlighter-rouge">/</code>path. 
+Our server will simply accept messages, print them out, and stream back a “Pong” message.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">RoutingServlet</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+			<span class="o">.</span><span class="na">mapWebSocket</span><span class="o">(</span><span class="s">"/"</span><span class="o">,</span> <span class="n">webSocket</span> <span class="o">-&gt;</span> <span class="n">webSocket</span><span class="o">.</span><span class="na">readMessage</span><span class="o">()</span>
+					<span class="o">.</span><span class="na">whenResult</span><span class="o">(</span><span class="n">message</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Received:"</span> <span class="o">+</span> <span class="n">message</span><span class="o">.</span><span class="na">getText</span><span class="o">()))</span>
+					<span class="o">.</span><span class="na">then</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">webSocket</span><span class="o">.</span><span class="na">writeMessage</span><span class="o">(</span><span class="nc">Message</span><span class="o">.</span><span class="na">text</span><span class="o">(</span><span class="s">"Pong"</span><span class="o">)))</span>
+					<span class="o">.</span><span class="na">whenComplete</span><span class="o">(</span><span class="nl">webSocket:</span><span class="o">:</span><span class="n">close</span><span class="o">));</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/WebSocketPongServerExample.java"><strong>See full example on GitHub</strong></a></p>
+
+<h3 id="websocket-ping-client">
+<a class="anchor" href="#websocket-ping-client" aria-hidden="true"><span class="octicon octicon-link"></span></a>WebSocket Ping Client</h3>
+<p>Now let’s create a client that will send a “Ping” message to server via WebSocket connection.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">ExecutionException</span><span class="o">,</span> <span class="nc">InterruptedException</span> <span class="o">{</span>
+	<span class="nc">String</span> <span class="n">url</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="na">length</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">:</span> <span class="s">"ws://127.0.0.1:8080/"</span><span class="o">;</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\nWeb Socket request: "</span> <span class="o">+</span> <span class="n">url</span><span class="o">);</span>
+	<span class="nc">CompletableFuture</span><span class="o">&lt;?&gt;</span> <span class="n">future</span> <span class="o">=</span> <span class="n">eventloop</span><span class="o">.</span><span class="na">submit</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Sending: Ping"</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">httpClient</span><span class="o">.</span><span class="na">webSocketRequest</span><span class="o">(</span><span class="nc">HttpRequest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">url</span><span class="o">))</span>
+				<span class="o">.</span><span class="na">then</span><span class="o">(</span><span class="n">webSocket</span> <span class="o">-&gt;</span> <span class="n">webSocket</span><span class="o">.</span><span class="na">writeMessage</span><span class="o">(</span><span class="nc">Message</span><span class="o">.</span><span class="na">text</span><span class="o">(</span><span class="s">"Ping"</span><span class="o">))</span>
+						<span class="o">.</span><span class="na">then</span><span class="o">(</span><span class="nl">webSocket:</span><span class="o">:</span><span class="n">readMessage</span><span class="o">)</span>
+						<span class="o">.</span><span class="na">whenResult</span><span class="o">(</span><span class="n">message</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Received: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">.</span><span class="na">getText</span><span class="o">()))</span>
+						<span class="o">.</span><span class="na">whenComplete</span><span class="o">(</span><span class="nl">webSocket:</span><span class="o">:</span><span class="n">close</span><span class="o">));</span>
+	<span class="o">});</span>
+	<span class="n">future</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>First, we create a supplier and override its <em>get</em> method via lambda. Here we call <em>AsyncHttpClient.webSocketRequest</em> that sends a 
+request and returns a Promise of a <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/WebSocket.java">WebSocket</a>. 
+Then we create a <strong>Function</strong> that sends a “Ping” message and receives a response from server.</p>
+
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/core/http/src/main/java/WebSocketPingClientExample.java"><strong>See full example on GitHub</strong></a></p>
+
+    <div class="row docs-prevnext">
+        
+            <div class="col-sm-6">
+                <a class="docs-prevnext__button pull-left" href="datastream.html">Prev</a>
+            </div>
+        
+        
+            <div class="col-sm-6">
+                <a class="docs-prevnext__button pull-right" href="eventloop.html">Next</a>
+            </div>
+        
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        
+        <div class="container justify-content-between footer">
+            <div class="col-md-4 col-lg-5"> &copy; 2021 ActiveJ LLC. All Rights Reserved</div>
+            <div class="col-md-4 col-lg-3">Contact us: contact@activej.io</div>
+            <div class="col-md-8 col-lg-4 footer__menu">
+                <a href="http://uikernel.io">UIKernel</a>
+                <a href="https://adkernel.com">AdKernel</a>
+                <a href="https://github.com/activej/activej">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="../static/js/leon.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

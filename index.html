@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176574648-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176574648-1');
+    </script>
+    
+    <link rel='stylesheet' href='/static/css/pygment_trac.css'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <title>ActiveJ | Alternative Java platform built from the ground up to redefine web, high load, and cloud programming</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" ActiveJ is an alternative Java platform built from the ground up to redefine web, high load, and cloud programming and replace Spring, Quarkus, Vert.x and other sub-optimal solutions ">
+    <meta name="keywords" content=" java,java framework,spring alternative,netty alternative,jetty alternative,nodejs alternative,guice alternative,asynchronous,eventloop,java nio,embedded http,java http server,java http client,high load,streams,serializers,http,code generation,crdt ">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name="og:description" content="ActiveJ is an alternative Java platform built from the ground up as a replacement of Spring, Spark, Quarkus, Micronauts, and other solutions. It is minimalistic, boilerplate-free, and provides outstanding performance." />
+    <meta name="og:image" content="https://activej.io/static/images/AJ_Card.jpeg" />
+    <meta name="og:title" content="ActiveJ - An Alternative Java platform built for web, high load, and cloud development" />
+</head>
+<body>
+    <div class="navbar-container-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <ul class="navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                <div class="logo-link-title mr-5">
+                    <img src="/favicon.png" style="max-width: 25px">
+                    
+                    
+                    <a class="navbar-nav__link logo-link-title" href="/" style="margin-left: 5px">ActiveJ</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </ul>
+            <button class="navbar-toggler m-1 ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="container">
+                    
+                    
+                    <ul class="navbar-nav navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/tutorials/getting-started.html">
+                                Tutorials
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/http.html">
+                                Docs
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <span>
+              <ul class="navbar-nav expanded-links navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                  <li class="dropdown">
+                    <a class="nav-link nav-expanded">Components</a>
+                    <ul class="dropdown__content">
+                        
+                            <div class="dropdown__content-wrapper">
+                                
+                                    <a href="https://activej.io" class="dropdown__content__item  selected-link ">
+                                        <li>
+                                            <div href="https://activej.io">ActiveJ</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Redefining Java for modern web applications </p>
+                                    </a>
+                                
+                                    <a href="https://inject.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://inject.activej.io">ActiveJ Inject</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast and ultimately powerful DI library </p>
+                                    </a>
+                                
+                                    <a href="https://serializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://serializer.activej.io">ActiveJ Serializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> The fastest JVM serializer in the world </p>
+                                    </a>
+                                
+                                    <a href="https://codegen.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://codegen.activej.io">ActiveJ Codegen</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Dynamic bytecode generation without overhead of reflection </p>
+                                    </a>
+                                
+                                    <a href="https://specializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://specializer.activej.io">ActiveJ Specializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> A little bit of magic to speed up your code </p>
+                                    </a>
+                                
+                                    <a href="https://rpc.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://rpc.activej.io">ActiveJ RPC</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast binary protocol for microservices architecture </p>
+                                    </a>
+                                
+                                    <a href="https://fs.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://fs.activej.io">ActiveJ FS</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Tiny abstraction for managing local, remote, and distributed FS </p>
+                                    </a>
+                                
+                           </div>
+                        
+                    </ul>
+                </li>
+                  <li><a class="navbar-nav__link" href="https://activej.io/blog/release-notes.html">Blog</a> </li>
+                <li><a class="navbar-nav__link" href="http://uikernel.io">UIKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://adkernel.com">AdKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://github.com/activej/activej">GitHub</a></li>
+                <li><a class="navbar-nav__link" href="/about.html">About us</a></li>
+              </ul>
+            </span>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <div class="content">
+        
+            <div class="container-wrapper">
+    <div class="container">
+        <div class="slider">
+            <div class="slider__text">
+                <h1 id="animatedLogo" text="ActiveJ" class="mb-4 mt-4 slider__text__logo"></h1>
+                Redefining Java for modern web, cloud, high-load, and microservices solutions
+            </div>
+        </div>
+        <div class="row mx-0 slider-buttons">
+            <a href="tutorials/getting-started.html" class="col-5 slider-buttons__get-started-button">
+                GET STARTED
+            </a>
+            <a href="https://github.com/activej/activej" target="_blank" class="col-4 slider-buttons__github-button">
+                GitHub
+            </a>
+        </div>
+    </div>
+</div>
+<div class="paper__wrapper">
+    <div class="container features">
+        <h3 class="ml-3 mt-4">What is ActiveJ?</h3>
+        <div class="ml-3">ActiveJ is an <b>alternative Java platform</b> built from the ground up as a replacement of
+            Spring,
+            Spark, Quarkus, Micronauts, and other solutions.
+            It is <b>minimalistic</b>,
+            <b>boilerplate-free</b>, and provides <b>outstanding performance</b>.
+            <br><br>
+            ActiveJ consists of several modules that can be logically grouped into following categories :
+            <ul>
+                <li><b>Async.io</b> - High-performance asynchronous IO with efficient event loop, NIO, promises,
+                    streaming and CSP. Alternative to Netty, RxJava, Akka and others.
+                    (<a href="/promise">Promise</a>, <a href="/eventloop">Eventloop</a>, <a href="/net">Net</a>,
+                    <a href="/csp">CSP</a>, <a href="/datastream">Datastream</a>)
+                </li>
+                <li><b>HTTP</b> - High-performance HTTP server and client with WebSocket support. Can be used as a
+                    simple web server or as an application server. An alternative to Jetty and other conventional
+                    HTTP clients and servers.
+                    (<a href="/http">HTTP</a>)
+                </li>
+                <li><b>ActiveJ Inject</b> - Lightweight powerful dependency injection library. Optimized for fast
+                    application
+                    start-up and ultimate runtime performance. Supports annotation-based component wiring as well as
+                    reflection-free wiring.
+                    (<a href="https://inject.activej.io">ActiveJ Inject</a>)
+                </li>
+                <li><b>Boot</b> - Production-ready tools for launching and monitoring ActiveJ application.
+                    Concurrently starts and stops services based on their dependencies. Various service monitoring
+                    utilities with the support of JMX and Zabbix.
+                    (<a href="/launcher">Launcher</a>, <a href="/service-graph">Service Graph</a>,
+                    <a href="https://github.com/activej/activej/tree/v4.3/boot-jmx">JMX</a>,
+                    <a href="https://github.com/activej/activej/tree/v4.3/boot-triggers">Triggers</a>)
+                </li>
+                <li><b>Bytecode manipulation</b>
+                    <ul>
+                        <li><b>ActiveJ Codegen</b> - Dynamic class and method bytecode generator on top of
+                            <a href="https://asm.ow2.io/">ObjectWeb ASM</a> library. Abstracts the complexity of direct
+                            bytecode manipulation and allows to create custom classes on the fly using Lisp-like AST
+                            expressions.
+                            (<a href="https://codegen.activej.io">ActiveJ Codegen</a>)
+                        </li>
+                        <li><b>ActiveJ Serializer</b> - Extremely fast and space-efficient serializers created with
+                            bytecode engineering. Introduces schema-less approach for the best performance.
+                            (<a href="https://serializer.activej.io">ActiveJ Serializer</a>)
+                        </li>
+                        <li><b>ActiveJ Specializer</b> - Innovative technology for enhancing class runtime performance
+                            by automatically transforming class instances into specialized static classes, and class
+                            instance fields into baked-in static fields. Enables a wide variety of JVM optimizations for
+                            static classes, not possible otherwise: dead code elimination, aggressively inlining
+                            methods, and static constants.
+                            (<a href="https://specializer.activej.io">ActiveJ Specializer</a>)
+                        </li>
+                    </ul>
+                </li>
+                <li><b>Cloud components</b>
+                    <ul>
+                        <li><b>ActiveJ FS</b> - Asynchronous abstraction over file system for building efficient,
+                            scalable local or remote file storages, supporting data redundancy, rebalancing, and
+                            resharding.
+                            (<a href="https://fs.activej.io">ActiveJ FS</a>)
+                        </li>
+                        <li><b>ActiveJ RPC</b> - Ultra high-performance binary client-server protocol. Allows to build
+                            distributed, sharded and fault-tolerant microservices applications.
+                            (<a href="https://rpc.activej.io">ActiveJ RPC</a>)
+                        </li>
+                        <li>Various extra services:
+                            <a href="https://crdt.activej.io">ActiveJ CRDT</a>,
+                            <a href="https://github.com/activej/activej/tree/v4.3/extra/cloud-redis">Redis client</a>,
+                            <a href="https://github.com/activej/activej/tree/v4.3/extra/cloud-memcache">Memcache</a>,
+                            <a href="https://github.com/activej/activej/tree/v4.3/extra/cloud-lsmt-cube">OLAP Cube</a>,
+                            <a href="https://github.com/activej/activej/tree/v4.3/extra/cloud-dataflow">Dataflow</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <h3 class="ml-3 mt-4">Why ActiveJ?</h3>
+        <div class="features__preview row justify-content-around mx-auto pb-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 paper">
+                <div class="paper__image">
+                    <img width="30" height="30" src="/static/images/star.png"/>
+                    <h3 class="features__title">Excellence of your products</h3>
+                </div>
+                <div class="card__description">Rich stack of unique technologies for lightning-fast and asynchronous web
+                    applications with competitive advantage
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 paper">
+                <div class="paper__image">
+                    <img width="30" height="30" src="/static/images/chart.png"/>
+                    <h3 class="features__title">Alternative architecture</h3>
+                </div>
+                <div class="card__description">Lightweight and natively scalable async architecture in contrast to
+                    Spring
+                    and other similar solutions
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 paper">
+                <div class="paper__image">
+                    <img width="30" height="30" src="/static/images/performance.png"/>
+                    <h3 class="features__title">Ultimate performance</h3>
+                </div>
+                <div class="card__description">Squeezing the last bits of performance from your hardware, proven by
+                    numerous benchmarks
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 paper">
+                <div class="paper__image">
+                    <img width="30" height="30" src="/static/images/active.png"/>
+                    <h3 class="features__title">Simple design</h3>
+                </div>
+                <div class="card__description">ActiveJ was built from the ground up, so it doesn’t feature tons of
+                    abstractions hiding the legacy standards
+                </div>
+            </div>
+        </div>
+        <h3 class="ml-3 mt-4">A step ahead of other solutions</h3>
+
+        <div class="features__preview row justify-content-between mx-auto">
+            <div class="col-lg-7 col-md-12 mb-2 slider-img">
+                <div class="chart__wrapper">
+                    <div class="chart">
+                        <a target="_blank" href="https://github.com/the-benchmarker/web-frameworks" class="chart__group chart__separate1">
+                            <div class="chart__group__title">HTTP</div>
+                            <div class="chart__tooltip">
+                                ActiveJ - 174.6 Krps <br/>
+                                Spring - 60.1 Krps
+                            </div>
+                            <div class="chart__series">
+                                <div class="chart__text">
+                                    ActiveJ
+                                </div>
+                                <div class="chart__bar chart__bar_primary" data="0.1746"></div>
+                                <div class="chart__measure-text">174.6 Krps</div>
+                            </div>
+                            <div class="chart__series">
+                                <div class="chart__text">
+                                    Spring
+                                </div>
+                                <div class="chart__bar chart__bar_secondary" data="0.0601"></div>
+                                <div class="chart__measure-text">60.1 Krps</div>
+                            </div>
+                        </a>
+                        <a target="_blank" href="https://github.com/activej/activej/tree/v4.3/benchmarks/inject" class="chart__group chart__separate2">
+                            <div class="chart__group__title">Dependency Injection</div>
+                            <div class="chart__tooltip">
+                                ActiveJ - 7.2 Mrps<br/>
+                                Guice - 1.3 Mrps<br/>
+                                Spring - 1.3 Krps
+                            </div>
+                            <div class="chart__series">
+                                <div class="chart__text">
+                                    ActiveJ
+                                </div>
+                                <div class="chart__bar chart__bar_primary" data="7.221"></div>
+                                <div class="chart__measure-text">7.2 Mrps</div>
+                            </div>
+                            <div class="chart__series">
+                                <div class="chart__text">
+                                    Guice
+                                </div>
+                                <div class="chart__bar chart__bar_third" data="1.286"></div>
+                                <div class="chart__measure-text">1.3 Mrps</div>
+                            </div>
+                            <div class="chart__series">
+                                <div class="chart__text">
+                                    Spring
+                                </div>
+                                <div class="chart__bar chart__bar_fourth" data="0.012"></div>
+                                <div class="chart__measure-text">1.3 Krps</div>
+                            </div>
+                        </a>
+                        <a target="_blank" href="https://github.com/activej/activej/blob/v4.3/benchmarks/rpc/src/main/java/io/activej/rpc/memcache/MemcacheRpcBenchmark.java" class="chart__group chart__separate">
+                            <div class="chart__group__title">Memcached</div>
+                            <div class="chart__tooltip">
+                                ActiveJ - 9.8 Mrps
+                            </div>
+                            <div class="chart__series">
+                                <div class="chart__text">
+                                    ActiveJ
+                                </div>
+                                <div class="chart__bar chart__bar_primary" data="9.890"></div>
+                                <div class="chart__measure-text">9.8 Mrps</div>
+                            </div>
+                        </a>
+                        <a target="_blank" href="https://github.com/activej/activej/tree/v4.3/benchmarks/rpc" class="chart__group chart__separate">
+                            <div class="chart__group__title">RPC</div>
+                            <div class="chart__tooltip">
+                                ActiveJ - 15.6 Mrps
+                            </div>
+                            <div class="chart__series">
+                                <div class="chart__text">
+                                    ActiveJ
+                                </div>
+                                <div class="chart__bar chart__bar_primary" data="15.644"></div>
+                                <div class="chart__measure-text">15.6 Mrps</div>
+                            </div>
+                        </a>
+                        <a target="_blank" href="https://github.com/activej/activej/tree/v4.3/benchmarks/promise" class="chart__group chart__separate">
+                            <div class="chart__group__title">Promise/Futures</div>
+                            <div class="chart__tooltip">
+                                ActiveJ - 77.2 Mrps <br/>
+                                JDK - 11.7 Mrps
+                            </div>
+                            <div class="chart__series">
+                                <div class="chart__text">
+                                    ActiveJ
+                                </div>
+                                <div class="chart__bar chart__bar_primary" data="77.218"></div>
+                                <div class="chart__measure-text">77.2 Mrps</div>
+                            </div>
+                            <div class="chart__series">
+                                <div class="chart__text">
+                                    JDK
+                                </div>
+                                <div class="chart__bar chart__bar_fifth" data="11.743"></div>
+                                <div class="chart__measure-text">11.7 Mrps</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="divider col-lg-1">
+                <img src="/static/images/divider.svg">
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="stats">
+                    <div class="stats__title">Minimum web application size</div>
+                    <div class="stats__diagrams row mb-4">
+                        <div class="stats__diagrams__wrapper col-6">
+                            <div class="stats__diagrams__text">ActiveJ</div>
+                            <img src="/static/images/app-size.svg" height="15" width="40"/>
+                            <div class="stats__diagrams__text">1.4 MB</div>
+                        </div>
+                        <div class="stats__diagrams__wrapper col-6">
+                            <div class="stats__diagrams__text">Spring</div>
+                            <img src="/static/images/app-size2.svg" height="80" width="160"/>
+                            <div class="stats__diagrams__text">17 MB</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stats__title">Web application launch time</div>
+                    <div class="stats__diagrams row">
+                        <div class="stats__diagrams__wrapper col-6">
+                            <div class="stats__diagrams__text">ActiveJ</div>
+                            <img src="/static/images/launch-time.svg" height="13" width="80"/>
+                            <div class="stats__diagrams__text">0.65 Sec</div>
+                        </div>
+                        <div class="stats__diagrams__wrapper col-6">
+                            <div class="stats__diagrams__text">Spring</div>
+                            <img src="/static/images/launch-time2.svg" height="80" width="160"/>
+                            <div class="stats__diagrams__text">14 Sec</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="container features transparent">
+        <div class="row mx-2 mb-4">
+            <div class="chart__wrapper">
+                <div class="chart">
+                    <a target="_blank" href="https://github.com/activej/jvm-serializers" class="chart__group-second chart__separate">
+                        <div class="chart__group__title">Serializer</div>
+                        <div class="chart__tooltip chart__tooltip-wide">
+                            ActiveJ Serializer speed mode - 546 ns/op <br/>
+                            ActiveJ Serializer default mode - 559 ns/op <br/>
+                            Colfer - 631 ns/op <br/>
+                            Protostuff - 1187 ns/op <br/>
+                            Dsl-json - 1238 ns/op <br/>
+                            Kryo - 1398 ns/op <br/>
+                            Protobuf - 1694 ns/op <br/>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid sec">
+                            <div class="chart__text">
+                                ActiveJ Serializer (speed mode)
+                            </div>
+                            <div class="chart__bar-second chart__bar_primary" data="546"></div>
+                            <div class="chart__measure-text">546 ns/op</div>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                ActiveJ Serializer (default mode)
+                            </div>
+                            <div class="chart__bar-second chart__bar_primary" data="559"></div>
+                            <div class="chart__measure-text">559 ns/op</div>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                Colfer
+                            </div>
+                            <div class="chart__bar-second chart__bar_secondary" data="631"></div>
+                            <div class="chart__measure-text">631 ns/op</div>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                Protostuff
+                            </div>
+                            <div class="chart__bar-second chart__bar_secondary" data="1187"></div>
+                            <div class="chart__measure-text">1187 ns/op</div>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                Dsl-json
+                            </div>
+                            <div class="chart__bar-second chart__bar_secondary" data="1238"></div>
+                            <div class="chart__measure-text">1238 ns/op</div>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                Kryo
+                            </div>
+                            <div class="chart__bar-second chart__bar_secondary" data="1398"></div>
+                            <div class="chart__measure-text">1398 ns/op</div>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                Protobuf
+                            </div>
+                            <div class="chart__bar-second chart__bar_secondary" data="1694"></div>
+                            <div class="chart__measure-text">1694 ns/op</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-2 mb-4">
+            <div class="chart__wrapper">
+                <div class="chart">
+                    <a target="_blank"
+                       href="https://github.com/activej/activej/tree/v4.3/benchmarks/specializer"
+                       class="chart__group-second chart__separate1">
+                        <div class="chart__group__title pt-0">Specializer</div>
+                        <div class="chart__tooltip chart__tooltip-wide">
+                            Naive DSL - 1005.2 ns/op <br/>
+                            Equivalent handcrafted code - 125.5 ns/op <br/>
+                            DSL, Specializer ON - 126 ns/op <br/>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                Naive DSL
+                            </div>
+                            <div class="chart__bar-second chart__bar_secondary" data="1005.2"></div>
+                            <div class="chart__measure-text">1005.2 ns/op</div>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                Equivalent handcrafted code
+                            </div>
+                            <div class="chart__bar-second chart__bar_secondary" data="125.5"></div>
+                            <div class="chart__measure-text">125.5 ns/op</div>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                DSL, Specializer ON
+                            </div>
+                            <div class="chart__bar-second chart__bar_primary" data="126"></div>
+                            <div class="chart__measure-text">126 ns/op</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-2 mb-5">
+            <div class="chart__wrapper">
+                <div class="chart">
+                    <a target="_blank"
+                       href="https://github.com/activej/activej/blob/v4.3/benchmarks/inject/src/main/java/io/activej/inject/ActiveJDirectScopebindBenchmark.java"
+                       class="chart__group-second chart__separate2">
+                        <div class="chart__group__title pt-0">Specializer + Inject</div>
+                        <div class="chart__tooltip chart__tooltip-wide">
+                            ActiveJ Inject, Specializer OFF - 2420.3 ns/op <br/>
+                            ActiveJ Inject, Specializer ON - 1545 ns/op <br/>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                ActiveJ Inject, Specializer OFF
+                            </div>
+                            <div class="chart__bar-second chart__bar_secondary" data="2420.3"></div>
+                            <div class="chart__measure-text">2420.3 ns/op</div>
+                        </div>
+                        <div class="chart__series-second chart__series-long-grid">
+                            <div class="chart__text">
+                                ActiveJ Inject, Specializer ON
+                            </div>
+                            <div class="chart__bar-second chart__bar_primary" data="1545"></div>
+                            <div class="chart__measure-text">1545 ns/op</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3 justify-content-between mx-auto">
+            <div class="samples__text-wrapper col-lg-5 col-md-12 pr-5">
+                <h3>Enjoy the development</h3>
+                <div class="simple__text mb-2">Predefined <b>launchers</b> and classes for both
+                    typical
+                    and more specific use cases combined with <b><a href="https://inject.activej.io">ActiveJ Inject</a>
+                        DI
+                        library</b> enable <b>extremely fast and convenient</b> app development.
+                </div>
+
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <figure class="highlight m-0"><pre><code class="language-java" data-lang="java"><span
+                        class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span
+                        class="nc">HttpHelloWorldExample</span> <span class="kd">extends</span> <span class="nc">HttpServerLauncher</span> <span
+                        class="o">{</span>
+	<span class="nd">@Provides</span>
+	<span class="nc">AsyncServlet</span> <span class="nf">servlet</span><span class="o">()</span> <span
+                            class="o">{</span>
+		<span class="k">return</span> <span class="n">request</span> <span class="o">-&gt;</span> <span class="nc">HttpResponse</span><span
+                            class="o">.</span><span class="na">ok200</span><span class="o">().</span><span class="na">withPlainText</span><span
+                            class="o">(</span><span class="s">"Hello World"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span
+                            class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span
+                            class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span
+                            class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Launcher</span> <span class="n">launcher</span> <span class="o">=</span> <span
+                            class="k">new</span> <span class="nc">HttpHelloWorldExample</span><span class="o">();</span>
+		<span class="n">launcher</span><span class="o">.</span><span class="na">launch</span><span
+                            class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre>
+                </figure>
+            </div>
+        </div>
+        <div class="row mt-4 mb-3 justify-content-between mx-auto">
+            <div class="samples__text-wrapper col-lg-5 col-md-12 pr-5">
+                <h3>Genuinely high load networking</h3>
+                <div class="simple__text mb-2">
+                    <p><b>Ultra-fast</b> means for <b>I/O processing</b> along with a <b>simple abstraction over
+                        low-level async
+                        sockets I/O</b>. Create servers that process <b>45M+ RPS on a single CPU core</b> in a few lines
+                        of code.
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <figure class="highlight m-0"><pre><code class="language-java" data-lang="java"><span class="n">ChannelSupplier</span><span
+                        class="o">.</span><span class="na">ofSocket</span><span class="o">(</span><span
+                        class="n">socket</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">transformWith</span><span class="o">(</span><span class="n">ChannelDeserializer</span><span
+                            class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">INT_SERIALIZER</span><span
+                            class="o">))</span>
+    <span class="o">.</span><span class="na">transformWith</span><span class="o">(</span><span
+                            class="n">StreamMapper</span><span class="o">.</span><span class="na">create</span><span
+                            class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span
+                            class="n">x</span> <span class="o">+</span> <span class="s">" times 10 = "</span> <span
+                            class="o">+</span> <span class="n">x</span> <span class="o">*</span> <span
+                            class="mi">10</span><span class="o">))</span>
+    <span class="o">.</span><span class="na">transformWith</span><span class="o">(</span><span class="n">ChannelSerializer</span><span
+                            class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">UTF8_SERIALIZER</span><span
+                            class="o">))</span>
+    <span class="o">.</span><span class="na">streamTo</span><span class="o">(</span><span
+                            class="n">ChannelConsumer</span><span class="o">.</span><span
+                            class="na">ofSocket</span><span class="o">(</span><span class="n">socket</span><span
+                            class="o">));</span></code></pre>
+                </figure>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="paper__wrapper">
+    <div class="container features">
+        <h3 class="mt-3 mx-3">ActiveJ in production</h3>
+        <div class="simple__text mx-3">ActiveJ has proved its stability and efficiency in our high-load in-house
+            projects, processing billions of requests daily. For example, <a href="https://adkernel.com">AdKernel</a>
+            is powered with ActiveJ and it is one of the leading ad-tech solutions providers in the market.
+        </div>
+    </div>
+    <div class="container features"><h3 class="mx-3">ActiveJ releases</h3>
+        <div class="simple__text mx-3">These docs cover the most recent ActiveJ release
+            <b>v4.3</b>
+            <small>(see on <a href="https://github.com/activej/activej/tree/v4.3">GitHub</a> and
+                <a href="https://mvnrepository.com/artifact/io.activej/activej">Maven</a>)</small>.
+        </div>
+    </div>
+</div>
+
+        
+        <div class="container justify-content-between footer">
+            <div class="col-md-4 col-lg-5"> &copy; 2021 ActiveJ LLC. All Rights Reserved</div>
+            <div class="col-md-4 col-lg-3">Contact us: contact@activej.io</div>
+            <div class="col-md-8 col-lg-4 footer__menu">
+                <a href="http://uikernel.io">UIKernel</a>
+                <a href="https://adkernel.com">AdKernel</a>
+                <a href="https://github.com/activej/activej">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="../static/js/leon.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
