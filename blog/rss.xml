@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>ActiveJ Blog</title>
+        <link>https://activej.io/blog</link>
+        <description>ActiveJ Blog</description>
+        <lastBuildDate>Fri, 28 May 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Active J 4.3 - Small improvements for multiple modules]]></title>
+            <link>https://activej.io/blog/2021/05/28/v4.3</link>
+            <guid>Active J 4.3 - Small improvements for multiple modules</guid>
+            <pubDate>Fri, 28 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[ActiveJ v4.3 was released May 28,]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Active J 4.2 - Expanded functionality]]></title>
+            <link>https://activej.io/blog/2021/04/13/v4.2</link>
+            <guid>Active J 4.2 - Expanded functionality</guid>
+            <pubDate>Tue, 13 Apr 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[ActiveJ v4.2 was released Apr 13, 2021 (see on Maven). This release expanded]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Active J 4.1 - Optimization and simplification]]></title>
+            <link>https://activej.io/blog/2021/03/19/v4.1</link>
+            <guid>Active J 4.1 - Optimization and simplification</guid>
+            <pubDate>Fri, 19 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[ActiveJ v4.1 was released Mar 19, 2021 (see on Maven).]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Active J 4.0 - Refactoring of exceptions]]></title>
+            <link>https://activej.io/blog/2021/02/16/v4.0</link>
+            <guid>Active J 4.0 - Refactoring of exceptions</guid>
+            <pubDate>Tue, 16 Feb 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[ActiveJ v4.0 was released Feb 16, 2021 (see on Maven).]]></description>
+        </item>
+    </channel>
+</rss>

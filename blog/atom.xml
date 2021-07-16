@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://activej.io/blog</id>
+    <title>ActiveJ Blog</title>
+    <updated>2021-05-28T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://activej.io/blog"/>
+    <subtitle>ActiveJ Blog</subtitle>
+    <icon>https://activej.io/./img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Active J 4.3 - Small improvements for multiple modules]]></title>
+        <id>Active J 4.3 - Small improvements for multiple modules</id>
+        <link href="https://activej.io/blog/2021/05/28/v4.3"/>
+        <updated>2021-05-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.3 was released May 28,]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Active J 4.2 - Expanded functionality]]></title>
+        <id>Active J 4.2 - Expanded functionality</id>
+        <link href="https://activej.io/blog/2021/04/13/v4.2"/>
+        <updated>2021-04-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.2 was released Apr 13, 2021 (see on Maven). This release expanded]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Active J 4.1 - Optimization and simplification]]></title>
+        <id>Active J 4.1 - Optimization and simplification</id>
+        <link href="https://activej.io/blog/2021/03/19/v4.1"/>
+        <updated>2021-03-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.1 was released Mar 19, 2021 (see on Maven).]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Active J 4.0 - Refactoring of exceptions]]></title>
+        <id>Active J 4.0 - Refactoring of exceptions</id>
+        <link href="https://activej.io/blog/2021/02/16/v4.0"/>
+        <updated>2021-02-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.0 was released Feb 16, 2021 (see on Maven).]]></summary>
+    </entry>
+</feed>
