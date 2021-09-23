@@ -59,6 +59,10 @@ function redirectToLocale() {
 
   const supportedLocales = getBrowserLocales();
 
+  if (!supportedLocales) {
+    return;
+  }
+
   if (supportedLocales.has('zh')) {
     window.location.replace(new URL('/zh' + window.location.pathname, window.location.href).href);
   }
