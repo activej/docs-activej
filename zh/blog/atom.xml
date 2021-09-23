@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://activej.io/zh/blog</id>
+    <title>ActiveJ Blog</title>
+    <updated>2021-09-01T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://activej.io/zh/blog"/>
+    <subtitle>ActiveJ Blog</subtitle>
+    <icon>https://activej.io/zh/./img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.0-beta2 - 改进的承诺，缓存的类构建器]]></title>
+        <id>ActiveJ 5.0-beta2 - 改进的承诺，缓存的类构建器</id>
+        <link href="https://activej.io/zh/blog/2021/09/01/v5.0-beta2"/>
+        <updated>2021-09-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.0-beta2 已发布 Sep 01, 2021 (查看Maven)。 这个版本引入了 ，改进了 承诺 API。 此外还为 ActiveJ Codegen 模块中的持久字节代码缓存添加了支持。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.0-beta1--改进类型分辨率等]]></title>
+        <id>ActiveJ 5.0-beta1--改进类型分辨率等</id>
+        <link href="https://activej.io/zh/blog/2021/06/30/v5.0-beta1"/>
+        <updated>2021-06-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.0-beta1 已经释放， 2021 (查看Maven)。 这个版本引入了 高级类型扫描和分辨率设施以及源于固定类型支持的更多变化。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 4.3 - 多个模块的小改进]]></title>
+        <id>ActiveJ 4.3 - 多个模块的小改进</id>
+        <link href="https://activej.io/zh/blog/2021/05/28/v4.3"/>
+        <updated>2021-05-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.3已经获释， 2021 (见Maven)。 这个版本为多个模块带来了 个小的改进。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 4.2 - 扩展的功能]]></title>
+        <id>ActiveJ 4.2 - 扩展的功能</id>
+        <link href="https://activej.io/zh/blog/2021/04/13/v4.2"/>
+        <updated>2021-04-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[* ActiveJ Redis客户端]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 4.1 - 优化和简化]]></title>
+        <id>ActiveJ 4.1 - 优化和简化</id>
+        <link href="https://activej.io/zh/blog/2021/03/19/v4.1"/>
+        <updated>2021-03-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.1 被释放。19, 2021 (见Maven)。 这个版本包括优化和简化HTTP代码，扩大某些组件的功能。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 4.0 - 异常的重构]]></title>
+        <id>ActiveJ 4.0 - 异常的重构</id>
+        <link href="https://activej.io/zh/blog/2021/02/16/v4.0"/>
+        <updated>2021-02-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.0 被释放，2021 Feb 16.(见Maven)。 这种释放包括对例外情况进行重大调整。 此版本还引入异步高性能 ActiveJ Redis客户端。 为性能优化了其他组件。]]></summary>
+    </entry>
+</feed>

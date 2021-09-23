@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://activej.io/ru/blog</id>
+    <title>ActiveJ Blog</title>
+    <updated>2021-09-01T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://activej.io/ru/blog"/>
+    <subtitle>ActiveJ Blog</subtitle>
+    <icon>https://activej.io/ru/./img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.0-beta2 - Улучшенные промисы, кэшированный конструктор классов]]></title>
+        <id>ActiveJ 5.0-beta2 - Улучшенные промисы, кэшированный конструктор классов</id>
+        <link href="https://activej.io/ru/blog/2021/09/01/v5.0-beta2"/>
+        <updated>2021-09-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.0-beta2 был выпущен Sep 01, 2021 (см. на Maven). В этой версии были внесены улучшения для promise API. Также добавлена поддержка постоянного байт-код кэша в модуле ActiveJ Codegen.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.0-beta1 - Улучшено type resolution и многое другое]]></title>
+        <id>ActiveJ 5.0-beta1 - Улучшено type resolution и многое другое</id>
+        <link href="https://activej.io/ru/blog/2021/06/30/v5.0-beta1"/>
+        <updated>2021-06-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.0-beta1 был выпущен 30 июня 2021 (см. на Maven). В этом релизе были представлены расширенные возможности сканирования и разрешения и другие изменения, вызванные поддержкой импотентных типов.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 4.3 - Небольшие улучшения для нескольких модулей]]></title>
+        <id>ActiveJ 4.3 - Небольшие улучшения для нескольких модулей</id>
+        <link href="https://activej.io/ru/blog/2021/05/28/v4.3"/>
+        <updated>2021-05-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.3 был выпущен 28 мая 2021 (см. на Maven). В этой версии были внесены небольшие улучшения для нескольких модулей.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 4.2 - Расширенная функциональность]]></title>
+        <id>ActiveJ 4.2 - Расширенная функциональность</id>
+        <link href="https://activej.io/ru/blog/2021/04/13/v4.2"/>
+        <updated>2021-04-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[* ActiveJ Redis client]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 4.1 - Оптимизация и упрощение]]></title>
+        <id>ActiveJ 4.1 - Оптимизация и упрощение</id>
+        <link href="https://activej.io/ru/blog/2021/03/19/v4.1"/>
+        <updated>2021-03-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.1 был выпущен Mar 19, 2021 (см. на Maven). Этот выпуск включал в себя оптимизацию и упрощение HTTP-кода, расширение функциональности некоторых компонентов.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 4.0 - Рефакторинг исключений]]></title>
+        <id>ActiveJ 4.0 - Рефакторинг исключений</id>
+        <link href="https://activej.io/ru/blog/2021/02/16/v4.0"/>
+        <updated>2021-02-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v4.0 был выпущен в свет 16 февраля 2021 (см. на Maven). Этот выпуск включал в себя существенное рефакторинг исключений. Этот релиз также представляет асинхронную высокую производительность ActiveJ Redis. Другие компоненты оптимизированы для производительности.]]></summary>
+    </entry>
+</feed>
