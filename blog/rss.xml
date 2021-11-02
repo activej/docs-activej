@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>ActiveJ Blog</title>
+        <title>ActiveJ 5.0 Blog</title>
         <link>https://activej.io/blog</link>
-        <description>ActiveJ Blog</description>
-        <lastBuildDate>Wed, 01 Sep 2021 00:00:00 GMT</lastBuildDate>
+        <description>ActiveJ 5.0 Blog</description>
+        <lastBuildDate>Fri, 29 Oct 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[ActiveJ 5.0-beta2 - Improved promises, cached class builder]]></title>
-            <link>https://activej.io/blog/2021/09/01/v5.0-beta2</link>
-            <guid>ActiveJ 5.0-beta2 - Improved promises, cached class builder</guid>
-            <pubDate>Wed, 01 Sep 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[ActiveJ v5.0-beta2 was released Sep 01,]]></description>
-        </item>
-        <item>
-            <title><![CDATA[ActiveJ 5.0-beta1 - Improved type resolution and more]]></title>
-            <link>https://activej.io/blog/2021/06/30/v5.0-beta1</link>
-            <guid>ActiveJ 5.0-beta1 - Improved type resolution and more</guid>
-            <pubDate>Wed, 30 Jun 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[ActiveJ v5.0-beta1 was released Jun 30,]]></description>
+            <title><![CDATA[ActiveJ 5.0 - New major release]]></title>
+            <link>https://activej.io/blog/2021/10/29/v5.0</link>
+            <guid>ActiveJ 5.0 - New major release</guid>
+            <pubDate>Fri, 29 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[ActiveJ v5.0 was released Oct 29,]]></description>
         </item>
         <item>
             <title><![CDATA[ActiveJ 4.3 - Small improvements for multiple modules]]></title>

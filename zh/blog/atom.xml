@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://activej.io/zh/blog</id>
-    <title>ActiveJ Blog</title>
-    <updated>2021-09-01T00:00:00.000Z</updated>
+    <title>ActiveJ 5.0 Blog</title>
+    <updated>2021-10-29T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://activej.io/zh/blog"/>
-    <subtitle>ActiveJ Blog</subtitle>
+    <subtitle>ActiveJ 5.0 Blog</subtitle>
     <icon>https://activej.io/zh/./img/favicon.png</icon>
     <entry>
-        <title type="html"><![CDATA[ActiveJ 5.0-beta2 - 改进的承诺，缓存的类构建器]]></title>
-        <id>ActiveJ 5.0-beta2 - 改进的承诺，缓存的类构建器</id>
-        <link href="https://activej.io/zh/blog/2021/09/01/v5.0-beta2"/>
-        <updated>2021-09-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[ActiveJ v5.0-beta2 已发布 Sep 01, 2021 (查看Maven)。 这个版本引入了 ，改进了 承诺 API。 此外还为 ActiveJ Codegen 模块中的持久字节代码缓存添加了支持。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ActiveJ 5.0-beta1--改进类型分辨率等]]></title>
-        <id>ActiveJ 5.0-beta1--改进类型分辨率等</id>
-        <link href="https://activej.io/zh/blog/2021/06/30/v5.0-beta1"/>
-        <updated>2021-06-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[ActiveJ v5.0-beta1 已经释放， 2021 (查看Maven)。 这个版本引入了 高级类型扫描和分辨率设施以及源于固定类型支持的更多变化。]]></summary>
+        <title type="html"><![CDATA[ActiveJ 5.0 - New major release]]></title>
+        <id>ActiveJ 5.0 - New major release</id>
+        <link href="https://activej.io/zh/blog/2021/10/29/v5.0"/>
+        <updated>2021-10-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.0 was released Oct 29,]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[ActiveJ 4.3 - 多个模块的小改进]]></title>
