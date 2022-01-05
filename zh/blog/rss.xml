@@ -4,9 +4,22 @@
         <title>ActiveJ 5.1 Blog</title>
         <link>https://activej.io/zh/blog</link>
         <description>ActiveJ 5.1 Blog</description>
-        <lastBuildDate>Fri, 29 Oct 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 04 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[ActiveJ 5.1 - Boot and ActiveJ FS improvements]]></title>
+            <link>https://activej.io/zh/blog/2022/01/04/v5.1</link>
+            <guid>ActiveJ 5.1 - Boot and ActiveJ FS improvements</guid>
+            <pubDate>Tue, 04 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[ActiveJ v5.1 was released Jan 4,]]></description>
+            <content:encoded><![CDATA[<p>ActiveJ v5.1 was released Jan 4,
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.1">see on Maven</a>). This release includes
+improvements to <a href="/fs">ActiveJ FS</a>, <a href="/inject">ActiveJ Inject</a> and <a href="/boot/launcher">boot</a> modules in general.</p><ul><li><a href="/inject">ActiveJ Inject</a> and <a href="/boot/launcher">boot</a> modules<ul><li><a href="https://github.com/activej/activej/blob/v5.1/boot-triggers/src/main/java/io/activej/trigger/TriggersModule.java">TriggersModule</a>
+now properly handles <a href="/inject/optional-dependencies">optional dependencies</a></li><li>Nested optional dependencies (e.g. <code>OptionalDependency&lt;OptionalDependency&lt;?&gt;&gt;</code>) are prohibited</li><li>Services (as well as those obtained from an optional dependencies) are guaranteed to start/stop exactly once</li><li>Added shortcuts for obtaining optional dependencies from <a href="https://github.com/activej/activej/blob/v5.1/core-inject/src/main/java/io/activej/inject/Injector.java">Injector</a></li></ul></li><li><a href="/fs">ActiveJ FS</a><ul><li>Added a new <a href="https://github.com/activej/activej/blob/v5.1/cloud-fs/src/main/java/io/activej/fs/exception/ActiveFsStructureException.java">exception</a> to
+indicate errors in a structure of a file system.</li><li>Added a precondition that checks whether local file systems (<a href="https://github.com/activej/activej/blob/v5.1/cloud-fs/src/main/java/io/activej/fs/LocalActiveFs.java">LocalActiveFs</a> and
+<a href="https://github.com/activej/activej/blob/v5.1/cloud-fs/src/main/java/io/activej/fs/LocalBlockingFs.java">LocalBlockingFs</a>) were started before being used.</li></ul></li></ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[ActiveJ 5.0 - New major release]]></title>
             <link>https://activej.io/zh/blog/2021/10/29/v5.0</link>
