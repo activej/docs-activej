@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://activej.io/zh/blog</id>
-    <title>ActiveJ 5.1.1 Blog</title>
-    <updated>2022-03-09T00:00:00.000Z</updated>
+    <title>ActiveJ 5.2 Blog</title>
+    <updated>2022-04-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://activej.io/zh/blog"/>
-    <subtitle>ActiveJ 5.1.1 Blog</subtitle>
+    <subtitle>ActiveJ 5.2 Blog</subtitle>
     <icon>https://activej.io/zh/./img/favicon.png</icon>
     <entry>
-        <title type="html"><![CDATA[ActiveJ 5.1.1 - Minor improvements]]></title>
-        <id>ActiveJ 5.1.1 - Minor improvements</id>
-        <link href="https://activej.io/zh/blog/2022/03/09/v5.1.1"/>
-        <updated>2022-03-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[ActiveJ v5.1.1 was released Mar 9,]]></summary>
-        <content type="html"><![CDATA[<p>ActiveJ v5.1.1 was released Mar 9,
-2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.1.1">see on Maven</a>). This release includes
-minor improvements mainly for <a href="/http">HTTP client/server</a> and <a href="/serializer">ActiveJ Serializer</a>.</p><ul><li><a href="/http">HTTP</a><ul><li>Malformed HTTP requests now result in a code <code>400</code> response rather than connection drop.</li><li>HTTP inspectors can now inspect malformed HTTP requests and responses.</li><li><a href="https://github.com/activej/activej/blob/v5.1.1/core-http/src/main/java/io/activej/http/RoutingServlet.java">RoutingServlet</a> now correctly decodes percent-encoded URL path parts.</li><li>Minor improvements of the <a href="https://github.com/activej/activej/blob/v5.1.1/core-http/src/main/java/io/activej/http/UrlParser.java">UrlParser</a>.</li></ul></li><li><a href="/serializer">ActiveJ Serializer</a><ul><li>Added additional preconditions for subclass serializer.</li><li>Removed unnecessary caching from <a href="https://github.com/activej/activej/blob/v5.1.1/core-serializer/src/main/java/io/activej/serializer/SerializerBuilder.java">SerializerBuilder</a>.</li></ul></li></ul>]]></content>
+        <title type="html"><![CDATA[ActiveJ 5.2 - Minor improvements]]></title>
+        <id>ActiveJ 5.2 - Minor improvements</id>
+        <link href="https://activej.io/zh/blog/2022/04/19/v5.2"/>
+        <updated>2022-04-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.2 was released Apr 19,]]></summary>
+        <content type="html"><![CDATA[<p>ActiveJ v5.2 was released Apr 19,
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.2">see on Maven</a>). This release includes
+minor improvements mainly for <a href="/http">HTTP client/server</a> and <a href="/serializer">ActiveJ Serializer</a>.</p><ul><li><a href="/http">HTTP</a><ul><li>Added dedicated enum for setting <code>SameSite</code> policy on cookies. </li><li>Malformed HTTP requests now result in a code <code>400</code> response rather than connection drop.</li><li>HTTP inspectors can now inspect malformed HTTP requests and responses.</li><li><a href="https://github.com/activej/activej/blob/v5.1.1/core-http/src/main/java/io/activej/http/RoutingServlet.java">RoutingServlet</a> now correctly decodes percent-encoded URL path parts.</li><li>Added checks for DNS label sizes.</li><li>Minor improvements of the <a href="https://github.com/activej/activej/blob/v5.1.1/core-http/src/main/java/io/activej/http/UrlParser.java">UrlParser</a>.</li></ul></li><li><a href="/serializer">ActiveJ Serializer</a><ul><li>Added additional preconditions for subclass serializer.</li><li>Removed unnecessary caching from <a href="https://github.com/activej/activej/blob/v5.1.1/core-serializer/src/main/java/io/activej/serializer/SerializerBuilder.java">SerializerBuilder</a>.</li></ul></li><li><a href="/fs">ActiveJ FS</a><ul><li>Storage paths are now normalized, so local file systems now work properly with relative storage paths.</li></ul></li></ul>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[ActiveJ 5.1 - Boot and ActiveJ FS improvements]]></title>
