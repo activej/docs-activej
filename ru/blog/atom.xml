@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://activej.io/ru/blog</id>
-    <title>ActiveJ 5.2 Blog</title>
-    <updated>2022-04-19T00:00:00.000Z</updated>
+    <title>ActiveJ 5.3 Blog</title>
+    <updated>2022-06-17T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://activej.io/ru/blog"/>
-    <subtitle>ActiveJ 5.2 Blog</subtitle>
+    <subtitle>ActiveJ 5.3 Blog</subtitle>
     <icon>https://activej.io/ru/./img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.3 - JMX improvements]]></title>
+        <id>ActiveJ 5.3 - JMX improvements</id>
+        <link href="https://activej.io/ru/blog/2022/06/17/v5.3"/>
+        <updated>2022-06-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.3 was released Jun 17,]]></summary>
+        <content type="html"><![CDATA[<p>ActiveJ v5.3 was released Jun 17,
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.3">see on Maven</a>). This release includes
+minor improvements to JMX, as well as several bug fixes.</p><ul><li>JMX<ul><li>Added the ability to use custom <code>JmxReducer</code>s for <code>@JmxOperation</code>s. </li><li>JMX attributes and operations of <code>Map</code> type now respect the specified <code>JmxReducer</code> when reducing map values.</li><li>Added the ability to specify a predicate for whether worker instances should be registered in JMX or not.</li></ul></li><li><a href="/codegen">ActiveJ Codegen</a><ul><li>Ability to use parameterized types for record fields has been added.</li></ul></li><li><a href="/http">HTTP</a><ul><li>Fixed a bug with quality factors parsing in headers.</li><li>Improved handling of runtime exceptions.</li></ul></li><li><a href="/async-io/datastream">Datastream</a><ul><li>Fixed acknowledgement completion in <code>StreamReducer</code> as well as in several <code>StreamConsumer</code>s</li></ul></li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ActiveJ 5.2 - Minor improvements]]></title>
         <id>ActiveJ 5.2 - Minor improvements</id>

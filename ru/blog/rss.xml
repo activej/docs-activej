@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>ActiveJ 5.2 Blog</title>
+        <title>ActiveJ 5.3 Blog</title>
         <link>https://activej.io/ru/blog</link>
-        <description>ActiveJ 5.2 Blog</description>
-        <lastBuildDate>Tue, 19 Apr 2022 00:00:00 GMT</lastBuildDate>
+        <description>ActiveJ 5.3 Blog</description>
+        <lastBuildDate>Fri, 17 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[ActiveJ 5.3 - JMX improvements]]></title>
+            <link>https://activej.io/ru/blog/2022/06/17/v5.3</link>
+            <guid>ActiveJ 5.3 - JMX improvements</guid>
+            <pubDate>Fri, 17 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[ActiveJ v5.3 was released Jun 17,]]></description>
+            <content:encoded><![CDATA[<p>ActiveJ v5.3 was released Jun 17,
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.3">see on Maven</a>). This release includes
+minor improvements to JMX, as well as several bug fixes.</p><ul><li>JMX<ul><li>Added the ability to use custom <code>JmxReducer</code>s for <code>@JmxOperation</code>s. </li><li>JMX attributes and operations of <code>Map</code> type now respect the specified <code>JmxReducer</code> when reducing map values.</li><li>Added the ability to specify a predicate for whether worker instances should be registered in JMX or not.</li></ul></li><li><a href="/codegen">ActiveJ Codegen</a><ul><li>Ability to use parameterized types for record fields has been added.</li></ul></li><li><a href="/http">HTTP</a><ul><li>Fixed a bug with quality factors parsing in headers.</li><li>Improved handling of runtime exceptions.</li></ul></li><li><a href="/async-io/datastream">Datastream</a><ul><li>Fixed acknowledgement completion in <code>StreamReducer</code> as well as in several <code>StreamConsumer</code>s</li></ul></li></ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[ActiveJ 5.2 - Minor improvements]]></title>
             <link>https://activej.io/ru/blog/2022/04/19/v5.2</link>
