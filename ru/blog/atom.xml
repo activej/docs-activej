@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://activej.io/ru/blog</id>
-    <title>ActiveJ 5.4.1 Blog</title>
-    <updated>2022-08-31T00:00:00.000Z</updated>
+    <title>ActiveJ 5.4.2 Blog</title>
+    <updated>2022-09-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://activej.io/ru/blog"/>
-    <subtitle>ActiveJ 5.4.1 Blog</subtitle>
+    <subtitle>ActiveJ 5.4.2 Blog</subtitle>
     <icon>https://activej.io/ru/./img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.4.2 - Minor bug fixes]]></title>
+        <id>ActiveJ 5.4.2 - Minor bug fixes</id>
+        <link href="https://activej.io/ru/blog/2022/09/05/v5.4.2"/>
+        <updated>2022-09-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.4.2 was released on Sep 5,]]></summary>
+        <content type="html"><![CDATA[<p>ActiveJ v5.4.2 was released on Sep 5,
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4.2">see on Maven</a>). This release includes
+minor bug fixes for stream codecs.</p><ul><li>Fixed a bug when a stream codec tried to safely decode more items than are present in the input of the stream. </li><li>Relative path tests in <a href="/fs">ActiveJ FS</a> are ignored when the project directory is located on a drive other than the temporary directory.</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ActiveJ 5.4.1 - Stream Codecs optimizations]]></title>
         <id>ActiveJ 5.4.1 - Stream Codecs optimizations</id>
