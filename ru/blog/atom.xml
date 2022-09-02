@@ -2,11 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://activej.io/ru/blog</id>
     <title>ActiveJ 5.4.1 Blog</title>
-    <updated>2022-06-17T00:00:00.000Z</updated>
+    <updated>2022-08-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://activej.io/ru/blog"/>
     <subtitle>ActiveJ 5.4.1 Blog</subtitle>
     <icon>https://activej.io/ru/./img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.4.1 - Stream Codecs optimizations]]></title>
+        <id>ActiveJ 5.4.1 - Stream Codecs optimizations</id>
+        <link href="https://activej.io/ru/blog/2022/08/31/v5.4.1"/>
+        <updated>2022-08-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.4.1 was released on Aug 31,]]></summary>
+        <content type="html"><![CDATA[<p>ActiveJ v5.4.1 was released on Aug 31,
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4.1">see on Maven</a>). This release includes
+optimizations for Stream Codecs to optimize memory usage.</p><ul><li>Optimized encoding and decoding of arrays of primitives, as well as arrays of variable-length ints and longs.</li><li>Minimized the required number of flushes when writing data to a byte array.</li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.4 - Codegen and Serializer optimizations]]></title>
+        <id>ActiveJ 5.4 - Codegen and Serializer optimizations</id>
+        <link href="https://activej.io/ru/blog/2022/08/19/v5.4"/>
+        <updated>2022-08-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.4 was released on Aug 19,]]></summary>
+        <content type="html"><![CDATA[<p>ActiveJ v5.4 was released on Aug 19,
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4">see on Maven</a>). This release includes
+improvements to <a href="/codegen">ActiveJ Codegen</a>,<a href="/serializer">ActiveJ Serializer</a>, and minor fixes to other
+components.</p><ul><li><a href="/codegen">ActiveJ Codegen</a><ul><li>Generated method calls that use <code>self</code> instances as method arguments are now automatically resolved.</li><li>Slightly optimized method lookup.</li></ul></li><li><a href="/serializer">ActiveJ Serializer</a><ul><li>Optimized serializer builder&#x27;s cache. Ensured that previously defined serializers are reused.</li><li>Ensured that dangling references are cleaned up if serialization fails.</li></ul></li><li><a href="/async-io/net">Net</a><ul><li>Fix order of promise completion when SSL socket receives <code>close_notify</code> message.</li></ul></li><li><a href="/http">HTTP</a><ul><li>Multimap of HTTP headers is now properly resized.</li><li>Fatal errors in HTTP server connections are now handled correctly.</li><li>Added the <code>HttpMessage#takeBodyStream</code> method instead of the <code>HttpMessage#getBodyStream</code> method as it has a more
+semantically correct name. <code>HttpMessage#getBodyStream</code> method is now deprecated and is a candidate for removal in
+the next major release.</li></ul></li><li>Misc<ul><li>Added additional application error logging in Launcher.</li><li>Fixed <code>@NotNull</code> annotations for function parameters.</li></ul></li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ActiveJ 5.3 - JMX improvements]]></title>
         <id>ActiveJ 5.3 - JMX improvements</id>
