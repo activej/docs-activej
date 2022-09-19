@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://activej.io/ru/blog</id>
-    <title>ActiveJ 5.4.2 Blog</title>
-    <updated>2022-09-05T00:00:00.000Z</updated>
+    <title>ActiveJ 5.4.3 Blog</title>
+    <updated>2022-09-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://activej.io/ru/blog"/>
-    <subtitle>ActiveJ 5.4.2 Blog</subtitle>
+    <subtitle>ActiveJ 5.4.3 Blog</subtitle>
     <icon>https://activej.io/ru/./img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.4.3 - Simplified custom serializers]]></title>
+        <id>ActiveJ 5.4.3 - Simplified custom serializers</id>
+        <link href="https://activej.io/ru/blog/2022/09/16/v5.4.3"/>
+        <updated>2022-09-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.4.3 was released on Sep 16,]]></summary>
+        <content type="html"><![CDATA[<p>ActiveJ v5.4.3 was released on Sep 16,
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4.3">see on Maven</a>). This release introduces a simplified
+approach for creating serializers for custom classes.</p><ul><li>Added an abstract <code>SimpleSerializerDef</code> class that simplifies the creation of custom serializers. Serializers for custom
+classes can now be created without the use of the Expressions API</li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ActiveJ 5.4.2 - Minor bug fixes]]></title>
         <id>ActiveJ 5.4.2 - Minor bug fixes</id>
