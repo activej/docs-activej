@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://activej.io/ru/blog</id>
-    <title>ActiveJ 5.4.3 Blog</title>
-    <updated>2022-09-16T00:00:00.000Z</updated>
+    <title>ActiveJ 5.5 Blog</title>
+    <updated>2023-06-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://activej.io/ru/blog"/>
-    <subtitle>ActiveJ 5.4.3 Blog</subtitle>
+    <subtitle>ActiveJ 5.5 Blog</subtitle>
     <icon>https://activej.io/ru/./img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[ActiveJ 5.5 - Performance improvements and bug fixes]]></title>
+        <id>ActiveJ 5.5 - Performance improvements and bug fixes</id>
+        <link href="https://activej.io/ru/blog/2023/06/15/v5.5"/>
+        <updated>2023-06-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ActiveJ v5.5 was released on Jun 15,]]></summary>
+        <content type="html"><![CDATA[<p>ActiveJ v5.5 was released on Jun 15,
+2023 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.5">see on Maven</a>). This release
+introduces bug fixes, as well as some performance improvements.</p><ul><li>General<ul><li>Updated dependency versions.</li><li>Changed logging levels in some components to be more appropriate.</li><li>Added method for parsing <code>InetSocketAddress</code> that tries to resolve the address.</li><li>Made <code>Checks</code> enabled by default if Java&#x27;s assertions are enabled.</li></ul></li><li><a href="/misc/bytebuf">ByteBuf</a><ul><li>Fixed UTF-8 encoding in <code>ByteBufStrings</code>.</li></ul></li><li><a href="/async-io/eventloop">Eventloop</a><ul><li>Improved performance of scheduled tasks. Minimized garbage collection required for task scheduling.</li></ul></li><li><a href="/inject">Inject</a><ul><li>Added the ability to create bindings out of Java&#x27;s constructors.</li><li>Simplified wildcard types in <code>KeyPattern</code>.</li></ul></li><li><a href="/rpc">RPC</a><ul><li>Improved <code>RpcClient</code> start/stop routine.</li><li>Added launcher for multithreaded RPC server.</li><li>Added <code>RpcClient#withForcedShutdown</code> method to allow shutting down the <code>RpcClient</code> even if there are
+active connections.</li></ul></li><li><a href="/http">HTTP</a><ul><li>Fixed inspector notification about malformed data exceptions.</li><li>Improved shutdown routine of <code>HttpClient</code>.</li><li>Added the ability to forcefully shutdown <code>HttpClient</code>.</li><li>Made response code of <code>HttpResponse</code> mutable.</li><li>Fixed multipart/form-data request parsing by considering the last <code>CRLF</code> optional,
+as per <a href="https://datatracker.ietf.org/doc/html/rfc2046#section-5.1.1">RFC</a>.</li></ul></li><li><a href="/async-io/datastream">Datastream</a><ul><li>Fixed <code>ChannelSerializer</code> behavior on exception occurances.</li><li>Added <code>StreamLimiter</code> class that limits number of items that pass via datastream pipeline.</li><li>Added <code>StreamSkip</code> class that omits N first items that pass via datastream pipeline.</li><li>Fixed stats aggregation in <code>StreamStatsForwarder</code>.</li></ul></li><li><a href="/codegen">Codegen</a><ul><li>Fixed method invocations on interfaces.</li><li>Improved class caching in <code>RecordScheme</code>.</li><li>Compared fields in <code>RecordScheme</code> are now transfered to the projection.</li></ul></li><li><a href="/serializer">Serializer</a><ul><li>Restricted non-static inner classes to be used for serialization.</li><li>Fixed closing routine in <code>StreamInput</code>.</li><li>Removed caching from <code>StreamCodecs</code>.</li><li>Added <code>StreamCodecs#reference</code> method that introduces an effective way to serialize/deserialize duplicate item
+instances.</li></ul></li><li><a href="/specializer">Specializer</a><ul><li>Refactored ActiveJ Specializer to perform well on conditional code.</li></ul></li><li>JMX<ul><li>Added JMX reducers (<code>Average</code>, <code>Any</code>).</li><li>Added built-in support for JMX attributes/operations of <code>Enum</code> type.</li><li>Added built-in support for JMX attributes/operations of <code>InetSocketAddress</code> type.</li></ul></li></ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ActiveJ 5.4.3 - Simplified custom serializers]]></title>
         <id>ActiveJ 5.4.3 - Simplified custom serializers</id>
