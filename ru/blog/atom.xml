@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://activej.io/ru/blog</id>
-    <title>ActiveJ 5.5 Blog</title>
+    <title>ActiveJ 6.0 Blog</title>
     <updated>2023-06-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://activej.io/ru/blog"/>
-    <subtitle>ActiveJ 5.5 Blog</subtitle>
+    <subtitle>ActiveJ 6.0 Blog</subtitle>
     <icon>https://activej.io/ru/./img/favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[ActiveJ 5.5 - Performance improvements and bug fixes]]></title>
