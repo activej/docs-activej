@@ -7,181 +7,504 @@
         <lastBuildDate>Thu, 15 Jun 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
         <item>
             <title><![CDATA[ActiveJ 5.5 - Performance improvements and bug fixes]]></title>
             <link>https://activej.io/blog/2023/06/15/v5.5</link>
-            <guid>ActiveJ 5.5 - Performance improvements and bug fixes</guid>
+            <guid>https://activej.io/blog/2023/06/15/v5.5</guid>
             <pubDate>Thu, 15 Jun 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v5.5 was released on Jun 15,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v5.5 was released on Jun 15,
-2023 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.5">see on Maven</a>). This release
-introduces bug fixes, as well as some performance improvements.</p><ul><li>General<ul><li>Updated dependency versions.</li><li>Changed logging levels in some components to be more appropriate.</li><li>Added method for parsing <code>InetSocketAddress</code> that tries to resolve the address.</li><li>Made <code>Checks</code> enabled by default if Java&#x27;s assertions are enabled.</li></ul></li><li><a href="/misc/bytebuf">ByteBuf</a><ul><li>Fixed UTF-8 encoding in <code>ByteBufStrings</code>.</li></ul></li><li><a href="/async-io/eventloop">Eventloop</a><ul><li>Improved performance of scheduled tasks. Minimized garbage collection required for task scheduling.</li></ul></li><li><a href="/inject">Inject</a><ul><li>Added the ability to create bindings out of Java&#x27;s constructors.</li><li>Simplified wildcard types in <code>KeyPattern</code>.</li></ul></li><li><a href="/rpc">RPC</a><ul><li>Improved <code>RpcClient</code> start/stop routine.</li><li>Added launcher for multithreaded RPC server.</li><li>Added <code>RpcClient#withForcedShutdown</code> method to allow shutting down the <code>RpcClient</code> even if there are
-active connections.</li></ul></li><li><a href="/http">HTTP</a><ul><li>Fixed inspector notification about malformed data exceptions.</li><li>Improved shutdown routine of <code>HttpClient</code>.</li><li>Added the ability to forcefully shutdown <code>HttpClient</code>.</li><li>Made response code of <code>HttpResponse</code> mutable.</li><li>Fixed multipart/form-data request parsing by considering the last <code>CRLF</code> optional,
-as per <a href="https://datatracker.ietf.org/doc/html/rfc2046#section-5.1.1">RFC</a>.</li></ul></li><li><a href="/async-io/datastream">Datastream</a><ul><li>Fixed <code>ChannelSerializer</code> behavior on exception occurances.</li><li>Added <code>StreamLimiter</code> class that limits number of items that pass via datastream pipeline.</li><li>Added <code>StreamSkip</code> class that omits N first items that pass via datastream pipeline.</li><li>Fixed stats aggregation in <code>StreamStatsForwarder</code>.</li></ul></li><li><a href="/codegen">Codegen</a><ul><li>Fixed method invocations on interfaces.</li><li>Improved class caching in <code>RecordScheme</code>.</li><li>Compared fields in <code>RecordScheme</code> are now transfered to the projection.</li></ul></li><li><a href="/serializer">Serializer</a><ul><li>Restricted non-static inner classes to be used for serialization.</li><li>Fixed closing routine in <code>StreamInput</code>.</li><li>Removed caching from <code>StreamCodecs</code>.</li><li>Added <code>StreamCodecs#reference</code> method that introduces an effective way to serialize/deserialize duplicate item
-instances.</li></ul></li><li><a href="/specializer">Specializer</a><ul><li>Refactored ActiveJ Specializer to perform well on conditional code.</li></ul></li><li>JMX<ul><li>Added JMX reducers (<code>Average</code>, <code>Any</code>).</li><li>Added built-in support for JMX attributes/operations of <code>Enum</code> type.</li><li>Added built-in support for JMX attributes/operations of <code>InetSocketAddress</code> type.</li></ul></li></ul>]]></content:encoded>
+2023 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.5" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release
+introduces bug fixes, as well as some performance improvements.</p>
+<ul>
+<li>General<!-- -->
+<ul>
+<li>Updated dependency versions.</li>
+<li>Changed logging levels in some components to be more appropriate.</li>
+<li>Added method for parsing <code>InetSocketAddress</code> that tries to resolve the address.</li>
+<li>Made <code>Checks</code> enabled by default if Java's assertions are enabled.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/misc/bytebuf">ByteBuf</a>
+<ul>
+<li>Fixed UTF-8 encoding in <code>ByteBufStrings</code>.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/async-io/eventloop">Eventloop</a>
+<ul>
+<li>Improved performance of scheduled tasks. Minimized garbage collection required for task scheduling.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/inject">Inject</a>
+<ul>
+<li>Added the ability to create bindings out of Java's constructors.</li>
+<li>Simplified wildcard types in <code>KeyPattern</code>.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/rpc">RPC</a>
+<ul>
+<li>Improved <code>RpcClient</code> start/stop routine.</li>
+<li>Added launcher for multithreaded RPC server.</li>
+<li>Added <code>RpcClient#withForcedShutdown</code> method to allow shutting down the <code>RpcClient</code> even if there are
+active connections.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/http">HTTP</a>
+<ul>
+<li>Fixed inspector notification about malformed data exceptions.</li>
+<li>Improved shutdown routine of <code>HttpClient</code>.</li>
+<li>Added the ability to forcefully shutdown <code>HttpClient</code>.</li>
+<li>Made response code of <code>HttpResponse</code> mutable.</li>
+<li>Fixed multipart/form-data request parsing by considering the last <code>CRLF</code> optional,
+as per <a href="https://datatracker.ietf.org/doc/html/rfc2046#section-5.1.1" target="_blank" rel="noopener noreferrer">RFC</a>.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/async-io/datastream">Datastream</a>
+<ul>
+<li>Fixed <code>ChannelSerializer</code> behavior on exception occurances.</li>
+<li>Added <code>StreamLimiter</code> class that limits number of items that pass via datastream pipeline.</li>
+<li>Added <code>StreamSkip</code> class that omits N first items that pass via datastream pipeline.</li>
+<li>Fixed stats aggregation in <code>StreamStatsForwarder</code>.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/codegen">Codegen</a>
+<ul>
+<li>Fixed method invocations on interfaces.</li>
+<li>Improved class caching in <code>RecordScheme</code>.</li>
+<li>Compared fields in <code>RecordScheme</code> are now transfered to the projection.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/serializer">Serializer</a>
+<ul>
+<li>Restricted non-static inner classes to be used for serialization.</li>
+<li>Fixed closing routine in <code>StreamInput</code>.</li>
+<li>Removed caching from <code>StreamCodecs</code>.</li>
+<li>Added <code>StreamCodecs#reference</code> method that introduces an effective way to serialize/deserialize duplicate item
+instances.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/specializer">Specializer</a>
+<ul>
+<li>Refactored ActiveJ Specializer to perform well on conditional code.</li>
+</ul>
+</li>
+<li>JMX<!-- -->
+<ul>
+<li>Added JMX reducers (<code>Average</code>, <code>Any</code>).</li>
+<li>Added built-in support for JMX attributes/operations of <code>Enum</code> type.</li>
+<li>Added built-in support for JMX attributes/operations of <code>InetSocketAddress</code> type.</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 5.4.3 - Simplified custom serializers]]></title>
             <link>https://activej.io/blog/2022/09/16/v5.4.3</link>
-            <guid>ActiveJ 5.4.3 - Simplified custom serializers</guid>
+            <guid>https://activej.io/blog/2022/09/16/v5.4.3</guid>
             <pubDate>Fri, 16 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v5.4.3 was released on Sep 16,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v5.4.3 was released on Sep 16,
-2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4.3">see on Maven</a>). This release introduces a simplified
-approach for creating serializers for custom classes.</p><ul><li>Added an abstract <code>SimpleSerializerDef</code> class that simplifies the creation of custom serializers. Serializers for custom
-classes can now be created without the use of the Expressions API</li></ul>]]></content:encoded>
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4.3" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release introduces a simplified
+approach for creating serializers for custom classes.</p>
+<ul>
+<li>Added an abstract <code>SimpleSerializerDef</code> class that simplifies the creation of custom serializers. Serializers for custom
+classes can now be created without the use of the Expressions API</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 5.4.2 - Minor bug fixes]]></title>
             <link>https://activej.io/blog/2022/09/05/v5.4.2</link>
-            <guid>ActiveJ 5.4.2 - Minor bug fixes</guid>
+            <guid>https://activej.io/blog/2022/09/05/v5.4.2</guid>
             <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v5.4.2 was released on Sep 5,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v5.4.2 was released on Sep 5,
-2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4.2">see on Maven</a>). This release includes
-minor bug fixes for stream codecs.</p><ul><li>Fixed a bug when a stream codec tried to safely decode more items than are present in the input of the stream. </li><li>Relative path tests in <a href="/fs">ActiveJ FS</a> are ignored when the project directory is located on a drive other than the temporary directory.</li></ul>]]></content:encoded>
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4.2" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release includes
+minor bug fixes for stream codecs.</p>
+<ul>
+<li>Fixed a bug when a stream codec tried to safely decode more items than are present in the input of the stream.</li>
+<li>Relative path tests in <a href="https://activej.io/fs">ActiveJ FS</a> are ignored when the project directory is located on a drive other than the temporary directory.</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 5.4.1 - Stream Codecs optimizations]]></title>
             <link>https://activej.io/blog/2022/08/31/v5.4.1</link>
-            <guid>ActiveJ 5.4.1 - Stream Codecs optimizations</guid>
+            <guid>https://activej.io/blog/2022/08/31/v5.4.1</guid>
             <pubDate>Wed, 31 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v5.4.1 was released on Aug 31,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v5.4.1 was released on Aug 31,
-2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4.1">see on Maven</a>). This release includes
-optimizations for Stream Codecs to optimize memory usage.</p><ul><li>Optimized encoding and decoding of arrays of primitives, as well as arrays of variable-length ints and longs.</li><li>Minimized the required number of flushes when writing data to a byte array.</li></ul>]]></content:encoded>
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4.1" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release includes
+optimizations for Stream Codecs to optimize memory usage.</p>
+<ul>
+<li>Optimized encoding and decoding of arrays of primitives, as well as arrays of variable-length ints and longs.</li>
+<li>Minimized the required number of flushes when writing data to a byte array.</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 5.4 - Codegen and Serializer optimizations]]></title>
             <link>https://activej.io/blog/2022/08/19/v5.4</link>
-            <guid>ActiveJ 5.4 - Codegen and Serializer optimizations</guid>
+            <guid>https://activej.io/blog/2022/08/19/v5.4</guid>
             <pubDate>Fri, 19 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v5.4 was released on Aug 19,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v5.4 was released on Aug 19,
-2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4">see on Maven</a>). This release includes
-improvements to <a href="/codegen">ActiveJ Codegen</a>,<a href="/serializer">ActiveJ Serializer</a>, and minor fixes to other
-components.</p><ul><li><a href="/codegen">ActiveJ Codegen</a><ul><li>Generated method calls that use <code>self</code> instances as method arguments are now automatically resolved.</li><li>Slightly optimized method lookup.</li></ul></li><li><a href="/serializer">ActiveJ Serializer</a><ul><li>Optimized serializer builder&#x27;s cache. Ensured that previously defined serializers are reused.</li><li>Ensured that dangling references are cleaned up if serialization fails.</li></ul></li><li><a href="/async-io/net">Net</a><ul><li>Fix order of promise completion when SSL socket receives <code>close_notify</code> message.</li></ul></li><li><a href="/http">HTTP</a><ul><li>Multimap of HTTP headers is now properly resized.</li><li>Fatal errors in HTTP server connections are now handled correctly.</li><li>Added the <code>HttpMessage#takeBodyStream</code> method instead of the <code>HttpMessage#getBodyStream</code> method as it has a more
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.4" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release includes
+improvements to <a href="https://activej.io/codegen">ActiveJ Codegen</a>,<a href="https://activej.io/serializer">ActiveJ Serializer</a>, and minor fixes to other
+components.</p>
+<ul>
+<li><a href="https://activej.io/codegen">ActiveJ Codegen</a>
+<ul>
+<li>Generated method calls that use <code>self</code> instances as method arguments are now automatically resolved.</li>
+<li>Slightly optimized method lookup.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/serializer">ActiveJ Serializer</a>
+<ul>
+<li>Optimized serializer builder's cache. Ensured that previously defined serializers are reused.</li>
+<li>Ensured that dangling references are cleaned up if serialization fails.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/async-io/net">Net</a>
+<ul>
+<li>Fix order of promise completion when SSL socket receives <code>close_notify</code> message.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/http">HTTP</a>
+<ul>
+<li>Multimap of HTTP headers is now properly resized.</li>
+<li>Fatal errors in HTTP server connections are now handled correctly.</li>
+<li>Added the <code>HttpMessage#takeBodyStream</code> method instead of the <code>HttpMessage#getBodyStream</code> method as it has a more
 semantically correct name. <code>HttpMessage#getBodyStream</code> method is now deprecated and is a candidate for removal in
-the next major release.</li></ul></li><li>Misc<ul><li>Added additional application error logging in Launcher.</li><li>Fixed <code>@NotNull</code> annotations for function parameters.</li></ul></li></ul>]]></content:encoded>
+the next major release.</li>
+</ul>
+</li>
+<li>Misc<!-- -->
+<ul>
+<li>Added additional application error logging in Launcher.</li>
+<li>Fixed <code>@NotNull</code> annotations for function parameters.</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 5.3 - JMX improvements]]></title>
             <link>https://activej.io/blog/2022/06/17/v5.3</link>
-            <guid>ActiveJ 5.3 - JMX improvements</guid>
+            <guid>https://activej.io/blog/2022/06/17/v5.3</guid>
             <pubDate>Fri, 17 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v5.3 was released Jun 17,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v5.3 was released Jun 17,
-2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.3">see on Maven</a>). This release includes
-minor improvements to JMX, as well as several bug fixes.</p><ul><li>JMX<ul><li>Added the ability to use custom <code>JmxReducer</code>s for <code>@JmxOperation</code>s. </li><li>JMX attributes and operations of <code>Map</code> type now respect the specified <code>JmxReducer</code> when reducing map values.</li><li>Added the ability to specify a predicate for whether worker instances should be registered in JMX or not.</li></ul></li><li><a href="/codegen">ActiveJ Codegen</a><ul><li>Ability to use parameterized types for record fields has been added.</li></ul></li><li><a href="/http">HTTP</a><ul><li>Fixed a bug with quality factors parsing in headers.</li><li>Improved handling of runtime exceptions.</li></ul></li><li><a href="/async-io/datastream">Datastream</a><ul><li>Fixed acknowledgement completion in <code>StreamReducer</code> as well as in several <code>StreamConsumer</code>s</li></ul></li></ul>]]></content:encoded>
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.3" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release includes
+minor improvements to JMX, as well as several bug fixes.</p>
+<ul>
+<li>JMX<!-- -->
+<ul>
+<li>Added the ability to use custom <code>JmxReducer</code>s for <code>@JmxOperation</code>s.</li>
+<li>JMX attributes and operations of <code>Map</code> type now respect the specified <code>JmxReducer</code> when reducing map values.</li>
+<li>Added the ability to specify a predicate for whether worker instances should be registered in JMX or not.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/codegen">ActiveJ Codegen</a>
+<ul>
+<li>Ability to use parameterized types for record fields has been added.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/http">HTTP</a>
+<ul>
+<li>Fixed a bug with quality factors parsing in headers.</li>
+<li>Improved handling of runtime exceptions.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/async-io/datastream">Datastream</a>
+<ul>
+<li>Fixed acknowledgement completion in <code>StreamReducer</code> as well as in several <code>StreamConsumer</code>s</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 5.2 - Minor improvements]]></title>
             <link>https://activej.io/blog/2022/04/19/v5.2</link>
-            <guid>ActiveJ 5.2 - Minor improvements</guid>
+            <guid>https://activej.io/blog/2022/04/19/v5.2</guid>
             <pubDate>Tue, 19 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v5.2 was released Apr 19,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v5.2 was released Apr 19,
-2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.2">see on Maven</a>). This release includes
-minor improvements mainly for <a href="/http">HTTP client/server</a> and <a href="/serializer">ActiveJ Serializer</a>.</p><ul><li><a href="/http">HTTP</a><ul><li>Added dedicated enum for setting <code>SameSite</code> policy on cookies. </li><li>Malformed HTTP requests now result in a code <code>400</code> response rather than connection drop.</li><li>HTTP inspectors can now inspect malformed HTTP requests and responses.</li><li><a href="https://github.com/activej/activej/blob/v5.1.1/core-http/src/main/java/io/activej/http/RoutingServlet.java">RoutingServlet</a> now correctly decodes percent-encoded URL path parts.</li><li>Added checks for DNS label sizes.</li><li>Minor improvements of the <a href="https://github.com/activej/activej/blob/v5.1.1/core-http/src/main/java/io/activej/http/UrlParser.java">UrlParser</a>.</li></ul></li><li><a href="/serializer">ActiveJ Serializer</a><ul><li>Added additional preconditions for subclass serializer.</li><li>Removed unnecessary caching from <a href="https://github.com/activej/activej/blob/v5.1.1/core-serializer/src/main/java/io/activej/serializer/SerializerBuilder.java">SerializerBuilder</a>.</li></ul></li><li><a href="/fs">ActiveJ FS</a><ul><li>Storage paths are now normalized, so local file systems now work properly with relative storage paths.</li></ul></li></ul>]]></content:encoded>
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.2" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release includes
+minor improvements mainly for <a href="https://activej.io/http">HTTP client/server</a> and <a href="https://activej.io/serializer">ActiveJ Serializer</a>.</p>
+<ul>
+<li><a href="https://activej.io/http">HTTP</a>
+<ul>
+<li>Added dedicated enum for setting <code>SameSite</code> policy on cookies.</li>
+<li>Malformed HTTP requests now result in a code <code>400</code> response rather than connection drop.</li>
+<li>HTTP inspectors can now inspect malformed HTTP requests and responses.</li>
+<li><a href="https://github.com/activej/activej/blob/v5.1.1/core-http/src/main/java/io/activej/http/RoutingServlet.java" target="_blank" rel="noopener noreferrer">RoutingServlet</a> now correctly decodes percent-encoded URL path parts.</li>
+<li>Added checks for DNS label sizes.</li>
+<li>Minor improvements of the <a href="https://github.com/activej/activej/blob/v5.1.1/core-http/src/main/java/io/activej/http/UrlParser.java" target="_blank" rel="noopener noreferrer">UrlParser</a>.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/serializer">ActiveJ Serializer</a>
+<ul>
+<li>Added additional preconditions for subclass serializer.</li>
+<li>Removed unnecessary caching from <a href="https://github.com/activej/activej/blob/v5.1.1/core-serializer/src/main/java/io/activej/serializer/SerializerBuilder.java" target="_blank" rel="noopener noreferrer">SerializerBuilder</a>.</li>
+</ul>
+</li>
+<li><a href="https://activej.io/fs">ActiveJ FS</a>
+<ul>
+<li>Storage paths are now normalized, so local file systems now work properly with relative storage paths.</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 5.1 - Boot and ActiveJ FS improvements]]></title>
             <link>https://activej.io/blog/2022/01/04/v5.1</link>
-            <guid>ActiveJ 5.1 - Boot and ActiveJ FS improvements</guid>
+            <guid>https://activej.io/blog/2022/01/04/v5.1</guid>
             <pubDate>Tue, 04 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v5.1 was released Jan 4,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v5.1 was released Jan 4,
-2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.1">see on Maven</a>). This release includes
-improvements to <a href="/fs">ActiveJ FS</a>, <a href="/inject">ActiveJ Inject</a> and <a href="/boot/launcher">boot</a> modules in general.</p><ul><li><a href="/inject">ActiveJ Inject</a> and <a href="/boot/launcher">boot</a> modules<ul><li><a href="https://github.com/activej/activej/blob/v5.1/boot-triggers/src/main/java/io/activej/trigger/TriggersModule.java">TriggersModule</a>
-now properly handles <a href="/inject/optional-dependencies">optional dependencies</a></li><li>Nested optional dependencies (e.g. <code>OptionalDependency&lt;OptionalDependency&lt;?&gt;&gt;</code>) are prohibited</li><li>Services (as well as those obtained from an optional dependencies) are guaranteed to start/stop exactly once</li><li>Added shortcuts for obtaining optional dependencies from <a href="https://github.com/activej/activej/blob/v5.1/core-inject/src/main/java/io/activej/inject/Injector.java">Injector</a></li></ul></li><li><a href="/fs">ActiveJ FS</a><ul><li>Added a new <a href="https://github.com/activej/activej/blob/v5.1/cloud-fs/src/main/java/io/activej/fs/exception/ActiveFsStructureException.java">exception</a> to
-indicate errors in a structure of a file system.</li><li>Added a precondition that checks whether local file systems (<a href="https://github.com/activej/activej/blob/v5.1/cloud-fs/src/main/java/io/activej/fs/LocalActiveFs.java">LocalActiveFs</a> and
-<a href="https://github.com/activej/activej/blob/v5.1/cloud-fs/src/main/java/io/activej/fs/LocalBlockingFs.java">LocalBlockingFs</a>) were started before being used.</li></ul></li></ul>]]></content:encoded>
+2022 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.1" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release includes
+improvements to <a href="https://activej.io/fs">ActiveJ FS</a>, <a href="https://activej.io/inject">ActiveJ Inject</a> and <a href="https://activej.io/boot/launcher">boot</a> modules in general.</p>
+<ul>
+<li><a href="https://activej.io/inject">ActiveJ Inject</a> and <a href="https://activej.io/boot/launcher">boot</a> modules<!-- -->
+<ul>
+<li><a href="https://github.com/activej/activej/blob/v5.1/boot-triggers/src/main/java/io/activej/trigger/TriggersModule.java" target="_blank" rel="noopener noreferrer">TriggersModule</a>
+now properly handles <a href="https://activej.io/inject/optional-dependencies">optional dependencies</a></li>
+<li>Nested optional dependencies (e.g. <code>OptionalDependency&lt;OptionalDependency&lt;?&gt;&gt;</code>) are prohibited</li>
+<li>Services (as well as those obtained from an optional dependencies) are guaranteed to start/stop exactly once</li>
+<li>Added shortcuts for obtaining optional dependencies from <a href="https://github.com/activej/activej/blob/v5.1/core-inject/src/main/java/io/activej/inject/Injector.java" target="_blank" rel="noopener noreferrer">Injector</a></li>
+</ul>
+</li>
+<li><a href="https://activej.io/fs">ActiveJ FS</a>
+<ul>
+<li>Added a new <a href="https://github.com/activej/activej/blob/v5.1/cloud-fs/src/main/java/io/activej/fs/exception/ActiveFsStructureException.java" target="_blank" rel="noopener noreferrer">exception</a> to
+indicate errors in a structure of a file system.</li>
+<li>Added a precondition that checks whether local file systems (<a href="https://github.com/activej/activej/blob/v5.1/cloud-fs/src/main/java/io/activej/fs/LocalActiveFs.java" target="_blank" rel="noopener noreferrer">LocalActiveFs</a> and
+<a href="https://github.com/activej/activej/blob/v5.1/cloud-fs/src/main/java/io/activej/fs/LocalBlockingFs.java" target="_blank" rel="noopener noreferrer">LocalBlockingFs</a>) were started before being used.</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 5.0 - New major release]]></title>
             <link>https://activej.io/blog/2021/10/29/v5.0</link>
-            <guid>ActiveJ 5.0 - New major release</guid>
+            <guid>https://activej.io/blog/2021/10/29/v5.0</guid>
             <pubDate>Fri, 29 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v5.0 was released Oct 29,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v5.0 was released Oct 29,
-2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.0">see on Maven</a>). This release includes
-major changes in <a href="/inject">ActiveJ Inject</a>, <a href="/codegen">ActiveJ Codegen</a>, <a href="/serializer">ActiveJ Serializer</a>
-<a href="/async-io/promise">promises API</a>. The release also introduced improved type scanning facility and
-overall minor improvements in other components.</p><ul><li><a href="/inject">ActiveJ Inject</a><ul><li>Refactored and simplified inner components to speed up dependency injection and provide better support for binding
-<a href="/specializer">specialization</a></li><li>Simplified type resolution in dependency injection</li><li>Added the ability to transform imported and exported bindings using patterns (see <a href="/inject/binding-transformation">example</a>)</li><li>Replaced <code>@Optional</code> annotation with an explicit <a href="https://github.com/activej/activej/blob/v5.0/core-inject/src/main/java/io/activej/inject/binding/OptionalDependency.java">OptionalDependency</a>
-class</li></ul></li><li><a href="/codegen">ActiveJ Codegen</a><ul><li>Improved <a href="https://github.com/activej/activej/blob/v5.0/core-codegen/src/main/java/io/activej/codegen/ClassBuilder.java">ClassBuilder</a> and <a href="https://github.com/activej/activej/blob/v5.0/core-codegen/src/main/java/io/activej/codegen/DefiningClassLoader.java">DefiningClassLoader</a> classes</li><li>Class generation may now be 100% lazy</li><li>Added in-memory <a href="https://github.com/activej/activej/blob/v5.0/core-codegen/src/main/java/io/activej/codegen/ClassBuilder.java">ClassBuilder</a> caches</li><li>Added the ability to use <a href="https://github.com/activej/activej/blob/v5.0/core-codegen/src/main/java/io/activej/codegen/BytecodeStorage.java">BytecodeStorage</a> as a persistent cache for generated bytecode</li><li>Added the ability to call super methods as well as protected methods</li><li>Improved built-in expressions for array/collection/map iteration</li></ul></li><li><a href="/serializer">ActiveJ Serializer</a><ul><li>Added the ability to specify serializer annotations directly on type use (see <a href="/serializer/examples#path-based-serialization">example</a>)</li><li>Automatic class member ordering is now supported within the same JVM</li><li>Added support for serializer annotation aliases</li><li>Improved array serialization as well as serialization of booleans</li><li>Refactored class hierarchy of collection serializers. </li><li>Abstract collection serializers now support builder pattern</li></ul></li><li><a href="/async-io/promise">Promise</a><ul><li>Greatly improved exception handling</li><li>Renamed promise chaining methods <code>thenEx</code> and <code>mapEx</code> to <code>then</code> and <code>map</code></li><li>Added new conditional chaining methods as well as dedicated null-handling chaining methods </li><li>All the changing methods now take &quot;throwing&quot; functions. If a checked exception is thrown in a chaining function,
-the whole promise is completed exceptionally</li></ul></li><li>Miscellaneous improvements<ul><li>Removed <code>codec</code> module. Components that require JSON marshalling now internally use the
-<a href="https://github.com/ngs-doo/dsl-json">DSL-JSON</a> library  </li><li>Added new <a href="https://github.com/activej/activej/tree/v5.0/util-types">types</a> module which contains various reflection and type utilities, including advanced type scanner</li><li><a href="https://github.com/activej/activej/tree/v5.0/util-common">Common</a> module has been massively refactored to make common functions and components more consistent</li><li>Restructured asynchronous exceptions</li><li>Unchecked exception handling can now be precisely configured using a thread-scoped or global
-<a href="https://github.com/activej/activej/blob/v5.0/util-common/src/main/java/io/activej/common/exception/FatalErrorHandler.java">FatalErrorHandler facility</a> </li><li>Made ActiveJ compatible with Java 17</li><li>Added various <code>DiscoveryService</code> interfaces for node discovery within server cluster (<a href="/rpc">RPC</a>, <a href="/fs">FS</a>)</li><li>Removed <code>AsyncServletDecorator</code> facility</li><li>Removed <code>StreamCodecRegistry</code> facility</li><li>Multiple small improvements and fixes</li></ul></li></ul>]]></content:encoded>
+2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/5.0" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release includes
+major changes in <a href="https://activej.io/inject">ActiveJ Inject</a>, <a href="https://activej.io/codegen">ActiveJ Codegen</a>, <a href="https://activej.io/serializer">ActiveJ Serializer</a>
+<a href="https://activej.io/async-io/promise">promises API</a>. The release also introduced improved type scanning facility and
+overall minor improvements in other components.</p>
+<ul>
+<li><a href="https://activej.io/inject">ActiveJ Inject</a>
+<ul>
+<li>Refactored and simplified inner components to speed up dependency injection and provide better support for binding
+<a href="https://activej.io/specializer">specialization</a></li>
+<li>Simplified type resolution in dependency injection</li>
+<li>Added the ability to transform imported and exported bindings using patterns (see <a href="https://activej.io/inject/binding-transformation">example</a>)</li>
+<li>Replaced <code>@Optional</code> annotation with an explicit <a href="https://github.com/activej/activej/blob/v5.0/core-inject/src/main/java/io/activej/inject/binding/OptionalDependency.java" target="_blank" rel="noopener noreferrer">OptionalDependency</a>
+class</li>
+</ul>
+</li>
+<li><a href="https://activej.io/codegen">ActiveJ Codegen</a>
+<ul>
+<li>Improved <a href="https://github.com/activej/activej/blob/v5.0/core-codegen/src/main/java/io/activej/codegen/ClassBuilder.java" target="_blank" rel="noopener noreferrer">ClassBuilder</a> and <a href="https://github.com/activej/activej/blob/v5.0/core-codegen/src/main/java/io/activej/codegen/DefiningClassLoader.java" target="_blank" rel="noopener noreferrer">DefiningClassLoader</a> classes</li>
+<li>Class generation may now be 100% lazy</li>
+<li>Added in-memory <a href="https://github.com/activej/activej/blob/v5.0/core-codegen/src/main/java/io/activej/codegen/ClassBuilder.java" target="_blank" rel="noopener noreferrer">ClassBuilder</a> caches</li>
+<li>Added the ability to use <a href="https://github.com/activej/activej/blob/v5.0/core-codegen/src/main/java/io/activej/codegen/BytecodeStorage.java" target="_blank" rel="noopener noreferrer">BytecodeStorage</a> as a persistent cache for generated bytecode</li>
+<li>Added the ability to call super methods as well as protected methods</li>
+<li>Improved built-in expressions for array/collection/map iteration</li>
+</ul>
+</li>
+<li><a href="https://activej.io/serializer">ActiveJ Serializer</a>
+<ul>
+<li>Added the ability to specify serializer annotations directly on type use (see <a href="https://github.com/activej/activej/blob/v5.0/examples/core/serializer/src/main/java/SerializeNoPathExample.java" target="_blank" rel="noopener noreferrer">example</a>)</li>
+<li>Automatic class member ordering is now supported within the same JVM</li>
+<li>Added support for serializer annotation aliases</li>
+<li>Improved array serialization as well as serialization of booleans</li>
+<li>Refactored class hierarchy of collection serializers.</li>
+<li>Abstract collection serializers now support builder pattern</li>
+</ul>
+</li>
+<li><a href="https://activej.io/async-io/promise">Promise</a>
+<ul>
+<li>Greatly improved exception handling</li>
+<li>Renamed promise chaining methods <code>thenEx</code> and <code>mapEx</code> to <code>then</code> and <code>map</code></li>
+<li>Added new conditional chaining methods as well as dedicated null-handling chaining methods</li>
+<li>All the changing methods now take "throwing" functions. If a checked exception is thrown in a chaining function,
+the whole promise is completed exceptionally</li>
+</ul>
+</li>
+<li>Miscellaneous improvements<!-- -->
+<ul>
+<li>Removed <code>codec</code> module. Components that require JSON marshalling now internally use the
+<a href="https://github.com/ngs-doo/dsl-json" target="_blank" rel="noopener noreferrer">DSL-JSON</a> library</li>
+<li>Added new <a href="https://github.com/activej/activej/tree/v5.0/util-types" target="_blank" rel="noopener noreferrer">types</a> module which contains various reflection and type utilities, including advanced type scanner</li>
+<li><a href="https://github.com/activej/activej/tree/v5.0/util-common" target="_blank" rel="noopener noreferrer">Common</a> module has been massively refactored to make common functions and components more consistent</li>
+<li>Restructured asynchronous exceptions</li>
+<li>Unchecked exception handling can now be precisely configured using a thread-scoped or global
+<a href="https://github.com/activej/activej/blob/v5.0/util-common/src/main/java/io/activej/common/exception/FatalErrorHandler.java" target="_blank" rel="noopener noreferrer">FatalErrorHandler facility</a></li>
+<li>Made ActiveJ compatible with Java 17</li>
+<li>Added various <code>DiscoveryService</code> interfaces for node discovery within server cluster (<a href="https://activej.io/rpc">RPC</a>, <a href="https://activej.io/fs">FS</a>)</li>
+<li>Removed <code>AsyncServletDecorator</code> facility</li>
+<li>Removed <code>StreamCodecRegistry</code> facility</li>
+<li>Multiple small improvements and fixes</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 4.3 - Small improvements for multiple modules]]></title>
             <link>https://activej.io/blog/2021/05/28/v4.3</link>
-            <guid>ActiveJ 4.3 - Small improvements for multiple modules</guid>
+            <guid>https://activej.io/blog/2021/05/28/v4.3</guid>
             <pubDate>Fri, 28 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v4.3 was released May 28,]]></description>
             <content:encoded><![CDATA[<p>ActiveJ v4.3 was released May 28,
-2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/4.3">see on Maven</a>). This release introduced
-small improvements for multiple modules.</p><ul><li>Added new method <code>onConnecting</code> to <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/AsyncHttpClient.java">AsyncHttpClient</a>
-&#x27;s <code>Inspector</code>. Now, the number of connection that are being
-established can be monitored via <code>JmxInspector#getConnecting</code> attribute</li><li>When HTTP connection closes, the proper exception is propagated to HTTP request and response body suppliers</li><li><a href="https://github.com/activej/activej/blob/v4.3/core-eventloop/src/main/java/io/activej/eventloop/inspector/ThrottlingController.java">ThrottlingController</a>
-now throttles all the processing if tasks consecutively execute for abnormally long time</li><li><a href="https://github.com/activej/activej/blob/v4.3/core-datastream/src/main/java/io/activej/datastream/ForwardingStreamSupplier.java">ForwardingStreamSupplier</a>
-now correctly binds peer <code>StreamSupplier</code> to <code>StreamConsumer</code></li><li>Fixed asynchronous recursion in <a href="https://github.com/activej/activej/blob/v4.3/core-datastream/src/main/java/io/activej/datastream/csp/ChannelSerializer.java">ChannelSerializer</a></li><li>Missing measures in <a href="https://github.com/activej/activej/blob/v4.3/extra/cloud-lsmt-aggregation/src/main/java/io/activej/aggregation/Aggregation.java">Aggregation</a>
-are initialized with default &#x27;zero&#x27; values</li><li><a href="https://github.com/activej/activej/blob/v4.3/extra/cloud-lsmt-aggregation/src/main/java/io/activej/aggregation/measure/HyperLogLog.java">HyperLogLog</a>
-now correctly adds <code>int</code> values</li></ul>]]></content:encoded>
+2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/4.3" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release introduced
+small improvements for multiple modules.</p>
+<ul>
+<li>Added new method <code>onConnecting</code> to <a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/AsyncHttpClient.java" target="_blank" rel="noopener noreferrer">AsyncHttpClient</a>
+'s <code>Inspector</code>. Now, the number of connection that are being
+established can be monitored via <code>JmxInspector#getConnecting</code> attribute</li>
+<li>When HTTP connection closes, the proper exception is propagated to HTTP request and response body suppliers</li>
+<li><a href="https://github.com/activej/activej/blob/v4.3/core-eventloop/src/main/java/io/activej/eventloop/inspector/ThrottlingController.java" target="_blank" rel="noopener noreferrer">ThrottlingController</a>
+now throttles all the processing if tasks consecutively execute for abnormally long time</li>
+<li><a href="https://github.com/activej/activej/blob/v4.3/core-datastream/src/main/java/io/activej/datastream/ForwardingStreamSupplier.java" target="_blank" rel="noopener noreferrer">ForwardingStreamSupplier</a>
+now correctly binds peer <code>StreamSupplier</code> to <code>StreamConsumer</code></li>
+<li>Fixed asynchronous recursion in <a href="https://github.com/activej/activej/blob/v4.3/core-datastream/src/main/java/io/activej/datastream/csp/ChannelSerializer.java" target="_blank" rel="noopener noreferrer">ChannelSerializer</a></li>
+<li>Missing measures in <a href="https://github.com/activej/activej/blob/v4.3/extra/cloud-lsmt-aggregation/src/main/java/io/activej/aggregation/Aggregation.java" target="_blank" rel="noopener noreferrer">Aggregation</a>
+are initialized with default 'zero' values</li>
+<li><a href="https://github.com/activej/activej/blob/v4.3/extra/cloud-lsmt-aggregation/src/main/java/io/activej/aggregation/measure/HyperLogLog.java" target="_blank" rel="noopener noreferrer">HyperLogLog</a>
+now correctly adds <code>int</code> values</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 4.2 - Expanded functionality]]></title>
             <link>https://activej.io/blog/2021/04/13/v4.2</link>
-            <guid>ActiveJ 4.2 - Expanded functionality</guid>
+            <guid>https://activej.io/blog/2021/04/13/v4.2</guid>
             <pubDate>Tue, 13 Apr 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v4.2 was released Apr 13, 2021 (see on Maven). This release expanded]]></description>
-            <content:encoded><![CDATA[<p>ActiveJ v4.2 was released Apr 13, 2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/4.2">see on Maven</a>). This release expanded
-functionality of some components.</p><ul><li><strong><a href="https://github.com/activej/activej/tree/v4.2/extra/cloud-redis">ActiveJ Redis client</a></strong><ul><li>Added <code>connect()</code> methods
-to <a href="https://github.com/activej/activej/blob/v4.2/extra/cloud-redis/src/main/java/io/activej/redis/RedisClient.java">RedisClient</a>
-that take up authentication credentials</li><li>Added new specialized exceptions for ActiveJ Redis module:<ul><li><a href="https://github.com/activej/activej/blob/v4.2/extra/cloud-redis/src/main/java/io/activej/redis/RedisAuthenticationException.java">RedisAuthenticationException</a></li><li><a href="https://github.com/activej/activej/blob/v4.2/extra/cloud-redis/src/main/java/io/activej/redis/RedisPermissionException.java">RedisPermissionException</a></li></ul></li></ul></li><li><strong><a href="https://github.com/activej/activej/blob/v4.2/core-codegen/src/main/java/io/activej/record/RecordScheme.java">RecordScheme</a></strong><ul><li>Added ability to specify fields in <code>RecordScheme</code> that would be used for <code>equals()</code> and <code>hashCode()</code> implementation</li><li>Added ability to specify fields that would be used to generate a record <code>Comparator</code></li></ul></li><li><strong><a href="https://github.com/activej/activej/blob/v4.2/util-common/src/main/java/io/activej/common/FileLocker.java">FileLocker</a></strong><ul><li>Made <code>FileLocker</code> constructors public</li><li><code>FileLocker</code> now implements <code>java.io.Closeable</code> interface</li></ul></li><li><strong><a href="https://github.com/activej/activej/blob/v4.2/util-state/src/main/java/io/activej/state/StateManager.java">StateManager</a></strong><ul><li>Added <code>tryLoadSnapshot()</code> and <code>tryLoadDiff()</code> methods that return <code>null</code> rather than throwing an exception</li><li>Added <code>tryLoad()</code> method to <a href="https://github.com/activej/activej/blob/v4.2/util-state/src/main/java/io/activej/state/file/FileStateManager.java">FileStateManager</a>
-that returns <code>null</code> rather than throwing an exception</li><li>Added <code>save()</code> method to <a href="https://github.com/activej/activej/blob/v4.2/util-state/src/main/java/io/activej/state/file/FileStateManager.java">FileStateManager</a>
-that takes up a revision for the state to be saved with</li></ul></li><li>Improved processing of HTTP requests with large URLs</li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<p>ActiveJ v4.2 was released Apr 13, 2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/4.2" target="_blank" rel="noopener noreferrer">see on Maven</a>). This release expanded
+functionality of some components.</p>
+<ul>
+<li><strong><a href="https://github.com/activej/activej/tree/v4.2/extra/cloud-redis" target="_blank" rel="noopener noreferrer">ActiveJ Redis client</a></strong>
+<ul>
+<li>Added <code>connect()</code> methods
+to <a href="https://github.com/activej/activej/blob/v4.2/extra/cloud-redis/src/main/java/io/activej/redis/RedisClient.java" target="_blank" rel="noopener noreferrer">RedisClient</a>
+that take up authentication credentials</li>
+<li>Added new specialized exceptions for ActiveJ Redis module:<!-- -->
+<ul>
+<li><a href="https://github.com/activej/activej/blob/v4.2/extra/cloud-redis/src/main/java/io/activej/redis/RedisAuthenticationException.java" target="_blank" rel="noopener noreferrer">RedisAuthenticationException</a></li>
+<li><a href="https://github.com/activej/activej/blob/v4.2/extra/cloud-redis/src/main/java/io/activej/redis/RedisPermissionException.java" target="_blank" rel="noopener noreferrer">RedisPermissionException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/activej/activej/blob/v4.2/core-codegen/src/main/java/io/activej/record/RecordScheme.java" target="_blank" rel="noopener noreferrer">RecordScheme</a></strong>
+<ul>
+<li>Added ability to specify fields in <code>RecordScheme</code> that would be used for <code>equals()</code> and <code>hashCode()</code> implementation</li>
+<li>Added ability to specify fields that would be used to generate a record <code>Comparator</code></li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/activej/activej/blob/v4.2/util-common/src/main/java/io/activej/common/FileLocker.java" target="_blank" rel="noopener noreferrer">FileLocker</a></strong>
+<ul>
+<li>Made <code>FileLocker</code> constructors public</li>
+<li><code>FileLocker</code> now implements <code>java.io.Closeable</code> interface</li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/activej/activej/blob/v4.2/util-state/src/main/java/io/activej/state/StateManager.java" target="_blank" rel="noopener noreferrer">StateManager</a></strong>
+<ul>
+<li>Added <code>tryLoadSnapshot()</code> and <code>tryLoadDiff()</code> methods that return <code>null</code> rather than throwing an exception</li>
+<li>Added <code>tryLoad()</code> method to <a href="https://github.com/activej/activej/blob/v4.2/util-state/src/main/java/io/activej/state/file/FileStateManager.java" target="_blank" rel="noopener noreferrer">FileStateManager</a>
+that returns <code>null</code> rather than throwing an exception</li>
+<li>Added <code>save()</code> method to <a href="https://github.com/activej/activej/blob/v4.2/util-state/src/main/java/io/activej/state/file/FileStateManager.java" target="_blank" rel="noopener noreferrer">FileStateManager</a>
+that takes up a revision for the state to be saved with</li>
+</ul>
+</li>
+<li>Improved processing of HTTP requests with large URLs</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 4.1 - Optimization and simplification]]></title>
             <link>https://activej.io/blog/2021/03/19/v4.1</link>
-            <guid>ActiveJ 4.1 - Optimization and simplification</guid>
+            <guid>https://activej.io/blog/2021/03/19/v4.1</guid>
             <pubDate>Fri, 19 Mar 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v4.1 was released Mar 19, 2021 (see on Maven).]]></description>
-            <content:encoded><![CDATA[<p>ActiveJ v4.1 was released Mar 19, 2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/4.1">see on Maven</a>).
-This release included optimization and simplification of HTTP code, expanding functionality of some components.</p><ul><li><strong>HTTP refactoring and optimizations</strong><ul><li>Optimized and simplified processing of incoming HTTP messages, headers and URLs</li><li>Added preconditions for an HTTP message which guard against using recycled messages</li><li>User-created HTTP messages (<a href="https://github.com/activej/activej/blob/v4.1/core-http/src/main/java/io/activej/http/HttpRequest.java">HttpRequest</a>
-for <a href="https://github.com/activej/activej/blob/v4.1/core-http/src/main/java/io/activej/http/AsyncHttpClient.java">AsyncHttpClient</a> /
-<a href="https://github.com/activej/activej/blob/v4.1/core-http/src/main/java/io/activej/http/HttpResponse.java">HttpResponse</a> in
-<a href="https://github.com/activej/activej/blob/v4.1/core-http/src/main/java/io/activej/http/AsyncServlet.java">AsyncServlet</a>) are not recycled anymore
-(only message body is recycled if present), thus making it possible to cache and reuse them</li></ul></li><li>Added <code>Promise&lt;Void&gt; fetch()</code> method to <a href="https://github.com/activej/activej/blob/v4.1/extra/cloud-ot/src/main/java/io/activej/ot/OTStateManager.java">OTStateManager</a>.
-Fetched changes are stored without being applied to the current state.</li><li>Improved casting of deserialized fields in <a href="https://serializer.activej.io/">ActiveJ Serializer</a></li><li>Added default <a href="https://github.com/activej/activej/blob/v4.1/util-common/src/main/java/io/activej/common/api/Initializer.java">Initializer</a>s
-for common components</li><li>Added preconditions when applying operations to <a href="https://github.com/activej/activej/blob/v4.1/extra/cloud-etl/src/main/java/io/activej/etl/LogOTState.java">LogOTState</a></li><li>Removed <a href="https://github.com/activej/activej/blob/v4.1/boot-jmx/src/main/java/io/activej/jmx/JmxModule.java">JmxModule</a> from common HTTP launchers</li><li>Added new JMX stats to <a href="https://github.com/activej/activej/blob/v4.1/cloud-rpc/src/main/java/io/activej/rpc/client/RpcClient.java">RpcClient</a>
-for monitoring unresponsive RPC servers</li><li>Added <a href="https://github.com/activej/activej/blob/v4.1/util-common/src/main/java/io/activej/common/ApplicationSettings.java">ApplicationSettings</a>
-method for obtaining a default <code>Locale</code></li><li>Stick to using <code>en-US</code> locale when formatting <a href="https://github.com/activej/activej/blob/v4.1/boot-jmx-stats/src/main/java/io/activej/jmx/stats/EventStats.java">EventStats</a>
-and <a href="https://github.com/activej/activej/blob/v4.1/boot-jmx-stats/src/main/java/io/activej/jmx/stats/ValueStats.java">ValueStats</a></li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<p>ActiveJ v4.1 was released Mar 19, 2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/4.1" target="_blank" rel="noopener noreferrer">see on Maven</a>).
+This release included optimization and simplification of HTTP code, expanding functionality of some components.</p>
+<ul>
+<li><strong>HTTP refactoring and optimizations</strong>
+<ul>
+<li>Optimized and simplified processing of incoming HTTP messages, headers and URLs</li>
+<li>Added preconditions for an HTTP message which guard against using recycled messages</li>
+<li>User-created HTTP messages (<a href="https://github.com/activej/activej/blob/v4.1/core-http/src/main/java/io/activej/http/HttpRequest.java" target="_blank" rel="noopener noreferrer">HttpRequest</a>
+for <a href="https://github.com/activej/activej/blob/v4.1/core-http/src/main/java/io/activej/http/AsyncHttpClient.java" target="_blank" rel="noopener noreferrer">AsyncHttpClient</a> /
+<a href="https://github.com/activej/activej/blob/v4.1/core-http/src/main/java/io/activej/http/HttpResponse.java" target="_blank" rel="noopener noreferrer">HttpResponse</a> in
+<a href="https://github.com/activej/activej/blob/v4.1/core-http/src/main/java/io/activej/http/AsyncServlet.java" target="_blank" rel="noopener noreferrer">AsyncServlet</a>) are not recycled anymore
+(only message body is recycled if present), thus making it possible to cache and reuse them</li>
+</ul>
+</li>
+<li>Added <code>Promise&lt;Void&gt; fetch()</code> method to <a href="https://github.com/activej/activej/blob/v4.1/extra/cloud-ot/src/main/java/io/activej/ot/OTStateManager.java" target="_blank" rel="noopener noreferrer">OTStateManager</a>.
+Fetched changes are stored without being applied to the current state.</li>
+<li>Improved casting of deserialized fields in <a href="https://serializer.activej.io/" target="_blank" rel="noopener noreferrer">ActiveJ Serializer</a></li>
+<li>Added default <a href="https://github.com/activej/activej/blob/v4.1/util-common/src/main/java/io/activej/common/api/Initializer.java" target="_blank" rel="noopener noreferrer">Initializer</a>s
+for common components</li>
+<li>Added preconditions when applying operations to <a href="https://github.com/activej/activej/blob/v4.1/extra/cloud-etl/src/main/java/io/activej/etl/LogOTState.java" target="_blank" rel="noopener noreferrer">LogOTState</a></li>
+<li>Removed <a href="https://github.com/activej/activej/blob/v4.1/boot-jmx/src/main/java/io/activej/jmx/JmxModule.java" target="_blank" rel="noopener noreferrer">JmxModule</a> from common HTTP launchers</li>
+<li>Added new JMX stats to <a href="https://github.com/activej/activej/blob/v4.1/cloud-rpc/src/main/java/io/activej/rpc/client/RpcClient.java" target="_blank" rel="noopener noreferrer">RpcClient</a>
+for monitoring unresponsive RPC servers</li>
+<li>Added <a href="https://github.com/activej/activej/blob/v4.1/util-common/src/main/java/io/activej/common/ApplicationSettings.java" target="_blank" rel="noopener noreferrer">ApplicationSettings</a>
+method for obtaining a default <code>Locale</code></li>
+<li>Stick to using <code>en-US</code> locale when formatting <a href="https://github.com/activej/activej/blob/v4.1/boot-jmx-stats/src/main/java/io/activej/jmx/stats/EventStats.java" target="_blank" rel="noopener noreferrer">EventStats</a>
+and <a href="https://github.com/activej/activej/blob/v4.1/boot-jmx-stats/src/main/java/io/activej/jmx/stats/ValueStats.java" target="_blank" rel="noopener noreferrer">ValueStats</a></li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[ActiveJ 4.0 - Refactoring of exceptions]]></title>
             <link>https://activej.io/blog/2021/02/16/v4.0</link>
-            <guid>ActiveJ 4.0 - Refactoring of exceptions</guid>
+            <guid>https://activej.io/blog/2021/02/16/v4.0</guid>
             <pubDate>Tue, 16 Feb 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[ActiveJ v4.0 was released Feb 16, 2021 (see on Maven).]]></description>
-            <content:encoded><![CDATA[<p>ActiveJ v4.0 was released Feb 16, 2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/4.0">see on Maven</a>).
+            <content:encoded><![CDATA[<p>ActiveJ v4.0 was released Feb 16, 2021 (<a href="https://mvnrepository.com/artifact/io.activej/activej/4.0" target="_blank" rel="noopener noreferrer">see on Maven</a>).
 This release included major refactoring of exceptions. This release also introduces asynchronous high-performance
-ActiveJ Redis client. Other components were optimized for the performance.</p><ul><li><strong>Exceptions refactoring</strong><ul><li>All public constant exceptions were removed/hidden.</li><li><strong>StacklessException</strong> was removed. Classes that extended <strong>StacklessException</strong> now extend regular <strong>Exception</strong>,
+ActiveJ Redis client. Other components were optimized for the performance.</p>
+<ul>
+<li><strong>Exceptions refactoring</strong>
+<ul>
+<li>All public constant exceptions were removed/hidden.</li>
+<li><strong>StacklessException</strong> was removed. Classes that extended <strong>StacklessException</strong> now extend regular <strong>Exception</strong>,
 some of them are still <em>stackless</em>. <em>Stackless</em> exceptions provide the ability to include stack trace for debugging purposes.
-This can be achieved by setting exception&#x27;s <a href="https://github.com/activej/activej/blob/v4.0/util-common/src/main/java/io/activej/common/ApplicationSettings.java">ApplicationSetting</a><code>withStackTrace</code> to <strong>true</strong>.</li><li>Renamed exceptions:<ul><li><strong>ParseException</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/util-common/src/main/java/io/activej/common/exception/MalformedDataException.java">MalformedDataException</a></li><li><strong>HttpException</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/core-http/src/main/java/io/activej/http/HttpError.java">HttpError</a>
-(<a href="https://github.com/activej/activej/blob/v4.0/core-http/src/main/java/io/activej/http/HttpException.java">HttpException</a>
-is now a parent class for other HTTP exceptions)</li><li><strong>OTTransformException</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/extra/cloud-ot/src/main/java/io/activej/ot/exception/TransformException.java">TransformException</a></li><li><strong>OTNoCommitException</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/extra/cloud-ot/src/main/java/io/activej/ot/exception/NoCommitException.java">NoCommitException</a></li></ul></li><li>Added new exceptions for top-level components, etc.</li></ul></li><li>Introduced asynchronous lightweight high-performance <a href="https://github.com/activej/activej/tree/v4.0/extra/cloud-redis">ActiveJ Redis Client</a>
-with extendable API. <a href="https://github.com/activej/activej/tree/v4.0/examples/cloud/redis">Examples</a> and <a href="https://github.com/activej/activej/tree/v4.0/benchmarks/redis">benchmarks</a>
-for Redis client were added as well.</li><li>Optimizations in network code, HTTP processing (especially in pipelining mode), and data serialization.</li><li>Renamed <strong>ByteBufQueue</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/core-bytebuf/src/main/java/io/activej/bytebuf/ByteBufs.java">ByteBufs</a>.
+This can be achieved by setting exception's <a href="https://github.com/activej/activej/blob/v4.0/util-common/src/main/java/io/activej/common/ApplicationSettings.java" target="_blank" rel="noopener noreferrer">ApplicationSetting</a>
+<code>withStackTrace</code> to <strong>true</strong>.</li>
+<li>Renamed exceptions:<!-- -->
+<ul>
+<li><strong>ParseException</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/util-common/src/main/java/io/activej/common/exception/MalformedDataException.java" target="_blank" rel="noopener noreferrer">MalformedDataException</a></li>
+<li><strong>HttpException</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/core-http/src/main/java/io/activej/http/HttpError.java" target="_blank" rel="noopener noreferrer">HttpError</a>
+(<a href="https://github.com/activej/activej/blob/v4.0/core-http/src/main/java/io/activej/http/HttpException.java" target="_blank" rel="noopener noreferrer">HttpException</a>
+is now a parent class for other HTTP exceptions)</li>
+<li><strong>OTTransformException</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/extra/cloud-ot/src/main/java/io/activej/ot/exception/TransformException.java" target="_blank" rel="noopener noreferrer">TransformException</a></li>
+<li><strong>OTNoCommitException</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/extra/cloud-ot/src/main/java/io/activej/ot/exception/NoCommitException.java" target="_blank" rel="noopener noreferrer">NoCommitException</a></li>
+</ul>
+</li>
+<li>Added new exceptions for top-level components, etc.</li>
+</ul>
+</li>
+<li>Introduced asynchronous lightweight high-performance <a href="https://github.com/activej/activej/tree/v4.0/extra/cloud-redis" target="_blank" rel="noopener noreferrer">ActiveJ Redis Client</a>
+with extendable API. <a href="https://github.com/activej/activej/tree/v4.0/examples/cloud/redis" target="_blank" rel="noopener noreferrer">Examples</a> and <a href="https://github.com/activej/activej/tree/v4.0/benchmarks/redis" target="_blank" rel="noopener noreferrer">benchmarks</a>
+for Redis client were added as well.</li>
+<li>Optimizations in network code, HTTP processing (especially in pipelining mode), and data serialization.</li>
+<li>Renamed <strong>ByteBufQueue</strong> -&gt; <a href="https://github.com/activej/activej/blob/v4.0/core-bytebuf/src/main/java/io/activej/bytebuf/ByteBufs.java" target="_blank" rel="noopener noreferrer">ByteBufs</a>.
 Added byte index to <strong>ByteScanner</strong>, refactored <code>ByteBufs::scanBytes</code>.
-Added <code>ByteBufs::consumeBytes</code> method that works like <code>ByteBufs::scanBytes</code>, but actually consumes scanned bytes/bufs.</li><li>Removed <strong>StreamMapper</strong>, now stream mapping can be achieved via <code>StreamFilter.mapper(Function&lt;I, O&gt;)</code></li><li>Removed <strong>Transducer</strong>, <strong>StreamTransducer</strong>, <strong>AbstractStreamReducer</strong>, <strong>StreamMerger</strong> classes. Merging of streams can be
-done via <a href="https://github.com/activej/activej/blob/v4.0/core-datastream/src/main/java/io/activej/datastream/processor/StreamReducer.java">StreamReducer</a></li><li>Renamed <strong>MergeSortReducer</strong> -&gt; <strong>MergeReducer</strong>, <strong>MergeDistinctReducer</strong> -&gt; <strong>DeduplicateReducer</strong></li><li>Added ability to obtain irrelevant chunks from <a href="https://github.com/activej/activej/blob/v4.0/extra/cloud-lsmt-cube/src/main/java/io/activej/cube/Cube.java">Cube</a>
-by calling <code>Cube::getIrrelevantChunks</code>. Irrelevant chunks can be cleaned up by calling <code>CubeConsolidationController::cleanupIrrelevantChunks</code>.</li><li>Added JUnit test rule <a href="https://github.com/activej/activej/blob/v4.0/test/src/main/java/io/activej/test/rules/ClassBuilderConstantsRule.java">ClassBuilderConstantsRule</a>
-which validates that all of the <a href="https://github.com/activej/activej/blob/v4.0/core-codegen/src/main/java/io/activej/codegen/ClassBuilder.java">ClassBuilder</a>&#x27;s
-static constants are cleared after test passes.</li><li>Renamed most classes/methods that contained <em>parse</em> to contain <em>decode</em> instead.</li></ul>]]></content:encoded>
+Added <code>ByteBufs::consumeBytes</code> method that works like <code>ByteBufs::scanBytes</code>, but actually consumes scanned bytes/bufs.</li>
+<li>Removed <strong>StreamMapper</strong>, now stream mapping can be achieved via <code>StreamFilter.mapper(Function&lt;I, O&gt;)</code></li>
+<li>Removed <strong>Transducer</strong>, <strong>StreamTransducer</strong>, <strong>AbstractStreamReducer</strong>, <strong>StreamMerger</strong> classes. Merging of streams can be
+done via <a href="https://github.com/activej/activej/blob/v4.0/core-datastream/src/main/java/io/activej/datastream/processor/StreamReducer.java" target="_blank" rel="noopener noreferrer">StreamReducer</a></li>
+<li>Renamed <strong>MergeSortReducer</strong> -&gt; <strong>MergeReducer</strong>, <strong>MergeDistinctReducer</strong> -&gt; <strong>DeduplicateReducer</strong></li>
+<li>Added ability to obtain irrelevant chunks from <a href="https://github.com/activej/activej/blob/v4.0/extra/cloud-lsmt-cube/src/main/java/io/activej/cube/Cube.java" target="_blank" rel="noopener noreferrer">Cube</a>
+by calling <code>Cube::getIrrelevantChunks</code>. Irrelevant chunks can be cleaned up by calling <code>CubeConsolidationController::cleanupIrrelevantChunks</code>.</li>
+<li>Added JUnit test rule <a href="https://github.com/activej/activej/blob/v4.0/test/src/main/java/io/activej/test/rules/ClassBuilderConstantsRule.java" target="_blank" rel="noopener noreferrer">ClassBuilderConstantsRule</a>
+which validates that all of the <a href="https://github.com/activej/activej/blob/v4.0/core-codegen/src/main/java/io/activej/codegen/ClassBuilder.java" target="_blank" rel="noopener noreferrer">ClassBuilder</a>'s
+static constants are cleared after test passes.</li>
+<li>Renamed most classes/methods that contained <em>parse</em> to contain <em>decode</em> instead.</li>
+</ul>]]></content:encoded>
         </item>
     </channel>
 </rss>
